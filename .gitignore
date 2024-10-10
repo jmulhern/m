@@ -4,3 +4,4 @@
 *.out
 go.work
 tmp
+.idea
