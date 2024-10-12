@@ -17,6 +17,11 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	if s.loud {
 		log.Println("->", r.Method, r.Host, r.URL.Path)
 	}
+	if r.URL.Path == "/health" {
+		w.WriteHeader(200)
+		return
+	}
+
 	domainParts := strings.Split(r.Host, ".")
 	if domainParts[0] == "whatever" {
 		s.whatever.ServeHTTP(w, r)
