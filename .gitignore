@@ -6,3 +6,4 @@ go.work
 tmp
 .idea
 dist
+node_modules

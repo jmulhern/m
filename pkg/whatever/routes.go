@@ -17,8 +17,8 @@ func init() {
 
 func Routes() *http.ServeMux {
 	mux := http.NewServeMux()
-	mux.HandleFunc("GET /dist/output.css", func(w http.ResponseWriter, r *http.Request) {
-		filename := "dist/output.css"
+	mux.HandleFunc("GET /dist/whatever.output.css", func(w http.ResponseWriter, r *http.Request) {
+		filename := "dist/whatever.output.css"
 		contentType := "text/css"
 
 		// keep in memory
@@ -32,8 +32,8 @@ func Routes() *http.ServeMux {
 			log.Printf("<- [%s] %s", contentType, filename)
 		}
 	})
-	mux.HandleFunc("GET /dist/bundle.js", func(w http.ResponseWriter, r *http.Request) {
-		filename := "dist/bundle.js"
+	mux.HandleFunc("GET /dist/whatever.bundle.js", func(w http.ResponseWriter, r *http.Request) {
+		filename := "dist/whatever.bundle.js"
 		contentType := "text/javascript; charset=utf-8"
 
 		// keep in memory
@@ -48,7 +48,7 @@ func Routes() *http.ServeMux {
 		}
 	})
 	mux.HandleFunc("GET /favicon.ico", func(w http.ResponseWriter, r *http.Request) {
-		filename := "public/sportsball/favicon.ico"
+		filename := "public/whatever/favicon.ico"
 		contentType := "image/x-icon"
 
 		// keep in memory
@@ -66,7 +66,7 @@ func Routes() *http.ServeMux {
 	// default
 	mux.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path == "/" {
-			filename := "public/sportsball/index.html"
+			filename := "public/whatever/index.html"
 			contentType := "text/html; charset=utf-8"
 
 			// keep in memory

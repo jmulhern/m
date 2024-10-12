@@ -2,7 +2,10 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    whatever: './src/index_whatever.js',
+    sportsball: './src/index_sportsball.js',
+  },
   mode: "development",
   module: {
     rules: [
@@ -21,8 +24,8 @@ module.exports = {
   resolve: {extensions: ["*", ".js", ".jsx"]},
   output: {
     path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
-    filename: "bundle.js"
+    publicPath: "/dist",
+    filename: '[name].bundle.js',
   },
   plugins: []
 };

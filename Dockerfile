@@ -11,7 +11,7 @@ COPY . .
 
 RUN npm run build
 
-FROM golang:1.23-bullseye AS bin-builder
+FROM golang:1.23-bookworm AS bin-builder
 
 WORKDIR /src
 

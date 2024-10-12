@@ -21,8 +21,8 @@ func Routes() *http.ServeMux {
 	mux.HandleFunc("GET /-/scoreboard/{tricode}", HandleScoreboard)
 	mux.HandleFunc("GET /-/schedule/{tricode}", HandleSchedule)
 
-	mux.HandleFunc("GET /dist/output.css", func(w http.ResponseWriter, r *http.Request) {
-		filename := "dist/output.css"
+	mux.HandleFunc("GET /dist/sportsball.output.css", func(w http.ResponseWriter, r *http.Request) {
+		filename := "dist/sportsball.output.css"
 		contentType := "text/css"
 
 		// keep in memory
@@ -36,8 +36,8 @@ func Routes() *http.ServeMux {
 			log.Printf("<- [%s] %s", contentType, filename)
 		}
 	})
-	mux.HandleFunc("GET /dist/bundle.js", func(w http.ResponseWriter, r *http.Request) {
-		filename := "dist/bundle.js"
+	mux.HandleFunc("GET /dist/sportsball.bundle.js", func(w http.ResponseWriter, r *http.Request) {
+		filename := "dist/sportsball.bundle.js"
 		contentType := "text/javascript; charset=utf-8"
 
 		// keep in memory
@@ -69,25 +69,18 @@ func Routes() *http.ServeMux {
 
 	// default
 	mux.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
-		if r.URL.Path == "/" {
-			filename := "public/sportsball/index.html"
-			contentType := "text/html; charset=utf-8"
+		filename := "public/sportsball/index.html"
+		contentType := "text/html; charset=utf-8"
 
-			// keep in memory
-			if len(index) == 0 || !cache {
-				file, _ := os.Open(filename)
-				index, _ = io.ReadAll(file)
-			}
-			w.Header().Add("Content-Type", contentType)
-			_, _ = w.Write(index)
-			if loud {
-				log.Printf("<- [%s] %s", contentType, filename)
-			}
-		} else {
-			if loud {
-				log.Println("!! 404 - Not Found !!")
-			}
-			w.WriteHeader(http.StatusNotFound)
+		// keep in memory
+		if len(index) == 0 || !cache {
+			file, _ := os.Open(filename)
+			index, _ = io.ReadAll(file)
+		}
+		w.Header().Add("Content-Type", contentType)
+		_, _ = w.Write(index)
+		if loud {
+			log.Printf("<- [%s] %s", contentType, filename)
 		}
 	})
 	return mux
