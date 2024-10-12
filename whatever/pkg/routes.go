@@ -48,7 +48,7 @@ func Routes() *http.ServeMux {
 		}
 	})
 	mux.HandleFunc("GET /favicon.ico", func(w http.ResponseWriter, r *http.Request) {
-		filename := "public/whatever/favicon.ico"
+		filename := "whatever/public/favicon.ico"
 		contentType := "image/x-icon"
 
 		// keep in memory
@@ -66,7 +66,7 @@ func Routes() *http.ServeMux {
 	// default
 	mux.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path == "/" {
-			filename := "public/whatever/index.html"
+			filename := "whatever/public/index.html"
 			contentType := "text/html; charset=utf-8"
 
 			// keep in memory

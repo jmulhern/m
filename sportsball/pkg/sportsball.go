@@ -1,7 +1,7 @@
 package sportsball
 
 import (
-	nbadata "github.com/jmulhern/m/pkg/sportsball/nba"
+	nbadata "github.com/jmulhern/m/sportsball/pkg/nba"
 )
 
 var (

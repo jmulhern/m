@@ -5,7 +5,7 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/jmulhern/m/pkg/sportsball/simple"
+	"github.com/jmulhern/m/sportsball/pkg/simple"
 )
 
 func TestGameDate_GetDate(t *testing.T) {

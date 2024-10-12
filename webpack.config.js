@@ -3,8 +3,8 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    whatever: './src/index_whatever.js',
-    sportsball: './src/index_sportsball.js',
+    whatever: './whatever/src/index.js',
+    sportsball: './sportsball/src/index.js',
   },
   mode: "development",
   module: {

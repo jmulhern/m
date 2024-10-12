@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/jmulhern/m/pkg/sportsball"
-	"github.com/jmulhern/m/pkg/whatever"
+	sportsball "github.com/jmulhern/m/sportsball/pkg"
+	whatever "github.com/jmulhern/m/whatever/pkg"
 )
 
 func Start(port int) {

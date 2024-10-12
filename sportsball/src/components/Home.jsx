@@ -4,7 +4,7 @@ import {useState} from "react";
 import {useQuery} from "react-query";
 import axios from "axios";
 
-export default function Sportsball({tricode}) {
+export default function Home({tricode}) {
   const [game, setGame] = useState({});
   const [showSchedule, setShowSchedule] = useState(false);
   useQuery({
