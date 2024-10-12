@@ -31,8 +31,8 @@ WORKDIR /m
 COPY --from=js-builder /src/dist dist
 COPY --from=bin-builder /src/bin/m m
 
-COPY desertcatcookies desertcatcookies
-COPY sportsball sportsball
-COPY whatever whatever
+COPY desertcatcookies/public desertcatcookies/public
+COPY sportsball/public sportsball/public
+COPY whatever/public whatever/public
 
 CMD ["/m/m"]

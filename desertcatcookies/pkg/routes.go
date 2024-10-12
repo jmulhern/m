@@ -1,19 +1,16 @@
 package desertcatcookies
 
 import (
-	"encoding/json"
-	"fmt"
 	"io"
 	"log"
 	"net/http"
 	"os"
-	"strings"
 
 	"github.com/sendgrid/sendgrid-go"
 	"github.com/sendgrid/sendgrid-go/helpers/mail"
 )
 
-var index, javascript, favicon []byte
+var index, javascript, favicon, logo []byte
 var cache, loud bool
 var sendGrid *sendgrid.Client
 var from, to *mail.Email
@@ -24,37 +21,14 @@ func init() {
 
 	sendGrid = sendgrid.NewSendClient(os.Getenv("SENDGRID_API_KEY"))
 	from = mail.NewEmail("Clarice", "clarice@em2928.desertcatcookies.com")
-	to = mail.NewEmail("John", "jmm@hey.com")
+	to = mail.NewEmail("Stacy", "stacymulhern@gmail.com")
 }
 
 func Routes() *http.ServeMux {
 
 	mux := http.NewServeMux()
 
-	mux.HandleFunc("POST /estimates", func(w http.ResponseWriter, r *http.Request) {
-		raw, _ := io.ReadAll(r.Body)
-		var estimate Estimate
-		_ = json.Unmarshal(raw, &estimate)
-
-		log.Println(string(raw))
-
-		var sb strings.Builder
-		sb.WriteString("First Name: " + estimate.FirstName + "\n")
-		sb.WriteString("Last Name: " + estimate.LastName + "\n")
-		sb.WriteString("Email: " + estimate.Email + "\n")
-		sb.WriteString("Phone Number: " + estimate.PhoneNumber + "\n")
-		sb.WriteString("Cookie Theme: " + estimate.CookieTheme + "\n")
-		sb.WriteString("Cookie Quantity: " + estimate.CookieQuantity + "\n")
-		sb.WriteString("Pickup Date: " + estimate.PickupDate + "\n")
-		sb.WriteString("Anything Else: " + estimate.AnythingElse + "\n")
-		message := mail.NewSingleEmail(from, "Estimate Request", to, sb.String(), "")
-		_, err := sendGrid.Send(message)
-		if err != nil {
-			log.Println(err)
-		} else {
-			fmt.Println("email sent")
-		}
-	})
+	mux.HandleFunc("POST /estimates", HandleEstimates)
 
 	mux.HandleFunc("GET /dist/desertcatcookies.bundle.js", func(w http.ResponseWriter, r *http.Request) {
 		filename := "dist/desertcatcookies.bundle.js"
@@ -91,12 +65,12 @@ func Routes() *http.ServeMux {
 		contentType := "image/webp"
 
 		// keep in memory
-		if len(favicon) == 0 || !cache {
+		if len(logo) == 0 || !cache {
 			file, _ := os.Open(filename)
-			favicon, _ = io.ReadAll(file)
+			logo, _ = io.ReadAll(file)
 		}
 		w.Header().Add("Content-Type", contentType)
-		_, _ = w.Write(favicon)
+		_, _ = w.Write(logo)
 		if loud {
 			log.Printf("<- [%s] %s", contentType, filename)
 		}
