@@ -8,9 +8,10 @@ import (
 )
 
 type Server struct {
-	loud       bool
-	whatever   *http.ServeMux
-	sportsball *http.ServeMux
+	loud             bool
+	whatever         *http.ServeMux
+	sportsball       *http.ServeMux
+	desertcatcookies *http.ServeMux
 }
 
 func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
@@ -23,11 +24,14 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 
 	domainParts := strings.Split(r.Host, ".")
-	if domainParts[0] == "whatever" {
+	switch {
+	case domainParts[0] == "whatever":
 		s.whatever.ServeHTTP(w, r)
-	} else if domainParts[0] == "sportsball" {
+	case domainParts[0] == "sportsball":
 		s.sportsball.ServeHTTP(w, r)
-	} else {
+	case domainParts[0] == "desertcatcookies":
+		s.desertcatcookies.ServeHTTP(w, r)
+	default:
 		http.Error(w, fmt.Sprintf("%s was not found", r.Host), http.StatusNotFound)
 	}
 }
