@@ -34,6 +34,6 @@ COPY --from=bin-builder /src/bin/m m
 COPY desertcatcookies/public desertcatcookies/public
 COPY sportsball/public sportsball/public
 COPY whatever/public whatever/public
-COPY lunkers/public lunkers/public
+COPY stream/public stream/public
 
 CMD ["/m/m"]

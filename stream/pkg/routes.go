@@ -1,4 +1,4 @@
-package lunkers
+package stream
 
 import (
 	"io"
@@ -20,8 +20,8 @@ func Routes() *http.ServeMux {
 
 	mux.HandleFunc("GET /live/{channel_id}", HandleLive)
 
-	mux.HandleFunc("GET /dist/lunkers.output.css", func(w http.ResponseWriter, r *http.Request) {
-		filename := "dist/lunkers.output.css"
+	mux.HandleFunc("GET /dist/stream.output.css", func(w http.ResponseWriter, r *http.Request) {
+		filename := "dist/stream.output.css"
 		contentType := "text/css"
 
 		// keep in memory
@@ -35,8 +35,8 @@ func Routes() *http.ServeMux {
 			log.Printf("<- [%s] %s", contentType, filename)
 		}
 	})
-	mux.HandleFunc("GET /dist/lunkers.bundle.js", func(w http.ResponseWriter, r *http.Request) {
-		filename := "dist/lunkers.bundle.js"
+	mux.HandleFunc("GET /dist/stream.bundle.js", func(w http.ResponseWriter, r *http.Request) {
+		filename := "dist/stream.bundle.js"
 		contentType := "text/javascript; charset=utf-8"
 
 		// keep in memory
@@ -51,7 +51,7 @@ func Routes() *http.ServeMux {
 		}
 	})
 	mux.HandleFunc("GET /favicon.ico", func(w http.ResponseWriter, r *http.Request) {
-		filename := "lunkers/public/favicon.ico"
+		filename := "stream/public/favicon.ico"
 		contentType := "image/x-icon"
 
 		// keep in memory
@@ -69,7 +69,7 @@ func Routes() *http.ServeMux {
 	// default
 	mux.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path == "/" {
-			filename := "lunkers/public/index.html"
+			filename := "stream/public/index.html"
 			contentType := "text/html; charset=utf-8"
 
 			// keep in memory

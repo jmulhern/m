@@ -1,4 +1,4 @@
-package lunkers
+package stream
 
 import (
 	"encoding/json"
