@@ -1,4 +1,4 @@
-package whatever
+package pkg
 
 import (
 	"io"
@@ -17,6 +17,9 @@ func init() {
 
 func Routes() *http.ServeMux {
 	mux := http.NewServeMux()
+
+	mux.HandleFunc("GET /player/{username}", HandlePlayer)
+
 	mux.HandleFunc("GET /dist/whatever.output.css", func(w http.ResponseWriter, r *http.Request) {
 		filename := "dist/whatever.output.css"
 		contentType := "text/css"
@@ -65,7 +68,7 @@ func Routes() *http.ServeMux {
 
 	// default
 	mux.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
-		if r.URL.Path == "/" {
+		if r.URL.Path == "/" || r.URL.Path == "/pandapandabear" || r.URL.Path == "/ghostlybones" {
 			filename := "whatever/public/index.html"
 			contentType := "text/html; charset=utf-8"
 

@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "npx webpack",
-    "build": "npx webpack --mode production && npx tailwindcss -i ./whatever/src/index.css -o ./dist/whatever.output.css && npx tailwindcss -i ./sportsball/src/index.css -o ./dist/sportsball.output.css && npx tailwindcss -i ./stream/src/index.css -o ./dist/stream.output.css",
+    "build": "npx webpack --mode production && npx tailwindcss -i ./whatever/src/index.css -o ./dist/whatever.output.css && npx tailwindcss -i ./sportsball/src/index.css -o ./dist/sportsball.output.css",
     "watch": "npx webpack watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

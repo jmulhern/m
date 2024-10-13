@@ -6,7 +6,6 @@ module.exports = {
     whatever: './whatever/src/index.js',
     sportsball: './sportsball/src/index.js',
     desertcatcookies: './desertcatcookies/src/index.js',
-    stream: './stream/src/index.js',
   },
   mode: "development",
   module: {

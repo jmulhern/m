@@ -1,12 +1,13 @@
-package stream
+package pkg
 
 import (
 	"encoding/json"
 	"net/http"
 	"strings"
 
-	"github.com/jmulhern/m/stream/pkg/psnprofiles"
-	youtubeapi "github.com/jmulhern/m/stream/pkg/youtube"
+	youtubeapi "github.com/jmulhern/m/whatever/pkg/youtube"
+
+	"github.com/jmulhern/m/whatever/pkg/psnprofiles"
 )
 
 var psn psnprofiles.API

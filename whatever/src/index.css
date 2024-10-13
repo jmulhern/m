@@ -3,8 +3,15 @@
 @tailwind utilities;
 
 body {
+    margin: 0;            /* Reset default margin */
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
 }
-
+iframe {
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 100vw;
+}

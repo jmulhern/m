@@ -12,7 +12,6 @@ type Server struct {
 	whatever         *http.ServeMux
 	sportsball       *http.ServeMux
 	desertcatcookies *http.ServeMux
-	stream           *http.ServeMux
 }
 
 func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
@@ -33,8 +32,6 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		s.sportsball.ServeHTTP(w, r)
 	case domainParts[0] == "desertcatcookies":
 		s.desertcatcookies.ServeHTTP(w, r)
-	case domainParts[0] == "stream":
-		s.stream.ServeHTTP(w, r)
 	default:
 		http.Error(w, fmt.Sprintf("%s was not found", r.Host), http.StatusNotFound)
 	}
