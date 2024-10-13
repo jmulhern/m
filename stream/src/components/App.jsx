@@ -7,12 +7,12 @@ import Stream from "./Stream";
 const queryClient = new QueryClient()
 
 export default function App() {
-  const channelID = 'UCGqaY3UNt7wNRuKFe1drzCw'
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
         <Routes>
-          <Route path="/*" element={<Stream channelID={channelID}/>}/>
+          <Route path="/ghostlybones" element={<Stream username="ghostlybones"/>}/>
+          <Route path="/*" element={<Stream username="pandapandabear"/>}/>
         </Routes>
       </Router>
     </QueryClientProvider>

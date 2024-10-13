@@ -18,7 +18,7 @@ func init() {
 func Routes() *http.ServeMux {
 	mux := http.NewServeMux()
 
-	mux.HandleFunc("GET /live/{channel_id}", HandleLive)
+	mux.HandleFunc("GET /player/{username}", HandlePlayer)
 
 	mux.HandleFunc("GET /dist/stream.output.css", func(w http.ResponseWriter, r *http.Request) {
 		filename := "dist/stream.output.css"
@@ -68,7 +68,7 @@ func Routes() *http.ServeMux {
 
 	// default
 	mux.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
-		if r.URL.Path == "/" {
+		if r.URL.Path == "/" || r.URL.Path == "/ghostlybones" {
 			filename := "stream/public/index.html"
 			contentType := "text/html; charset=utf-8"
 
