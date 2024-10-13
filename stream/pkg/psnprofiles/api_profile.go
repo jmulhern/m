@@ -12,12 +12,10 @@ func (c Client) GetPSNProfile(psn string) (PSNProfile, error) {
 	profileResponse, _ := c.getter.Get(profileURL)
 
 	doc, _ := html.Parse(profileResponse.Body)
-	results, err := Search(doc, "span", "stat")
-	if err != nil {
-		return PSNProfile{}, err
-	}
+
+	statResults, _ := Search(doc, "span", "stat")
 	var gamesPlayed, gamesCompleted, trophiesPerDay string
-	for _, result := range results {
+	for _, result := range statResults {
 		if grow, err := Search(result, "span", "grow"); err == nil {
 			if grow[0].FirstChild != nil && grow[0].LastChild != nil && grow[0].LastChild.FirstChild != nil {
 				switch grow[0].LastChild.FirstChild.Data {
@@ -32,11 +30,52 @@ func (c Client) GetPSNProfile(psn string) (PSNProfile, error) {
 		}
 	}
 
+	var platinumTropies string
+	platinumResults, _ := Search(doc, "li", "platinum")
+	for _, result := range platinumResults {
+		data := strings.TrimSpace(result.LastChild.Data)
+		if data != "" {
+			platinumTropies = data
+			break
+		}
+	}
+	var goldTropies string
+	goldResults, _ := Search(doc, "li", "gold")
+	for _, result := range goldResults {
+		data := strings.TrimSpace(result.LastChild.Data)
+		if data != "" {
+			goldTropies = data
+			break
+		}
+	}
+	var silverTropies string
+	silverResults, _ := Search(doc, "li", "silver")
+	for _, result := range silverResults {
+		data := strings.TrimSpace(result.LastChild.Data)
+		if data != "" {
+			silverTropies = data
+			break
+		}
+	}
+	var bronzeTropies string
+	bronzeResults, _ := Search(doc, "li", "bronze")
+	for _, result := range bronzeResults {
+		data := strings.TrimSpace(result.LastChild.Data)
+		if data != "" {
+			bronzeTropies = data
+			break
+		}
+	}
+
 	return PSNProfile{
-		PSN:            psn,
-		GamesPlayed:    gamesPlayed,
-		GamesCompleted: gamesCompleted,
-		TrophiesPerDay: trophiesPerDay,
+		PSN:              psn,
+		GamesPlayed:      gamesPlayed,
+		GamesCompleted:   gamesCompleted,
+		TrophiesPerDay:   trophiesPerDay,
+		TrophiesPlatinum: platinumTropies,
+		TrophiesGold:     goldTropies,
+		TrophiesSilver:   silverTropies,
+		TrophiesBronze:   bronzeTropies,
 	}, nil
 }
 

@@ -33,6 +33,18 @@ export default function Stream({username}) {
       <h5 className="text-sm tracking-tight text-gray-900 sm:text-lg">
         <span>Trophies Per Day {player['psn_profile']['trophies_per_day']}</span>
       </h5>
+      <h5 className="text-sm tracking-tight text-gray-900 sm:text-lg">
+        <span>Platinum {player['psn_profile']['trophies_platinum']}&nbsp;</span>
+      </h5>
+      <h5 className="text-sm tracking-tight text-gray-900 sm:text-lg">
+        <span>Gold {player['psn_profile']['trophies_gold']}&nbsp;</span>
+      </h5>
+      <h5 className="text-sm tracking-tight text-gray-900 sm:text-lg">
+        <span>Silver {player['psn_profile']['trophies_silver']}&nbsp;</span>
+      </h5>
+      <h5 className="text-sm tracking-tight text-gray-900 sm:text-lg">
+        <span>Bronze {player['psn_profile']['trophies_bronze']}&nbsp;</span>
+      </h5>
     </>
   }
 
