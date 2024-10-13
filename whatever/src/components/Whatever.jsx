@@ -22,23 +22,32 @@ export default function Whatever({username}) {
   }
 
   let cards = []
-  if(player['psn_profile'] !== undefined) {
+  cards.push(<div className="my-3 divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
+    <div className="px-4 py-5 sm:px-6">
+      <span className="px-2"><i className={player['icon']}></i> {player['username']}</span>
+    </div>
+  </div>)
+
+  if (player['psn_profile'] !== undefined) {
     cards.push(<div className="my-3 divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
       <div className="px-4 py-5 sm:px-6">
         <span><i className="fa-brands fa-playstation"></i> {player['psn_profile']['psn']}</span>
       </div>
       <div className="px-4 py-5 sm:p-6">
-        <ul role="list" className="divide-y divide-gray-200">
-          <li className="py-4">Played {player['psn_profile']['games_played']}</li>
-          <li className="py-4">Completed {player['psn_profile']['games_completed']}</li>
-          <li className="py-4">Trophies Per Day {player['psn_profile']['trophies_per_day']}</li>
-        </ul>
+        <span className="px-2">
+          <i className="fa-solid fa-game-console-handheld"></i> {player['psn_profile']['games_played']}
+        </span>
+        <span className="px-2">
+          <i className="fa-solid fa-hundred-points"></i> {player['psn_profile']['games_completed']}
+        </span>
+        <span className="px-2">{player['psn_profile']['trophies_per_day']} <i className="fa-solid fa-trophy"></i>/day
+        </span>
       </div>
       <div className="px-4 py-4 sm:px-6">
-        <span className="px-2"><i className="fa-solid fa-trophy"></i> {player['psn_profile']['trophies_platinum']}</span>
-        <span className="px-2"><i className="fa-solid fa-trophy"></i> {player['psn_profile']['trophies_gold']}</span>
-        <span className="px-2"><i className="fa-solid fa-trophy"></i> {player['psn_profile']['trophies_silver']}</span>
-        <span className="px-2"><i className="fa-solid fa-trophy"></i> {player['psn_profile']['trophies_bronze']}</span>
+        <span className="px-2" style={{color: '#83b8e0'}}><i className="fa-solid fa-trophy"></i> {player['psn_profile']['trophies_platinum']}</span>
+        <span className="px-2" style={{color: '#cd9a46'}}><i className="fa-solid fa-trophy"></i> {player['psn_profile']['trophies_gold']}</span>
+        <span className="px-2" style={{color: '#d6d6d6'}}><i className="fa-solid fa-trophy"></i> {player['psn_profile']['trophies_silver']}</span>
+        <span className="px-2" style={{color: '#bf6a3a'}}><i className="fa-solid fa-trophy"></i> {player['psn_profile']['trophies_bronze']}</span>
       </div>
     </div>)
   }
@@ -55,12 +64,8 @@ export default function Whatever({username}) {
   }
 
 
-  return <div className="bg-white px-6 py-24 sm:py-32 lg:px-8">
+  return <div className="px-6 py-8 sm:py-16 lg:px-8">
     <div className="mx-auto max-w-2xl text-center">
-      <span className="text-3xl font-bold tracking-tight text-gray-300 sm:text-6xl">
-        <i className="fa-solid fa-ghost"></i><span>{player['username']}</span>
-      </span>
-      <br />
       {cards}
     </div>
   </div>

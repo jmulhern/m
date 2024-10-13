@@ -21,15 +21,18 @@ func init() {
 type Player struct {
 	YouTubeChannelID string `json:"youtube_channel_id"`
 	PSN              string `json:"psn"`
+	FontAwesomeIcon  string `json:"fa_icon"`
 }
 
 var players = map[string]Player{
 	"pandapandabear": {
 		YouTubeChannelID: "UCGqaY3UNt7wNRuKFe1drzCw",
 		PSN:              "PandaPandaBear",
+		FontAwesomeIcon:  "fa-solid fa-teddy-bear",
 	},
 	"ghostlybones": {
-		PSN: "ghostlybonesss",
+		PSN:             "ghostlybonesss",
+		FontAwesomeIcon: "fa-solid fa-ghost",
 	},
 }
 
