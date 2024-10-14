@@ -2,7 +2,6 @@ package youtube
 
 import (
 	"fmt"
-	"io"
 	"strings"
 
 	"golang.org/x/net/html"
@@ -13,15 +12,35 @@ func (c Client) GetYouTubeChannel(id string) (Channel, error) {
 
 	liveURL := fmt.Sprintf("%s/live", url)
 	liveResponse, _ := c.getter.Get(liveURL)
-	liveResponseRaw, _ := io.ReadAll(liveResponse.Body)
+	doc, _ := html.Parse(liveResponse.Body)
 
-	live := strings.Contains(string(liveResponseRaw),
-		`<link rel="canonical" href="https://www.youtube.com/watch?v=`)
+	linkResults, _ := Search(doc, "link", "")
+
+	var live bool
+	for _, result := range linkResults {
+		var canonical bool
+		for _, attr := range result.Attr {
+			if attr.Key == "rel" && attr.Val == "canonical" {
+				canonical = true
+				break
+			}
+		}
+
+		if canonical {
+			for _, attr := range result.Attr {
+				if attr.Key == "href" && strings.HasPrefix(attr.Val, "https://www.youtube.com/watch?v=") {
+					live = true
+					break
+				}
+			}
+		}
+	}
 
 	return Channel{
-		ID:   id,
-		URL:  url,
-		Live: live,
+		ID:      id,
+		URL:     url,
+		Live:    live,
+		LiveURL: liveURL,
 	}, nil
 }
 

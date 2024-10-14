@@ -19,20 +19,27 @@ func init() {
 }
 
 type Player struct {
+	YouTubeUsername  string `json:"youtube_username"`
 	YouTubeChannelID string `json:"youtube_channel_id"`
 	PSN              string `json:"psn"`
-	FontAwesomeIcon  string `json:"fa_icon"`
+	Icon             Icon   `json:"icon"`
+}
+
+type Icon struct {
+	Kind  string `json:"kind"`
+	Color string `json:"color"`
 }
 
 var players = map[string]Player{
 	"pandapandabear": {
+		YouTubeUsername:  "@thegospelclaws",
 		YouTubeChannelID: "UCGqaY3UNt7wNRuKFe1drzCw",
 		PSN:              "PandaPandaBear",
-		FontAwesomeIcon:  "fa-solid fa-teddy-bear",
+		Icon:             Icon{Kind: "octopus", Color: "purple"},
 	},
 	"ghostlybones": {
-		PSN:             "ghostlybonesss",
-		FontAwesomeIcon: "fa-solid fa-ghost",
+		PSN:  "ghostlybonesss",
+		Icon: Icon{Kind: "ghost", Color: "gray"},
 	},
 }
 
@@ -50,10 +57,12 @@ func HandlePlayer(w http.ResponseWriter, r *http.Request) {
 		_, _ = w.Write(raw)
 		return
 	}
+	responseBody["icon"] = player.Icon
 
 	if player.YouTubeChannelID != "" {
 		channel, _ := youtube.GetYouTubeChannel(player.YouTubeChannelID)
 		responseBody["youtube_channel"] = channel
+		responseBody["youtube_username"] = player.YouTubeUsername
 	}
 
 	if player.PSN != "" {

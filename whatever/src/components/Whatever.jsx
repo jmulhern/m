@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {useQuery} from "react-query";
 import axios from "axios";
+import Icon from "./Icon";
 
 
 export default function Whatever({username}) {
@@ -17,14 +18,10 @@ export default function Whatever({username}) {
     return <></>
   }
 
-  if(player['youtube_channel'] !== undefined && player['youtube_channel']['live'] === true) {
-    return <iframe src={player['youtube_channel']['url']}></iframe>
-  }
-
   let cards = []
   cards.push(<div className="my-3 divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
     <div className="px-4 py-5 sm:px-6">
-      <span className="px-2"><i className={player['icon']}></i> {player['username']}</span>
+      <span className="px-2"><Icon kind={player['icon']['kind']} color={player['icon']['color']}></Icon> {player['username']}</span>
     </div>
   </div>)
 
@@ -44,10 +41,10 @@ export default function Whatever({username}) {
         </span>
       </div>
       <div className="px-4 py-4 sm:px-6">
-        <span className="px-2" style={{color: '#83b8e0'}}><i className="fa-solid fa-trophy"></i> {player['psn_profile']['trophies_platinum']}</span>
-        <span className="px-2" style={{color: '#cd9a46'}}><i className="fa-solid fa-trophy"></i> {player['psn_profile']['trophies_gold']}</span>
-        <span className="px-2" style={{color: '#d6d6d6'}}><i className="fa-solid fa-trophy"></i> {player['psn_profile']['trophies_silver']}</span>
-        <span className="px-2" style={{color: '#bf6a3a'}}><i className="fa-solid fa-trophy"></i> {player['psn_profile']['trophies_bronze']}</span>
+        <span className="px-2"><i className="fa-solid fa-trophy" style={{color: '#83b8e0'}}></i> {player['psn_profile']['trophies_platinum']}</span>
+        <span className="px-2"><i className="fa-solid fa-trophy" style={{color: '#cd9a46'}}></i> {player['psn_profile']['trophies_gold']}</span>
+        <span className="px-2"><i className="fa-solid fa-trophy" style={{color: '#bbbbbb'}}></i> {player['psn_profile']['trophies_silver']}</span>
+        <span className="px-2"><i className="fa-solid fa-trophy" style={{color: '#bf6a3a'}}></i> {player['psn_profile']['trophies_bronze']}</span>
       </div>
     </div>)
   }
@@ -55,14 +52,21 @@ export default function Whatever({username}) {
   if (player['youtube_channel'] !== undefined) {
     cards.push(<div className="my-3 divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
       <div className="px-4 py-5 sm:px-6">
-        <span><i className="fa-brands fa-youtube"></i> {player['youtube_channel']['url']}</span>
+        <span><i className="fa-brands fa-youtube"></i> <a href={player['youtube_channel']['url']}>{player['youtube_username']}</a></span>
       </div>
       <div className="px-4 py-5 sm:p-6">
-        Stream is not live!
+      {player['youtube_channel']['live'] === true ?
+          <span className="px-2"><i className="fa-solid fa-signal-stream" style={{color: '#ff0000'}}></i> <a href={player['youtube_channel']['live_url']}>Stream is live!</a></span>  :
+          <span className="px-2"><i className="fa-solid fa-signal-stream-slash" style={{color: '#bbbbbb'}}></i> Stream is not live</span>}
       </div>
     </div>)
   }
 
+  cards.push(<div className="my-3 divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
+    <div className="px-4 py-5 sm:px-6">
+      <span className="px-2"><a href="/"><i className="fa-solid fa-house-blank" style={{color: '#000000'}}></i> Home</a></span>
+    </div>
+  </div>)
 
   return <div className="px-6 py-8 sm:py-16 lg:px-8">
     <div className="mx-auto max-w-2xl text-center">
