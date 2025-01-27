@@ -1,19 +1,27 @@
 import React from "react";
-import Icon from "./Icon";
 
-export default function Home() {
-  return <div className="px-6 py-8 sm:py-16 lg:px-8">
-    <div className="mx-auto max-w-2xl text-center">
-      <div className="my-3 divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
-        <div className="px-4 py-5 sm:px-6">
-          <span className="px-2"><Icon kind="octopus" color="purple"></Icon> <a href="/pandapandabear">pandapandabear</a></span>
-        </div>
-        <div className="px-4 py-5 sm:p-6">
-          <span className="px-2"><Icon kind="ghost" color="gray"></Icon> <a href="/ghostlybones">ghostlybones</a></span>
+const Home = () => {
+  return (
+      <div className="flex items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+        {/* Card Container */}
+        <div className="bg-white text-gray-800 rounded-lg shadow-xl p-8 max-w-lg text-center">
+          <h1 className="text-5xl font-extrabold mb-4 text-blue-600">
+            Welcome to Whatever!
+          </h1>
+          <p className="text-lg font-medium mb-6">
+            We're so glad you're here. Explore all the features Whatever offers and have a great experience!
+          </p>
+          <img
+              src="https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg"
+              alt="A cute cat"
+              className="rounded-lg shadow-lg mb-6"
+          />
+          <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
+            Get Started
+          </button>
         </div>
       </div>
-    </div>
-  </div>
+  );
+};
 
-
-}
+export default Home;

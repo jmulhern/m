@@ -11,15 +11,12 @@ var index, stylesheets, javascript, favicon []byte
 var cache, loud bool
 
 func init() {
-	cache = true
+	cache = false
 	loud = false
 }
 
 func Routes() *http.ServeMux {
 	mux := http.NewServeMux()
-
-	mux.HandleFunc("GET /player/{username}", HandlePlayer)
-
 	mux.HandleFunc("GET /dist/whatever.output.css", func(w http.ResponseWriter, r *http.Request) {
 		filename := "dist/whatever.output.css"
 		contentType := "text/css"
@@ -68,25 +65,18 @@ func Routes() *http.ServeMux {
 
 	// default
 	mux.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
-		if r.URL.Path == "/" || r.URL.Path == "/pandapandabear" || r.URL.Path == "/ghostlybones" {
-			filename := "whatever/public/index.html"
-			contentType := "text/html; charset=utf-8"
+		filename := "whatever/public/index.html"
+		contentType := "text/html; charset=utf-8"
 
-			// keep in memory
-			if len(index) == 0 || !cache {
-				file, _ := os.Open(filename)
-				index, _ = io.ReadAll(file)
-			}
-			w.Header().Add("Content-Type", contentType)
-			_, _ = w.Write(index)
-			if loud {
-				log.Printf("<- [%s] %s", contentType, filename)
-			}
-		} else {
-			if loud {
-				log.Println("!! 404 - Not Found !!")
-			}
-			w.WriteHeader(http.StatusNotFound)
+		// keep in memory
+		if len(index) == 0 || !cache {
+			file, _ := os.Open(filename)
+			index, _ = io.ReadAll(file)
+		}
+		w.Header().Add("Content-Type", contentType)
+		_, _ = w.Write(index)
+		if loud {
+			log.Printf("<- [%s] %s", contentType, filename)
 		}
 	})
 	return mux
