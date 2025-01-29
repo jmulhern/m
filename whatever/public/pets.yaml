@@ -1,0 +1,12 @@
+- id: 1
+  image: public/gigi.webp
+  text: Gigi
+- id: 2
+  image: public/clarice.webp
+  text: Clarice
+- id: 3
+  image: public/sheila.webp
+  text: Sheila
+- id: 4
+  image: public/pazuzu.webp
+  text: Pazuzu

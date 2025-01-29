@@ -85,12 +85,26 @@ func Routes() *http.ServeMux {
 	})
 
 	// api
+	mux.HandleFunc("GET /api/pets", func(w http.ResponseWriter, r *http.Request) {
+		// read from yaml
+		filename := "whatever/public/pets.yaml"
+		file, _ := os.Open(filename)
+		raw, _ := io.ReadAll(file)
+		var fosterAnimals []Animal
+		_ = yaml.Unmarshal(raw, &fosterAnimals)
+
+		// convert to json
+		raw, _ = json.Marshal(fosterAnimals)
+		w.Header().Add("Content-Type", "application/json")
+		_, _ = w.Write(raw)
+
+	})
 	mux.HandleFunc("GET /api/foster_animals", func(w http.ResponseWriter, r *http.Request) {
 		// read from yaml
 		filename := "whatever/public/foster-animals.yaml"
 		file, _ := os.Open(filename)
 		raw, _ := io.ReadAll(file)
-		var fosterAnimals []FosterAnimal
+		var fosterAnimals []Animal
 		_ = yaml.Unmarshal(raw, &fosterAnimals)
 
 		// convert to json
