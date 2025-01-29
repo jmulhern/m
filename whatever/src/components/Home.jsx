@@ -1,6 +1,79 @@
 import React from "react";
 
 const Home = () => {
+    const fosterAnimals = [
+        {
+            id: 1,
+            image: "public/koi.webp",
+            text: "Koi",
+        },
+        {
+            id: 2,
+            image: "public/casper.webp",
+            text: "Casper",
+        },
+        {
+            id: 3,
+            image: "public/tessa.webp",
+            text: "Tessa",
+        },
+        {
+            id: 4,
+            image: "public/peaches.webp",
+            text: "Peaches",
+        },
+        {
+            id: 5,
+            image: "public/luna-w.webp",
+            text: "Luna W",
+        },
+        {
+            id: 6,
+            image: "public/captain-lee-and-ruby.webp",
+            text: "Captain Lee & Ruby",
+        },
+        {
+            id: 7,
+            image: "public/ollie.webp",
+            text: "Ollie",
+        },
+        {
+            id: 8,
+            image: "public/missy.webp",
+            text: "Missy",
+        },
+        {
+            id: 9,
+            image: "public/meg-and-toofers.webp",
+            text: "Meg & Toofers",
+        },
+        {
+            id: 10,
+            image: "public/chuck.webp",
+            text: "Chuck",
+        },
+        {
+            id: 11,
+            image: "public/puppers.webp",
+            text: "Puppers",
+        },
+        {
+            id: 12,
+            image: "public/teefs.webp",
+            text: "Teefs",
+        },
+        {
+            id: 13,
+            image: "public/milo-and-luna.webp",
+            text: "Milo & Luna",
+        },
+        {
+            id: 13,
+            image: "public/dim-sum-and-chopstix.webp",
+            text: "Dim Sum & Chopstix",
+        },
+    ];
+
     return (
         <div>
             {/* Navbar */}
@@ -22,76 +95,40 @@ const Home = () => {
                         Yes, can I help you?
                     </p>
                     <img
-                        src="https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg"
+                        src="public/clarice.webp"
                         alt="A cute cat"
                         className="rounded-lg shadow-lg"
                     />
                 </div>
             </div>
 
-            {/* Features Section */}
+            {/* Placeholder Card Section */}
             <section className="bg-gray-900 text-gray-200 py-12">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center mb-8">Features</h2>
-                    {/* Features Columns */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {/* Column 1 */}
-                        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                            <h3 className="text-xl font-bold text-teal-400 mb-4">
-                                Feature 1
-                            </h3>
-                            <p className="text-gray-300">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Pellentesque ac libero sit amet eros ultrices sagittis.
-                                Maecenas in libero eget lorem tristique pretium sed a metus.
-                                Nunc convallis nisi vitae ex vehicula, at consequat velit
-                                tristique.
-                            </p>
-                        </div>
-                        {/* Column 2 */}
-                        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                            <h3 className="text-xl font-bold text-teal-400 mb-4">
-                                Feature 2
-                            </h3>
-                            <p className="text-gray-300">
-                                Fusce nec augue malesuada, malesuada odio in, ornare magna.
-                                Curabitur euismod risus ut nisl pharetra, nec varius orci
-                                facilisis. Donec pharetra ultrices risus, non pulvinar magna.
-                                Suspendisse potenti.
-                            </p>
-                        </div>
-                        {/* Column 3 */}
-                        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                            <h3 className="text-xl font-bold text-teal-400 mb-4">
-                                Feature 3
-                            </h3>
-                            <p className="text-gray-300">
-                                Quisque vel nisi ut ante condimentum feugiat sed non lorem.
-                                Nulla fringilla magna ac purus tincidunt, in molestie orci
-                                mattis. Integer facilisis nulla vitae nisl fermentum
-                                auctor. Aliquam sit amet suscipit nibh.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Cute Dog Section */}
-            <section className="bg-gray-800 text-gray-200 py-12">
-                <div className="container mx-auto px-4 flex flex-col items-center">
-                    <h2 className="text-3xl font-bold text-center mb-8 text-teal-400">
-                        Meet Our Mascot!
+                    <h2 className="text-3xl font-bold text-center mb-12 text-teal-400">
+                        Fosters
                     </h2>
-                    <img
-                        src="https://images.dog.ceo/breeds/shiba/shiba-11.jpg" /* Hardcoded URL to a cute dog image */
-                        alt="A really cute dog"
-                        className="rounded-lg shadow-lg"
-                    />
-                    <p className="text-gray-300 text-center mt-4 max-w-2xl">
-                        Isn't this the most adorable dog you've ever seen? This fluffy
-                        companion is here to bring smiles and bark out the good word about
-                        our amazing features!
-                    </p>
+
+                    {/* Card Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* Render placeholder cards */}
+                        {fosterAnimals.map((fosterAnimal) => (
+                            <div
+                                key={fosterAnimal.id}
+                                className="bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col items-center text-center p-6"
+                            >
+                                {/* Image */}
+                                <img
+                                    src={fosterAnimal.image}
+                                    alt={`Placeholder ${fosterAnimal.id}`}
+                                    className="rounded-lg mb-6"
+                                />
+
+                                {/* Text */}
+                                <p className="text-gray-300 text-sm">{fosterAnimal.text}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
         </div>

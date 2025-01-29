@@ -1,10 +1,12 @@
 package pkg
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"net/http"
 	"os"
+	"strings"
 )
 
 var index, stylesheets, javascript, favicon []byte
@@ -50,6 +52,26 @@ func Routes() *http.ServeMux {
 	mux.HandleFunc("GET /favicon.ico", func(w http.ResponseWriter, r *http.Request) {
 		filename := "whatever/public/favicon.ico"
 		contentType := "image/x-icon"
+
+		// keep in memory
+		if len(favicon) == 0 || !cache {
+			file, _ := os.Open(filename)
+			favicon, _ = io.ReadAll(file)
+		}
+		w.Header().Add("Content-Type", contentType)
+		_, _ = w.Write(favicon)
+		if loud {
+			log.Printf("<- [%s] %s", contentType, filename)
+		}
+	})
+	mux.HandleFunc("GET /public/{name}", func(w http.ResponseWriter, r *http.Request) {
+		name := r.PathValue("name")
+		filename := fmt.Sprintf("whatever/public/%s", name)
+
+		var contentType string
+		if strings.HasSuffix(name, ".webp") {
+			contentType = "image/webp"
+		}
 
 		// keep in memory
 		if len(favicon) == 0 || !cache {
