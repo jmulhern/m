@@ -19,8 +19,8 @@ func HandleEstimates(w http.ResponseWriter, r *http.Request) {
 	log.Println(string(raw))
 
 	var sb strings.Builder
-	sb.WriteString("First Name: " + estimate.FirstName + "\n")
-	sb.WriteString("Last Name: " + estimate.LastName + "\n")
+	sb.WriteString("First Text: " + estimate.FirstName + "\n")
+	sb.WriteString("Last Text: " + estimate.LastName + "\n")
 	sb.WriteString("Email: " + estimate.Email + "\n")
 	sb.WriteString("Phone Number: " + estimate.PhoneNumber + "\n")
 	sb.WriteString("Cookie Theme: " + estimate.CookieTheme + "\n")

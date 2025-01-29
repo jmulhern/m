@@ -1,7 +1,9 @@
 package pkg
 
 import (
+	"encoding/json"
 	"fmt"
+	"gopkg.in/yaml.v3"
 	"io"
 	"log"
 	"net/http"
@@ -73,16 +75,29 @@ func Routes() *http.ServeMux {
 			contentType = "image/webp"
 		}
 
-		// keep in memory
-		if len(favicon) == 0 || !cache {
-			file, _ := os.Open(filename)
-			favicon, _ = io.ReadAll(file)
-		}
+		file, _ := os.Open(filename)
+		raw, _ := io.ReadAll(file)
 		w.Header().Add("Content-Type", contentType)
-		_, _ = w.Write(favicon)
+		_, _ = w.Write(raw)
 		if loud {
 			log.Printf("<- [%s] %s", contentType, filename)
 		}
+	})
+
+	// api
+	mux.HandleFunc("GET /api/foster_animals", func(w http.ResponseWriter, r *http.Request) {
+		// read from yaml
+		filename := "whatever/public/foster-animals.yaml"
+		file, _ := os.Open(filename)
+		raw, _ := io.ReadAll(file)
+		var fosterAnimals []FosterAnimal
+		_ = yaml.Unmarshal(raw, &fosterAnimals)
+
+		// convert to json
+		raw, _ = json.Marshal(fosterAnimals)
+		w.Header().Add("Content-Type", "application/json")
+		_, _ = w.Write(raw)
+
 	})
 
 	// default

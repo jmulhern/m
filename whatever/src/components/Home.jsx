@@ -1,78 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 
 const Home = () => {
-    const fosterAnimals = [
-        {
-            id: 1,
-            image: "public/koi.webp",
-            text: "Koi",
-        },
-        {
-            id: 2,
-            image: "public/casper.webp",
-            text: "Casper",
-        },
-        {
-            id: 3,
-            image: "public/tessa.webp",
-            text: "Tessa",
-        },
-        {
-            id: 4,
-            image: "public/peaches.webp",
-            text: "Peaches",
-        },
-        {
-            id: 5,
-            image: "public/luna-w.webp",
-            text: "Luna W",
-        },
-        {
-            id: 6,
-            image: "public/captain-lee-and-ruby.webp",
-            text: "Captain Lee & Ruby",
-        },
-        {
-            id: 7,
-            image: "public/ollie.webp",
-            text: "Ollie",
-        },
-        {
-            id: 8,
-            image: "public/missy.webp",
-            text: "Missy",
-        },
-        {
-            id: 9,
-            image: "public/meg-and-toofers.webp",
-            text: "Meg & Toofers",
-        },
-        {
-            id: 10,
-            image: "public/chuck.webp",
-            text: "Chuck",
-        },
-        {
-            id: 11,
-            image: "public/puppers.webp",
-            text: "Puppers",
-        },
-        {
-            id: 12,
-            image: "public/teefs.webp",
-            text: "Teefs",
-        },
-        {
-            id: 13,
-            image: "public/milo-and-luna.webp",
-            text: "Milo & Luna",
-        },
-        {
-            id: 13,
-            image: "public/dim-sum-and-chopstix.webp",
-            text: "Dim Sum & Chopstix",
-        },
-    ];
+
+    const [fosterAnimals, setFosterAnimals] = useState([]);
+    useEffect(() => {
+        const fetchFosterAnimals = async () => {
+            try {
+                const response = await fetch("/api/foster_animals"); // Fetch data from API
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch data: ${response.statusText}`);
+                }
+                const data = await response.json();
+                setFosterAnimals(data);
+                setLoading(false);
+            } catch (err) {
+                // Handle errors
+                setError(err.message);
+                setLoading(false);
+            }
+        };
+
+        fetchFosterAnimals();
+    }, []);
 
     return (
         <div>
@@ -108,8 +58,7 @@ const Home = () => {
                     <h2 className="text-3xl font-bold text-center mb-12 text-teal-400">
                         Fosters
                     </h2>
-
-                    {/* Card Grid */}
+                    {fosterAnimals.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* Render placeholder cards */}
                         {fosterAnimals.map((fosterAnimal) => (
@@ -129,6 +78,11 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
+                        ) : (
+
+                        <p>Nothing sorry.</p> // Handle case when the list is empty
+                        )}
+
                 </div>
             </section>
         </div>
