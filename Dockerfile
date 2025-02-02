@@ -32,6 +32,7 @@ COPY --from=js-builder /src/dist dist
 COPY --from=bin-builder /src/bin/m m
 
 COPY desertcatcookies/public desertcatcookies/public
+COPY greasyshadows/public greasyshadows/public
 COPY sportsball/public sportsball/public
 COPY whatever/public whatever/public
 
