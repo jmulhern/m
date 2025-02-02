@@ -62,13 +62,10 @@ func Routes() *http.ServeMux {
 		}
 		w.Header().Add("Content-Type", contentType)
 		_, _ = w.Write(favicon)
-		if loud {
-			log.Printf("<- [%s] %s", contentType, filename)
-		}
 	})
-	mux.HandleFunc("GET /public/{name}", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("GET /public/images/{name}", func(w http.ResponseWriter, r *http.Request) {
 		name := r.PathValue("name")
-		filename := fmt.Sprintf("whatever/public/%s", name)
+		filename := fmt.Sprintf("whatever/public/images/%s", name)
 
 		var contentType string
 		if strings.HasSuffix(name, ".webp") {
@@ -79,15 +76,12 @@ func Routes() *http.ServeMux {
 		raw, _ := io.ReadAll(file)
 		w.Header().Add("Content-Type", contentType)
 		_, _ = w.Write(raw)
-		if loud {
-			log.Printf("<- [%s] %s", contentType, filename)
-		}
 	})
 
 	// api
 	mux.HandleFunc("GET /api/pets", func(w http.ResponseWriter, r *http.Request) {
 		// read from yaml
-		filename := "whatever/public/pets.yaml"
+		filename := "whatever/private/data/pets.yaml"
 		file, _ := os.Open(filename)
 		raw, _ := io.ReadAll(file)
 		var fosterAnimals []Animal
@@ -101,7 +95,7 @@ func Routes() *http.ServeMux {
 	})
 	mux.HandleFunc("GET /api/foster_animals", func(w http.ResponseWriter, r *http.Request) {
 		// read from yaml
-		filename := "whatever/public/foster-animals.yaml"
+		filename := "whatever/private/data/fosters.yaml"
 		file, _ := os.Open(filename)
 		raw, _ := io.ReadAll(file)
 		var fosterAnimals []Animal
@@ -126,9 +120,6 @@ func Routes() *http.ServeMux {
 		}
 		w.Header().Add("Content-Type", contentType)
 		_, _ = w.Write(index)
-		if loud {
-			log.Printf("<- [%s] %s", contentType, filename)
-		}
 	})
 	return mux
 }

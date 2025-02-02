@@ -1,5 +1,5 @@
 import React from "react";
-import FosterAnimals from "./FosterAnimals";
+import Fosters from "./Fosters";
 import Pets from "./Pets";
 
 
@@ -24,7 +24,7 @@ const Home = () => {
                         Yes, can I help you?
                     </p>
                     <img
-                        src="public/clarice-what.webp"
+                        src="public/images/clarice-what.webp"
                         alt="A cute cat"
                         className="rounded-lg shadow-lg"
                     />
@@ -36,7 +36,7 @@ const Home = () => {
             </section>
 
             <section className="bg-gray-900 text-gray-200 py-12">
-                <FosterAnimals />
+                <Fosters />
             </section>
         </div>
     );

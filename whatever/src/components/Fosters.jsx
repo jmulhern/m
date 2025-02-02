@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 
-const FosterAnimals = () => {
+const Fosters = () => {
 
     const [fosterAnimals, setFosterAnimals] = useState([]);
     useEffect(() => {
@@ -54,4 +54,4 @@ const FosterAnimals = () => {
     );
 };
 
-export default FosterAnimals;
+export default Fosters;
