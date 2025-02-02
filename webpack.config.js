@@ -3,9 +3,10 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    whatever: './whatever/src/index.js',
-    sportsball: './sportsball/src/index.js',
     desertcatcookies: './desertcatcookies/src/index.js',
+    greasyshadows: './greasyshadows/src/index.js',
+    sportsball: './sportsball/src/index.js',
+    whatever: './whatever/src/index.js',
   },
   mode: "development",
   module: {
