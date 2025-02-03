@@ -1,4 +1,4 @@
-package pkg
+package johnmulhern
 
 type Animal struct {
 	ID    string `yaml:"id" json:"id"`

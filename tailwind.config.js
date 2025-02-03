@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./desercatcookies/src/**/*.{html,js,jsx}",
-    "./desercatcookies/public/**/*.html",
     "./greasyshadows/src/**/*.{html,js,jsx}",
     "./greasyshadows/public/**/*.html",
     "./johnmulhern/src/**/*.{html,js,jsx}",

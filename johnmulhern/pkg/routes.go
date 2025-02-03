@@ -1,4 +1,4 @@
-package pkg
+package johnmulhern
 
 import (
 	"encoding/json"

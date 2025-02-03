@@ -1,9 +1,7 @@
-package pkg
+package whatever
 
 import (
-	"encoding/json"
 	"fmt"
-	"gopkg.in/yaml.v3"
 	"io"
 	"log"
 	"net/http"
@@ -76,36 +74,6 @@ func Routes() *http.ServeMux {
 		raw, _ := io.ReadAll(file)
 		w.Header().Add("Content-Type", contentType)
 		_, _ = w.Write(raw)
-	})
-
-	// api
-	mux.HandleFunc("GET /api/pets", func(w http.ResponseWriter, r *http.Request) {
-		// read from yaml
-		filename := "whatever/private/data/pets.yaml"
-		file, _ := os.Open(filename)
-		raw, _ := io.ReadAll(file)
-		var fosterAnimals []Animal
-		_ = yaml.Unmarshal(raw, &fosterAnimals)
-
-		// convert to json
-		raw, _ = json.Marshal(fosterAnimals)
-		w.Header().Add("Content-Type", "application/json")
-		_, _ = w.Write(raw)
-
-	})
-	mux.HandleFunc("GET /api/foster_animals", func(w http.ResponseWriter, r *http.Request) {
-		// read from yaml
-		filename := "whatever/private/data/fosters.yaml"
-		file, _ := os.Open(filename)
-		raw, _ := io.ReadAll(file)
-		var fosterAnimals []Animal
-		_ = yaml.Unmarshal(raw, &fosterAnimals)
-
-		// convert to json
-		raw, _ = json.Marshal(fosterAnimals)
-		w.Header().Add("Content-Type", "application/json")
-		_, _ = w.Write(raw)
-
 	})
 
 	// default
