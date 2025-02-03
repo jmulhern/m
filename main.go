@@ -1,12 +1,11 @@
 package main
 
 import (
+	"github.com/jmulhern/m/backend"
 	"log"
-
-	"github.com/jmulhern/m/pkg/server"
 )
 
 func main() {
 	log.Print("hello")
-	server.Start(3000)
+	backend.Start(3000)
 }

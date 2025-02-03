@@ -3,7 +3,7 @@ package phx
 import (
 	"time"
 
-	"github.com/jmulhern/m/sportsball/pkg/simple"
+	"github.com/jmulhern/m/sportsball/backend/simple"
 )
 
 func Now() simple.Date {

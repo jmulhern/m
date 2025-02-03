@@ -3,19 +3,10 @@ package whatever
 import (
 	"fmt"
 	"io"
-	"log"
 	"net/http"
 	"os"
 	"strings"
 )
-
-var index, stylesheets, javascript, favicon []byte
-var cache, loud bool
-
-func init() {
-	cache = false
-	loud = false
-}
 
 func Routes() *http.ServeMux {
 	mux := http.NewServeMux()
@@ -23,43 +14,41 @@ func Routes() *http.ServeMux {
 		filename := "dist/whatever.output.css"
 		contentType := "text/css"
 
-		// keep in memory
-		if len(stylesheets) == 0 || !cache {
-			file, _ := os.Open(filename)
-			stylesheets, _ = io.ReadAll(file)
-		}
+		file, _ := os.Open(filename)
+		raw, _ := io.ReadAll(file)
+
 		w.Header().Add("Content-Type", contentType)
-		_, _ = w.Write(stylesheets)
-		if loud {
-			log.Printf("<- [%s] %s", contentType, filename)
-		}
+		_, _ = w.Write(raw)
 	})
 	mux.HandleFunc("GET /dist/whatever.bundle.js", func(w http.ResponseWriter, r *http.Request) {
 		filename := "dist/whatever.bundle.js"
 		contentType := "text/javascript; charset=utf-8"
 
-		// keep in memory
-		if len(javascript) == 0 || !cache {
-			file, _ := os.Open(filename)
-			javascript, _ = io.ReadAll(file)
-		}
+		file, _ := os.Open(filename)
+		raw, _ := io.ReadAll(file)
+
 		w.Header().Add("Content-Type", contentType)
-		_, _ = w.Write(javascript)
-		if loud {
-			log.Printf("<- [%s] %s", contentType, filename)
-		}
+		_, _ = w.Write(raw)
 	})
 	mux.HandleFunc("GET /favicon.ico", func(w http.ResponseWriter, r *http.Request) {
 		filename := "whatever/public/favicon.ico"
 		contentType := "image/x-icon"
 
-		// keep in memory
-		if len(favicon) == 0 || !cache {
-			file, _ := os.Open(filename)
-			favicon, _ = io.ReadAll(file)
-		}
+		file, _ := os.Open(filename)
+		raw, _ := io.ReadAll(file)
+
 		w.Header().Add("Content-Type", contentType)
-		_, _ = w.Write(favicon)
+		_, _ = w.Write(raw)
+	})
+	mux.HandleFunc("GET /robots.txt", func(w http.ResponseWriter, r *http.Request) {
+		filename := "whatever/public/robots.txt"
+		contentType := "text/plain"
+
+		file, _ := os.Open(filename)
+		raw, _ := io.ReadAll(file)
+
+		w.Header().Add("Content-Type", contentType)
+		_, _ = w.Write(raw)
 	})
 	mux.HandleFunc("GET /public/images/{name}", func(w http.ResponseWriter, r *http.Request) {
 		name := r.PathValue("name")
@@ -72,6 +61,7 @@ func Routes() *http.ServeMux {
 
 		file, _ := os.Open(filename)
 		raw, _ := io.ReadAll(file)
+
 		w.Header().Add("Content-Type", contentType)
 		_, _ = w.Write(raw)
 	})
@@ -81,13 +71,11 @@ func Routes() *http.ServeMux {
 		filename := "whatever/public/index.html"
 		contentType := "text/html; charset=utf-8"
 
-		// keep in memory
-		if len(index) == 0 || !cache {
-			file, _ := os.Open(filename)
-			index, _ = io.ReadAll(file)
-		}
+		file, _ := os.Open(filename)
+		raw, _ := io.ReadAll(file)
+
 		w.Header().Add("Content-Type", contentType)
-		_, _ = w.Write(index)
+		_, _ = w.Write(raw)
 	})
 	return mux
 }

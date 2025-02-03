@@ -3,7 +3,7 @@ package sportsball
 import (
 	"time"
 
-	"github.com/jmulhern/m/sportsball/pkg/phx"
+	"github.com/jmulhern/m/sportsball/backend/phx"
 )
 
 func GetSchedule(teamTricode string) Schedule {

@@ -1,0 +1,4 @@
+# robots.txt for sportsball - Block All Crawlers
+
+User-agent: *
+Disallow: /

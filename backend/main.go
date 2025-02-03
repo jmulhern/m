@@ -1,20 +1,19 @@
-package server
+package backend
 
 import (
 	"fmt"
 	"log"
 	"net/http"
 
-	desertcatcookies "github.com/jmulhern/m/desertcatcookies/pkg"
-	greasyshadows "github.com/jmulhern/m/greasyshadows/pkg"
-	johnmulhern "github.com/jmulhern/m/johnmulhern/pkg"
-	sportsball "github.com/jmulhern/m/sportsball/pkg"
-	whatever "github.com/jmulhern/m/whatever/pkg"
+	desertcatcookies "github.com/jmulhern/m/desertcatcookies/backend"
+	greasyshadows "github.com/jmulhern/m/greasyshadows/backend"
+	johnmulhern "github.com/jmulhern/m/johnmulhern/backend"
+	sportsball "github.com/jmulhern/m/sportsball/backend"
+	whatever "github.com/jmulhern/m/whatever/backend"
 )
 
 func Start(port int) {
 	mux := &Server{
-		loud:             false,
 		desertcatcookies: desertcatcookies.Routes(),
 		greasyshadows:    greasyshadows.Routes(),
 		johnmulhern:      johnmulhern.Routes(),

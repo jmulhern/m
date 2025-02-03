@@ -1,14 +1,12 @@
-package server
+package backend
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 	"strings"
 )
 
 type Server struct {
-	loud             bool
 	desertcatcookies *http.ServeMux
 	greasyshadows    *http.ServeMux
 	johnmulhern      *http.ServeMux
@@ -21,12 +19,7 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(200)
 		return
 	}
-
 	domainParts := strings.Split(r.Host, ".")
-	if s.loud {
-		log.Println("->", r.Method, r.Host, r.URL.Path)
-	}
-
 	switch {
 	case domainParts[0] == "desertcatcookies":
 		s.desertcatcookies.ServeHTTP(w, r)

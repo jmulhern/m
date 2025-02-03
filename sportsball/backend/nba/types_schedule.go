@@ -3,7 +3,7 @@ package nba
 import (
 	"time"
 
-	"github.com/jmulhern/m/sportsball/pkg/simple"
+	"github.com/jmulhern/m/sportsball/backend/simple"
 )
 
 type Schedule struct {
