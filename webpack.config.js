@@ -5,6 +5,7 @@ module.exports = {
   entry: {
     desertcatcookies: './desertcatcookies/src/index.js',
     greasyshadows: './greasyshadows/src/index.js',
+    johnmulhern: './johnmulhern/src/index.js',
     sportsball: './sportsball/src/index.js',
     whatever: './whatever/src/index.js',
   },

@@ -7,6 +7,7 @@ import (
 
 	desertcatcookies "github.com/jmulhern/m/desertcatcookies/pkg"
 	greasyshadows "github.com/jmulhern/m/greasyshadows/pkg"
+	johnmulhern "github.com/jmulhern/m/johnmulhern/pkg"
 	sportsball "github.com/jmulhern/m/sportsball/pkg"
 	whatever "github.com/jmulhern/m/whatever/pkg"
 )
@@ -16,6 +17,7 @@ func Start(port int) {
 		loud:             false,
 		desertcatcookies: desertcatcookies.Routes(),
 		greasyshadows:    greasyshadows.Routes(),
+		johnmulhern:      johnmulhern.Routes(),
 		sportsball:       sportsball.Routes(),
 		whatever:         whatever.Routes(),
 	}

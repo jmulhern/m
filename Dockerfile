@@ -33,6 +33,7 @@ COPY --from=bin-builder /src/bin/m m
 
 COPY desertcatcookies/public desertcatcookies/public
 COPY greasyshadows/public greasyshadows/public
+COPY johnmulhern/public johnmulhern/public
 COPY sportsball/public sportsball/public
 COPY whatever/public whatever/public
 

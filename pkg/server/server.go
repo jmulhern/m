@@ -11,6 +11,7 @@ type Server struct {
 	loud             bool
 	desertcatcookies *http.ServeMux
 	greasyshadows    *http.ServeMux
+	johnmulhern      *http.ServeMux
 	sportsball       *http.ServeMux
 	whatever         *http.ServeMux
 }
@@ -31,6 +32,8 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		s.desertcatcookies.ServeHTTP(w, r)
 	case domainParts[0] == "greasyshadows":
 		s.greasyshadows.ServeHTTP(w, r)
+	case domainParts[0] == "johnmulhern":
+		s.johnmulhern.ServeHTTP(w, r)
 	case domainParts[0] == "sportsball":
 		s.sportsball.ServeHTTP(w, r)
 	case domainParts[0] == "whatever":

@@ -1,0 +1,39 @@
+- id: fosters|koi--casper
+  image: public/images/koi-and-casper.webp
+  text: Koi & Casper
+- id: fosters-tessa
+  image: public/images/tessa.webp
+  text: Tessa
+- id: fosters|peaches
+  image: public/images/peaches.webp
+  text: Peaches
+- id: fosters|luna-w
+  image: public/images/luna-w.webp
+  text: Luna W
+- id: fosters|captain-lee--ruby
+  image: public/images/captain-lee-and-ruby.webp
+  text: Captain Lee & Ruby
+- id: fosters-ollie
+  image: public/images/ollie.webp
+  text: Ollie
+- id: fosters|missy
+  image: public/images/missy.webp
+  text: Missy
+- id: fosters|meg--toofers
+  image: public/images/meg-and-toofers.webp
+  text: Meg & Toofers
+- id: fosters|chuck
+  image: public/images/chuck.webp
+  text: Chuck
+- id: fosters|puppers
+  image: public/images/puppers.webp
+  text: Puppers
+- id: fosters|teefs
+  image: public/images/teefs.webp
+  text: Teefs
+- id: fosters|milo--luna
+  image: public/images/milo-and-luna.webp
+  text: Milo & Luna
+- id: fosters|dim-sum--chopstix
+  image: public/images/dim-sum-and-chopstix.webp
+  text: Dim Sum & Chopstix
