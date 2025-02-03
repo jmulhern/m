@@ -5,7 +5,7 @@ const Ironclad = () => {
     const tierData = [
         {
             tier: "S",
-            color: "bg-blue-400",
+            color: "bg-blue-500",
             cards: [
                 {
                     name: "Offering",
@@ -35,7 +35,7 @@ const Ironclad = () => {
         },
         {
             tier: "A",
-            color: "bg-red-400",
+            color: "bg-red-500",
             cards: [
                 {
                     name: "Disarm",
@@ -107,7 +107,7 @@ const Ironclad = () => {
         },
         {
             tier: "B",
-            color: "bg-orange-300",
+            color: "bg-orange-500",
             cards: [
                 {
                     name: "Fiend Fire",
@@ -241,7 +241,7 @@ const Ironclad = () => {
         },
         {
             tier: "C",
-            color: "bg-yellow-200",
+            color: "bg-yellow-500",
             cards: [
                 {
                     name: "Intimidate",
@@ -343,7 +343,7 @@ const Ironclad = () => {
         },
         {
             tier: "D",
-            color: "bg-green-200",
+            color: "bg-green-500",
             cards: [
                 {
                     name: "Warcry",
@@ -451,7 +451,7 @@ const Ironclad = () => {
         },
         {
             tier: "F",
-            color: "bg-gray-200",
+            color: "bg-gray-500",
             cards: [
                 {
                     name: "Sever Soul",
@@ -497,27 +497,23 @@ const Ironclad = () => {
                 <table className="table-auto border-collapse text-left w-full">
                     <thead className="bg-gray-700 text-gray-300">
                     <tr>
-                        <th className="px-4 py-2 border border-gray-600">Tier</th>
-                        <th className="px-4 py-2 border border-gray-600">Cards</th>
+                        <th className="px-2 py-2 border border-gray-600">Tier</th>
+                        <th className="px-2 py-2 border border-gray-600">Cards</th>
                     </tr>
                     </thead>
                     <tbody>
                     {tierData.map((row, index) => (
                         <tr key={index} className={row.color}>
-                            <td className="px-4 py-2">{row.tier}</td>
-                            <td className="px-4 py-2">
-                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+                            <td className="px-2 py-2">{row.tier}</td>
+                            <td className="px-2 py-2">
+                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
                                     {row.cards.map((card, cardIndex) => (
                                         <button
                                             key={cardIndex}
                                             className="relative flex flex-col"
                                             onClick={() => openModal(card)}
                                         >
-                                            <img
-                                                src={card.image}
-                                                alt={card.name}
-                                                className="w-full h-auto"
-                                            />
+                                            {card.name}
                                         </button>
                                     ))}
                                 </div>
