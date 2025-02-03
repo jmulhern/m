@@ -31,10 +31,16 @@ WORKDIR /m
 COPY --from=js-builder /src/dist dist
 COPY --from=bin-builder /src/bin/m m
 
+# desertcatecookies
 COPY desertcatcookies/public desertcatcookies/public
+# greasyshadows
 COPY greasyshadows/public greasyshadows/public
+# johnmulhern
 COPY johnmulhern/public johnmulhern/public
+COPY johnmulhern/private johnmulhern/private
+# sportsball
 COPY sportsball/public sportsball/public
+# whatever
 COPY whatever/public whatever/public
 
 CMD ["/m/m"]
