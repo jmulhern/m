@@ -1,7 +1,9 @@
 package whatever
 
 import (
+	"encoding/json"
 	"fmt"
+	"gopkg.in/yaml.v3"
 	"io"
 	"net/http"
 	"os"
@@ -63,6 +65,22 @@ func Routes() *http.ServeMux {
 		raw, _ := io.ReadAll(file)
 
 		w.Header().Add("Content-Type", contentType)
+		_, _ = w.Write(raw)
+	})
+
+	// api
+	mux.HandleFunc("GET /api/riddles", func(w http.ResponseWriter, r *http.Request) {
+		// read from yaml
+		filename := "whatever/private/data/riddles.yaml"
+		file, _ := os.Open(filename)
+		raw, _ := io.ReadAll(file)
+
+		var riddles []Riddle
+		_ = yaml.Unmarshal(raw, &riddles)
+
+		// convert to json
+		raw, _ = json.Marshal(riddles[0])
+		w.Header().Add("Content-Type", "application/json")
 		_, _ = w.Write(raw)
 	})
 

@@ -1,0 +1,8 @@
+- id: whose-my-puppy
+  question: Whose my puppy?
+  possible-answers:
+  - Clarice
+  - Ginger
+  - Pazuzu
+  - Sheila
+  answer: Pazuzu

@@ -42,5 +42,6 @@ COPY johnmulhern/private johnmulhern/private
 COPY sportsball/public sportsball/public
 # whatever
 COPY whatever/public whatever/public
+COPY whatever/private whatever/private
 
 CMD ["/m/m"]
