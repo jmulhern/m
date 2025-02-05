@@ -1,0 +1,15 @@
+- question: AWS allows users to manage their resources using a web based user interface. What is the name of this interface?
+  possible-answers:
+  - AWS CLI
+  - AWS API
+  - AWS SDK
+  - AWS Management Console
+  answer: AWS Management Console
+
+- question: Which of the following is an example of horizontal scaling in the AWS Cloud?
+  possible-answers:
+    - Replacing an existing EC2 instance with a larger, more powerful one.
+    - Increasing the compute capacity of a single EC2 instance to address the growing demands of an application.
+    - Adding more RAM capacity to an EC2 instance.
+    - Adding more EC2 instances of the same size to handle an increase in traffic.
+  answer: Adding more EC2 instances of the same size to handle an increase in traffic.

@@ -8,6 +8,7 @@ import Two from "./Two";
 import SlayTheSpire from "./SlayTheSpire";
 import Ironclad from "./TierList";
 import TierList from "./TierList";
+import Questions from "./Questions";
 
 
 
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/relic" element={<TierList id="relic" name="Relics" />}/>
           <Route path="/ironclad" element={<TierList id="ironclad" name="Ironclad" />}/>
           <Route path="/the-watcher" element={<TierList id="the-watcher" name="The Watcher" />}/>
+          <Route path="/questions" element={<Questions />}/>
           <Route path="/gameover" element={<GameOver />}/>
         </Routes>
       </Router>

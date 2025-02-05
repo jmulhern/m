@@ -100,6 +100,23 @@ func Routes() *http.ServeMux {
 		_, _ = w.Write(raw)
 	})
 
+	mux.HandleFunc("GET /api/questions/{name}", func(w http.ResponseWriter, r *http.Request) {
+		name := r.PathValue("name")
+
+		// read from yaml
+		filename := fmt.Sprintf("whatever/private/data/questions/%s.yaml", name)
+		file, _ := os.Open(filename)
+		raw, _ := io.ReadAll(file)
+
+		var questions []Riddle
+		_ = yaml.Unmarshal(raw, &questions)
+
+		// convert to json
+		raw, _ = json.Marshal(questions)
+		w.Header().Add("Content-Type", "application/json")
+		_, _ = w.Write(raw)
+	})
+
 	// default
 	mux.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
 		filename := "whatever/public/index.html"
