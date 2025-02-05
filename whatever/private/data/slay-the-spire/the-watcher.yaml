@@ -1,0 +1,88 @@
+- name: S
+  cards:
+    - Cut Through Fate
+    - Empty Fist
+    - Flurry of Blows
+    - Foresight
+    - Just Lucky
+    - Lessons Learned
+    - Meditate
+    - Omniscience
+    - Rushdown
+    - Sands of Time
+    - Scrawl
+    - Talk to the Hand
+    - Vault
+- name: A
+  cards:
+    - Blasphemy
+    - Collect
+    - Crescendo
+    - Crush Joints
+    - Deceive Reality
+    - Empty Mind
+    - Establishment
+    - Fear No Evil
+    - Follow-Up
+    - Indignation
+    - Inner Peace
+    - Mental Fortress
+    - Simmering Fury
+    - Tantrum
+    - Third Eye
+    - Tranquility
+    - Wave of the Hand
+    - Weave
+    - Wish
+- name: B
+  cards:
+    - Bowling Bash
+    - Brilliance
+    - Conclude
+    - Consecrate
+    - Deva Form
+    - Empty Body
+    - Fasting
+    - Flying Sleeves
+    - Halt
+    - Nirvana
+    - Protect
+    - Sanctity
+    - Sash Whip
+    - Spirit Shield
+    - Wallop
+    - Wheel Kick
+    - Windmill Strike
+
+- name: C
+  cards:
+    - Deus Ex Machina
+    - Devotion
+    - Eruption
+    - Evaluate
+    - Foreign Influence
+    - Like Water
+    - Perseverance
+    - Prostrate
+    - Ragnarok
+    - Reach Heaven
+    - Swivel
+    - Vigilance
+    - Worship
+- name: D
+  cards:
+    - Battle Hymn
+    - Carve Reality
+    - Conjure Blade
+    - Judgement
+    - Strike
+    - Wreath of Flame
+- name: F
+  cards:
+    - Alpha
+    - Defend
+    - Master Reality
+    - Pray
+    - Pressure Points
+    - Signature Move
+    - Study

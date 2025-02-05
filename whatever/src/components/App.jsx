@@ -6,7 +6,8 @@ import GameOver from "./GameOver";
 import One from "./One";
 import Two from "./Two";
 import SlayTheSpire from "./SlayTheSpire";
-import Ironclad from "./Ironclad";
+import Ironclad from "./TierList";
+import TierList from "./TierList";
 
 
 
@@ -21,7 +22,8 @@ export default function App() {
           <Route path="/one" element={<One />}/>
           <Route path="/two" element={<Two />}/>
           <Route path="/slay-the-spire" element={<SlayTheSpire />}/>
-          <Route path="/ironclad" element={<Ironclad />}/>
+          <Route path="/ironclad" element={<TierList id="ironclad" name="Ironclad" />}/>
+          <Route path="/the-watcher" element={<TierList id="the-watcher" name="The Watcher" />}/>
           <Route path="/gameover" element={<GameOver />}/>
         </Routes>
       </Router>

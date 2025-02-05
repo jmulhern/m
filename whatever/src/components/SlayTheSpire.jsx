@@ -9,18 +9,27 @@ const SlayTheSpire = () => {
                 href="/ironclad"
                 target="_self"
                 rel="noopener noreferrer"
-                className="mt-8 text-white font-bold underline hover:text-red-400"
+                className="mt-4 text-white font-bold underline hover:text-red-400"
             >
                 Ironclad
             </a>
 
             <a
-                href="/"
+                href="/the-watcher"
+                target="_self"
+                rel="noopener noreferrer"
+                className="mt-4 text-white font-bold underline hover:text-purple-400"
+            >
+                The Watcher
+            </a>
+
+            <a
+                href="/two"
                 target="_self"
                 rel="noopener noreferrer"
                 className="mt-8  text-white font-bold underline"
             >
-                bye
+                back
             </a>
         </div>
     );

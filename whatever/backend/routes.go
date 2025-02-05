@@ -83,6 +83,22 @@ func Routes() *http.ServeMux {
 		w.Header().Add("Content-Type", "application/json")
 		_, _ = w.Write(raw)
 	})
+	mux.HandleFunc("GET /api/slay_the_spire/{name}", func(w http.ResponseWriter, r *http.Request) {
+		name := r.PathValue("name")
+
+		// read from yaml
+		filename := fmt.Sprintf("whatever/private/data/slay-the-spire/%s.yaml", name)
+		file, _ := os.Open(filename)
+		raw, _ := io.ReadAll(file)
+
+		var tiers []Tier
+		_ = yaml.Unmarshal(raw, &tiers)
+
+		// convert to json
+		raw, _ = json.Marshal(tiers)
+		w.Header().Add("Content-Type", "application/json")
+		_, _ = w.Write(raw)
+	})
 
 	// default
 	mux.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {

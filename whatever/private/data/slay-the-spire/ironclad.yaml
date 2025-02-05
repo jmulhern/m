@@ -1,0 +1,85 @@
+- name: S
+  cards:
+  - Corruption
+  - Feed
+  - Immolate
+  - Offering
+- name: A
+  cards:
+    - Battle Trance
+    - Dark Embrace
+    - Disarm
+    - Feel No Pain
+    - Flame Barrier
+    - Impervious
+    - Pommel Strike
+    - Reaper
+    - Shockwave
+    - Shrug It Off
+    - Spot Weakness
+- name: B
+  cards:
+    - Anger
+    - Barricade
+    - Blood for Blood
+    - Bloodletting
+    - Brutality
+    - Burning Pact
+    - Carnage
+    - Demon Form
+    - Evolve
+    - Exhume
+    - Fiend Fire
+    - Ghostly Armor
+    - Headbutt
+    - Inflame
+    - Limit Break
+    - Power Through
+    - Second Wind
+    - Seeing Red
+    - True Grit
+    - Uppercut
+    - Whirlwind
+- name: C
+  cards:
+    - Armaments
+    - Bludgeon
+    - Body Slam
+    - Cleave
+    - Clothesline
+    - Combust
+    - Dropkick
+    - Dual Wield
+    - Entrench
+    - Heavy Blade
+    - Hemokinesis
+    - Intimidate
+    - Pummel
+    - Sentinel
+    - Sword Boomerang
+    - Twin Strike
+- name: D
+  cards:
+    - Berserk
+    - Double Tap
+    - Fire Breathing
+    - Flex
+    - Havoc
+    - Infernal Blade
+    - Iron Wave
+    - Juggernaut
+    - Metallicize
+    - Perfected Strike
+    - Rage
+    - Rampage
+    - Reckless Charge
+    - Rupture
+    - Thunderclap
+    - Warcry
+    - Wild Strike
+- name: F
+  cards:
+    - Clash
+    - Searing Blow
+    - Sever Soul
+
