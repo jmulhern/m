@@ -5,6 +5,7 @@ const Questions = () => {
     const navigate = useNavigate();
     const [questions, setQuestions] = useState([]); // Stores the question data
     const [loading, setLoading] = useState(true); // Tracks loading state
+    const [answerStatuses, setAnswerStatuses] = useState({}); // Tracks answer statuses
 
     // Fetch question data from the API
     useEffect(() => {
@@ -27,68 +28,110 @@ const Questions = () => {
     }, []);
 
     // Handle click on a possible answer
-    const handleTextClick = (chosenAnswer, correctAnswer) => {
-        if (chosenAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+    const handleTextClick = (chosenAnswer, correctAnswer, questionIndex) => {
+        const isCorrect = chosenAnswer.toLowerCase() === correctAnswer.toLowerCase();
+        setAnswerStatuses((prevStatuses) => ({
+            ...prevStatuses,
+            [questionIndex]: isCorrect ? "correct" : "incorrect",
+        }));
+
+        if (isCorrect) {
             console.log("correct");
         } else {
             console.log("wrong");
         }
     };
 
+    // Handle reset of all answers
+    const handleReset = () => {
+        setAnswerStatuses({});
+    };
+
     if (loading) {
         return (
-            <div className="flex items-center justify-center h-screen bg-gray-900">
-                <h1 className="text-white text-xl">Loading...</h1>
+            <div className="flex items-center justify-center min-h-screen bg-gray-900">
+                <h1 className="text-white text-2xl">Loading...</h1>
             </div>
         );
     }
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 mt-4 px-4">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 pt-4 px-4">
             <div className="w-full max-w-3xl">
                 {/* Loop over questions and render them */}
-                {questions.map((question, index) => (
-                    <div
-                        key={index}
-                        className="mb-8 bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700"
-                    >
-                        {/* Display the question text */}
-                        <h2 className="text-white text-2xl font-semibold mb-5">
-                            Question {index + 1}
-                        </h2>
-                        <h2 className="text-gray-200 text-xl font-semibold mb-5">
-                            {question.question}
-                        </h2>
+                {questions.map((question, index) => {
+                    // Determine the card's text color based on answer status
+                    let cardTextColor = "text-gray-200";
+                    if (answerStatuses[index] === "correct") {
+                        cardTextColor = "text-green-400";
+                    } else if (answerStatuses[index] === "incorrect") {
+                        cardTextColor = "text-red-400";
+                    }
 
-                        {/* Loop over the possible answers */}
-                        <div className="space-y-3">
-                            {question["possible_answers"].map((answer, idx) => (
-                                <button
-                                    key={idx}
-                                    onClick={() =>
-                                        handleTextClick(answer, question["answer"])
-                                    }
-                                    className="w-full text-left hover:text-blue-300 text-gray-200 font-medium py-3 px-4 rounded transition duration-200"
-                                >
-                                    {String.fromCharCode(65 + idx)}. {answer}
-                                </button>
-                            ))}
+                    return (
+                        <div
+                            key={index}
+                            className={`mb-8 bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 transition-colors duration-300 ${
+                                answerStatuses[index] === "correct"
+                                    ? "border-green-500"
+                                    : answerStatuses[index] === "incorrect"
+                                        ? "border-red-500"
+                                        : ""
+                            }`}
+                        >
+                            {/* Display the question number */}
+                            <h2 className={`text-2xl font-semibold mb-2 ${cardTextColor}`}>
+                                Question {index + 1}
+                            </h2>
+                            {/* Display the question text */}
+                            <h3 className={`text-xl font-semibold mb-5 ${cardTextColor}`}>
+                                {question.question}
+                            </h3>
+
+                            {/* Loop over the possible answers */}
+                            <div className="space-y-3">
+                                {question["possible_answers"].map((answer, idx) => (
+                                    <button
+                                        key={idx}
+                                        onClick={() =>
+                                            handleTextClick(answer, question["answer"], index)
+                                        }
+                                        disabled={answerStatuses.hasOwnProperty(index)} // Disable buttons if already answered
+                                        className={`w-full text-left font-medium py-3 px-4 rounded transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 ${
+                                            answerStatuses[index] === "correct"
+                                                ? "bg-green-600 hover:bg-green-700 text-white"
+                                                : answerStatuses[index] === "incorrect" && answer === question["answer"]
+                                                    ? "bg-green-600 text-white"
+                                                    : answerStatuses[index] === "incorrect"
+                                                        ? "bg-red-600 hover:bg-red-700 text-white"
+                                                        : "bg-blue-600 hover:bg-blue-700 text-white"
+                                        }`}
+                                    >
+                                        {String.fromCharCode(65 + idx)}. {answer}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
 
-                {/* Navigation button */}
-                <div className="m-6">
+                {/* Action Buttons */}
+                <div className="flex justify-between m-6">
+                    <button
+                        onClick={handleReset}
+                        className="text-white text-lg font-bold bg-yellow-500 hover:bg-yellow-600 py-2 px-4 rounded"
+                    >
+                        Reset
+                    </button>
                     <button
                         onClick={() => navigate("/")}
-                        className="text-white text-lg font-bold hover:text-gray-300"
+                        className="text-white text-lg font-bold bg-purple-500 hover:bg-purple-600 py-2 px-4 rounded"
                     >
                         Go Back
                     </button>
                 </div>
             </div>
         </div>
-
     );
 };
 

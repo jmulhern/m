@@ -13,3 +13,11 @@
     - Adding more RAM capacity to an EC2 instance.
     - Adding more EC2 instances of the same size to handle an increase in traffic.
   answer: Adding more EC2 instances of the same size to handle an increase in traffic.
+
+- question: You have noticed that several critical Amazon EC2 instances have been terminated. Which of the following AWS services would help you determine who took this action?
+  possible-answers:
+  - Amazon Inspector.
+  - AWS CloudTrail.
+  - AWS Trusted Advisor.
+  - EC2 Instance Usage Report.
+  answer: AWS CloudTrail.
