@@ -1,18 +1,18 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 
 const Home = () => {
+    const navigate = useNavigate();
     return (
         <div className="flex items-center justify-center h-screen bg-gray-900 text-white">
             <div className="font-bold text-6xl">
                 whatever
-                <a
-                    href="/one"
-                    target="_self"
-                    rel="noopener noreferrer"
-                    className="text-white underline"
+                <button
+                    onClick={() => navigate("/one")}
+                    className="mt-6 text-white text-6xl font-bold hover:text-gray-900"
                 >
                     .
-                </a>
+                </button>
             </div>
         </div>
     );

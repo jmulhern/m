@@ -1,36 +1,41 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const SlayTheSpire = () => {
+    const navigate = useNavigate();
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
-            <h1 className="text-3xl font-bold mb-8">Slay the Spire</h1>
-            <a
-                href="/ironclad"
-                target="_self"
-                rel="noopener noreferrer"
+            <h1 className="text-3xl font-bold">Slay the Spire</h1>
+
+            <button
+                onClick={() => navigate("/ironclad")}
                 className="mt-4 text-white font-bold underline hover:text-red-400"
             >
                 Ironclad
-            </a>
+            </button>
 
-            <a
-                href="/the-watcher"
-                target="_self"
-                rel="noopener noreferrer"
+            <button
+                onClick={() => navigate("/the-watcher")}
                 className="mt-4 text-white font-bold underline hover:text-purple-400"
             >
                 The Watcher
-            </a>
+            </button>
 
-            <a
-                href="/two"
-                target="_self"
-                rel="noopener noreferrer"
-                className="mt-8  text-white font-bold underline"
+            <button
+                onClick={() => navigate("/relic")}
+                className="mt-4 text-white font-bold underline hover:text-orange-400"
             >
-                back
-            </a>
+                Relic
+            </button>
+
+            <button
+                onClick={() => navigate("/two")}
+                className="mt-6 text-white text-6xl font-bold hover:text-gray-900"
+            >
+                .
+            </button>
+
         </div>
     );
 };

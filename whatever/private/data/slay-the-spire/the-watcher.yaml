@@ -1,5 +1,5 @@
 - name: S
-  cards:
+  items:
     - Cut Through Fate
     - Empty Fist
     - Flurry of Blows
@@ -14,7 +14,7 @@
     - Talk to the Hand
     - Vault
 - name: A
-  cards:
+  items:
     - Blasphemy
     - Collect
     - Crescendo
@@ -35,7 +35,7 @@
     - Weave
     - Wish
 - name: B
-  cards:
+  items:
     - Bowling Bash
     - Brilliance
     - Conclude
@@ -55,7 +55,7 @@
     - Windmill Strike
 
 - name: C
-  cards:
+  items:
     - Deus Ex Machina
     - Devotion
     - Eruption
@@ -70,7 +70,7 @@
     - Vigilance
     - Worship
 - name: D
-  cards:
+  items:
     - Battle Hymn
     - Carve Reality
     - Conjure Blade
@@ -78,7 +78,7 @@
     - Strike
     - Wreath of Flame
 - name: F
-  cards:
+  items:
     - Alpha
     - Defend
     - Master Reality

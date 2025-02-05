@@ -66,14 +66,12 @@ const One = () => {
                 ))}
             </div>
 
-            <a
-                href="/"
-                target="_self"
-                rel="noopener noreferrer"
-                className="text-white font-bold underline"
+            <button
+                onClick={() => navigate("/")}
+                className="mt-6 text-white text-6xl font-bold hover:text-gray-900"
             >
-                bye
-            </a>
+                .
+            </button>
         </div>
     );
 };

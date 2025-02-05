@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 const TierList = ({id, name}) => {
+    const navigate = useNavigate();
+
     const tierColor = {
         S: "bg-blue-500",
         A: "bg-red-500",
@@ -58,21 +61,21 @@ const TierList = ({id, name}) => {
                     <thead className="bg-gray-700 text-gray-300">
                     <tr>
                         <th className="px-2 py-2 border border-gray-600">Tier</th>
-                        <th className="px-2 py-2 border border-gray-600">Cards</th>
+                        <th className="px-2 py-2 border border-gray-600"></th>
                     </tr>
                     </thead>
                     <tbody>
-                    {tierData.map((row, index) => (
-                        <tr key={index} className={tierColor[row.name]}>
-                            <td className="px-2 py-2">{row.name}</td>
+                    {tierData.map((tier) => (
+                        <tr key={tier} className={tierColor[tier.name]}>
+                            <td className="px-2 py-2">{tier.name}</td>
                             <td className="px-2 py-2">
                                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
-                                    {row.cards.map((cardName, cardIndex) => (
+                                    {tier.items.map((itemName) => (
                                         <div
-                                            key={cardIndex}
+                                            key={itemName}
                                             className="relative flex flex-col"
                                         >
-                                            {cardName}
+                                            {itemName}
                                         </div>
                                     ))}
                                 </div>
@@ -82,14 +85,12 @@ const TierList = ({id, name}) => {
                     </tbody>
                 </table>
             </div>
-            <a
-                href="/slay-the-spire"
-                target="_self"
-                rel="noopener noreferrer"
-                className="mt-8  text-white font-bold underline"
+            <button
+                onClick={() => navigate("/slay-the-spire")}
+                className="mt-6 text-white text-6xl font-bold hover:text-gray-900"
             >
-                back
-            </a>
+                .
+            </button>
         </div>
     );
 };

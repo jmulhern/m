@@ -1,11 +1,11 @@
 - name: S
-  cards:
+  items:
   - Corruption
   - Feed
   - Immolate
   - Offering
 - name: A
-  cards:
+  items:
     - Battle Trance
     - Dark Embrace
     - Disarm
@@ -18,7 +18,7 @@
     - Shrug It Off
     - Spot Weakness
 - name: B
-  cards:
+  items:
     - Anger
     - Barricade
     - Blood for Blood
@@ -41,7 +41,7 @@
     - Uppercut
     - Whirlwind
 - name: C
-  cards:
+  items:
     - Armaments
     - Bludgeon
     - Body Slam
@@ -59,7 +59,7 @@
     - Sword Boomerang
     - Twin Strike
 - name: D
-  cards:
+  items:
     - Berserk
     - Double Tap
     - Fire Breathing
@@ -78,7 +78,7 @@
     - Warcry
     - Wild Strike
 - name: F
-  cards:
+  items:
     - Clash
     - Searing Blow
     - Sever Soul

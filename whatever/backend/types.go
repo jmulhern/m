@@ -9,5 +9,5 @@ type Riddle struct {
 
 type Tier struct {
 	Name  string   `yaml:"name" json:"name"`
-	Cards []string `yaml:"cards" json:"cards"`
+	Items []string `yaml:"items" json:"items"`
 }
