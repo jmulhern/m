@@ -21,3 +21,35 @@
   - AWS Trusted Advisor.
   - EC2 Instance Usage Report.
   answer: AWS CloudTrail.
+
+- question: Which statement is true regarding the AWS Shared Responsibility Model?
+  possible-answers:
+  - Responsibilities vary depending on the services used.
+  - Security of the IaaS services is the responsibility of AWS.
+  - Patching the guest OS is always the responsibility of AWS.
+  - Security of the managed services is the responsibility of the customer.
+  answer: Responsibilities vary depending on the services used.
+
+- question: You have set up consolidated billing for several AWS accounts. One of the accounts has purchased a number of reserved instances for 3 years. Which of the following is true regarding this scenario?
+  possible-answers:
+  - The Reserved Instance discounts can only be shared with the master account.
+  - All accounts can receive the hourly cost benefit of the Reserved Instances.
+  - The purchased instances will have better performance than On-demand instances.
+  - There are no cost benefits from using consolidated billing; It is for informational purposes only.
+  answer: All accounts can receive the hourly cost benefit of the Reserved Instances.
+
+- question: A company has developed an eCommerce web application in AWS. What should they do to ensure that the application has the highest level of availability?
+  possible-answers:
+  - Deploy the application across multiple Availability Zones and Edge locations.
+  - Deploy the application across multiple Availability Zones and subnets.
+  - Deploy the application across multiple Regions and Availability Zones.
+  - Deploy the application across multiple VPC's and subnets.
+  answer: Deploy the application across multiple Regions and Availability Zones.
+
+- question: A company has an AWS Enterprise Support plan. They want quick and efficient guidance with their billing and account inquiries. Which of the following should the company use?
+  possible-answers:
+    - AWS Health Dashboard.
+    - AWS Support Concierge.
+    - AWS Customer Service.
+    - AWS Operations Support.
+  answer: AWS Support Concierge.

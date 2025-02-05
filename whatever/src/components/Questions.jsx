@@ -99,12 +99,12 @@ const Questions = () => {
                                         disabled={answerStatuses.hasOwnProperty(index)} // Disable buttons if already answered
                                         className={`w-full text-left font-medium py-3 px-4 rounded transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 ${
                                             answerStatuses[index] === "correct"
-                                                ? "bg-green-600 hover:bg-green-700 text-white"
+                                                ? "bg-green-600  text-white"
                                                 : answerStatuses[index] === "incorrect" && answer === question["answer"]
                                                     ? "bg-green-600 text-white"
                                                     : answerStatuses[index] === "incorrect"
-                                                        ? "bg-red-600 hover:bg-red-700 text-white"
-                                                        : "bg-blue-600 hover:bg-blue-700 text-white"
+                                                        ? "bg-red-600 text-white"
+                                                        : "hover:text-blue-400 text-white"
                                         }`}
                                     >
                                         {String.fromCharCode(65 + idx)}. {answer}
@@ -119,15 +119,9 @@ const Questions = () => {
                 <div className="flex justify-between m-6">
                     <button
                         onClick={handleReset}
-                        className="text-white text-lg font-bold bg-yellow-500 hover:bg-yellow-600 py-2 px-4 rounded"
+                        className="text-white text-lg font-bold bg-yellow-600 hover:bg-yellow-700 py-2 px-4 rounded"
                     >
                         Reset
-                    </button>
-                    <button
-                        onClick={() => navigate("/")}
-                        className="text-white text-lg font-bold bg-purple-500 hover:bg-purple-600 py-2 px-4 rounded"
-                    >
-                        Go Back
                     </button>
                 </div>
             </div>
