@@ -104,7 +104,7 @@ const Questions = () => {
                                                     ? "bg-green-600 text-white"
                                                     : answerStatuses[index] === "incorrect"
                                                         ? "bg-red-600 text-white"
-                                                        : "hover:text-blue-400 text-white"
+                                                        : "bg-blue-600 hover:bg-blue-700 text-white"
                                         }`}
                                     >
                                         {String.fromCharCode(65 + idx)}. {answer}
