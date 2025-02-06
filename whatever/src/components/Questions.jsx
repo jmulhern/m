@@ -187,7 +187,7 @@ const Questions = () => {
                             } else {
                                 buttonClass += isSelected
                                     ? "bg-blue-600 text-white "
-                                    : "bg-gray-600 hover:bg-blue-600 text-white ";
+                                    : "bg-gray-600 text-white ";
                             }
 
                             return (
@@ -214,7 +214,7 @@ const Questions = () => {
                         className={`w-full py-3 sm:py-4 rounded-lg text-white font-bold ${
                             selectedAnswers.length === 0
                                 ? "bg-gray-500 cursor-not-allowed"
-                                : "bg-orange-600 hover:bg-orange-700"
+                                : "bg-orange-600"
                         } transition-colors duration-200`}
                     >
                         Submit
