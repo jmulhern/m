@@ -6,18 +6,29 @@ const Questions = () => {
     const [questions, setQuestions] = useState([]); // Stores the question data
     const [loading, setLoading] = useState(true); // Tracks loading state
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // Tracks current question
-    const [answerStatus, setAnswerStatus] = useState(null); // Tracks current question's answer status
+    const [selectedAnswers, setSelectedAnswers] = useState([]); // Tracks selected answers
+    const [answerStatus, setAnswerStatus] = useState({}); // Tracks submission status
+    const [isSubmitted, setIsSubmitted] = useState(false); // Tracks if the user has submitted answers
 
     // Fetch question data from the API
     useEffect(() => {
         const fetchQuestions = async () => {
             try {
-                const response = await fetch("/api/questions/aws-practice-exam-01"); // Call API endpoint
+                const response = await fetch("/api/questions/aws-practice-exam"); // Call API endpoint
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const data = await response.json(); // Parse the response as JSON
-                setQuestions(data); // Set questions or empty array if undefined
+
+                // Rename 'answer' to 'correct_answers' and ensure it's always an array
+                const processedData = data.map((question) => ({
+                    ...question,
+                    correct_answers: Array.isArray(question.correct_answers)
+                        ? question.correct_answers
+                        : [question.correct_answers],
+                }));
+
+                setQuestions(processedData); // Set processed questions
                 setLoading(false);
             } catch (error) {
                 console.error("Error fetching questions:", error);
@@ -29,28 +40,51 @@ const Questions = () => {
     }, []);
 
     // Handle click on a possible answer
-    const handleTextClick = (chosenAnswer, correctAnswer) => {
-        const isCorrect = chosenAnswer.toLowerCase() === correctAnswer.toLowerCase();
-        setAnswerStatus(isCorrect ? "correct" : "incorrect");
+    const handleTextClick = (chosenAnswer) => {
+        if (isSubmitted) return; // Prevent changes after submission
 
-        if (isCorrect) {
-            console.log("correct");
+        if (selectedAnswers.includes(chosenAnswer)) {
+            // Deselect the answer
+            setSelectedAnswers(selectedAnswers.filter((answer) => answer !== chosenAnswer));
         } else {
-            console.log("wrong");
+            // Select the answer
+            setSelectedAnswers([...selectedAnswers, chosenAnswer]);
         }
+    };
+
+    // Handle submit of selected answers
+    const handleSubmit = () => {
+        const correctAnswers = currentQuestion.correct_answers.map((ans) => ans.toLowerCase());
+        const selected = selectedAnswers.map((ans) => ans.toLowerCase());
+
+        // Check if selected answers match the correct answers
+        const isCorrect =
+            selected.length === correctAnswers.length &&
+            selected.every((ans) => correctAnswers.includes(ans));
+
+        setAnswerStatus({
+            isCorrect,
+            correct_answers: currentQuestion.correct_answers,
+        });
+
+        setIsSubmitted(true);
     };
 
     // Handle reset of the quiz
     const handleReset = () => {
         setCurrentQuestionIndex(0);
-        setAnswerStatus(null);
+        setSelectedAnswers([]);
+        setAnswerStatus({});
+        setIsSubmitted(false);
     };
 
     // Handle continue to next question
     const handleContinue = () => {
         if (currentQuestionIndex < questions.length - 1) {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
-            setAnswerStatus(null);
+            setSelectedAnswers([]);
+            setAnswerStatus({});
+            setIsSubmitted(false);
         } else {
             // Optionally, navigate to a results page or show a completion message
             navigate("/");
@@ -79,9 +113,9 @@ const Questions = () => {
 
     // Determine the card's text color based on answer status
     let cardTextColor = "text-gray-200";
-    if (answerStatus === "correct") {
+    if (answerStatus.isCorrect) {
         cardTextColor = "text-green-400";
-    } else if (answerStatus === "incorrect") {
+    } else if (answerStatus.isCorrect === false) {
         cardTextColor = "text-red-400";
     }
 
@@ -91,11 +125,11 @@ const Questions = () => {
                 {/* Current Question Card */}
                 <div
                     className={`mb-8 bg-gray-800 p-6 rounded-lg shadow-lg border transition-colors duration-300 ${
-                        answerStatus === "correct"
-                            ? "border-green-500"
-                            : answerStatus === "incorrect"
-                                ? "border-red-500"
-                                : "border-gray-700"
+                        isSubmitted
+                            ? answerStatus.isCorrect
+                                ? "border-green-500"
+                                : "border-red-500"
+                            : "border-gray-700"
                     }`}
                 >
                     {/* Display the question number */}
@@ -109,34 +143,57 @@ const Questions = () => {
 
                     {/* Loop over the possible answers */}
                     <div className="space-y-3">
-                        {currentQuestion["possible_answers"].map((answer, idx) => (
-                            <button
-                                key={idx}
-                                onClick={() => handleTextClick(answer, currentQuestion["answer"])}
-                                disabled={answerStatus !== null} // Disable buttons if already answered
-                                className={`w-full text-left font-medium py-3 px-4 rounded transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 ${
-                                    answerStatus === "correct"
-                                        ? "bg-green-600 text-white"
-                                        : answerStatus === "incorrect" && answer === currentQuestion["answer"]
-                                            ? "bg-green-600 text-white"
-                                            : answerStatus === "incorrect"
-                                                ? "bg-red-600 text-white"
-                                                : "bg-blue-600 hover:bg-blue-700 text-white"
-                                }`}
-                            >
-                                {String.fromCharCode(65 + idx)}. {answer}
-                            </button>
-                        ))}
+                        {currentQuestion.possible_answers.map((answer, idx) => {
+                            const isSelected = selectedAnswers.includes(answer);
+                            let buttonClass =
+                                "w-full text-left font-medium py-3 px-4 rounded transition duration-200 ";
+
+                            if (isSubmitted) {
+                                const isAnswerCorrect = currentQuestion.correct_answers.includes(answer);
+                                if (isAnswerCorrect) {
+                                    buttonClass += "bg-green-600 text-white ";
+                                } else if (isSelected && !isAnswerCorrect) {
+                                    buttonClass += "bg-red-600 text-white ";
+                                } else {
+                                    buttonClass += "bg-gray-600 text-white ";
+                                }
+                            } else {
+                                buttonClass += isSelected
+                                    ? "bg-blue-600 text-white "
+                                    : "bg-gray-600 hover:bg-blue-600 text-white ";
+                            }
+
+                            return (
+                                <button
+                                    key={idx}
+                                    onClick={() => handleTextClick(answer)}
+                                    disabled={isSubmitted} // Disable buttons after submission
+                                    className={buttonClass}
+                                >
+                                    {String.fromCharCode(65 + idx)}. {answer}
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
 
                 {/* Action Buttons */}
                 <div className="flex justify-start m-6 w-full max-w-3xl space-x-4">
-                    {/* Continue Button - Visible after answering */}
-                    {answerStatus && (
+                    {/* Submit Button - Visible when at least one answer is selected and not yet submitted */}
+                    {!isSubmitted && selectedAnswers.length > 0 && (
+                        <button
+                            onClick={handleSubmit}
+                            className="text-white text-lg font-bold bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded"
+                        >
+                            Submit
+                        </button>
+                    )}
+
+                    {/* Continue Button - Visible after submission */}
+                    {isSubmitted && (
                         <button
                             onClick={handleContinue}
-                            className="text-white text-lg font-bold bg-green-600 hover:bg-green-700 py-2 px-4 rounded"
+                            className="text-white text-lg font-bold bg-green-500 hover:bg-green-700 py-2 px-4 rounded"
                         >
                             Continue
                         </button>
@@ -147,7 +204,7 @@ const Questions = () => {
                         onClick={handleReset}
                         className="text-white text-lg font-bold bg-yellow-600 hover:bg-yellow-700 py-2 px-4 rounded"
                     >
-                        Start Over
+                        Reset
                     </button>
                 </div>
             </div>

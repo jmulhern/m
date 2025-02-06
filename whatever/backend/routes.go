@@ -5,9 +5,11 @@ import (
 	"fmt"
 	"gopkg.in/yaml.v3"
 	"io"
+	"math/rand"
 	"net/http"
 	"os"
 	"strings"
+	"time"
 )
 
 func Routes() *http.ServeMux {
@@ -108,11 +110,23 @@ func Routes() *http.ServeMux {
 		file, _ := os.Open(filename)
 		raw, _ := io.ReadAll(file)
 
-		var questions []Riddle
-		_ = yaml.Unmarshal(raw, &questions)
+		var assessments []Assessment
+		_ = yaml.Unmarshal(raw, &assessments)
+
+		var questions []any
+		for _, assessment := range assessments {
+			possibleAnswers := append(assessment.Detractors, assessment.CorrectAnswers...)
+			shuffleStrings(possibleAnswers)
+			questions = append(questions, map[string]any{
+				"question":         assessment.Question,
+				"possible_answers": possibleAnswers,
+				"correct_answers":  assessment.CorrectAnswers,
+			})
+		}
+		shuffle(questions)
 
 		// convert to json
-		raw, _ = json.Marshal(questions)
+		raw, _ = json.Marshal(questions[:25])
 		w.Header().Add("Content-Type", "application/json")
 		_, _ = w.Write(raw)
 	})
@@ -129,4 +143,21 @@ func Routes() *http.ServeMux {
 		_, _ = w.Write(raw)
 	})
 	return mux
+}
+
+func shuffle(slice []any) {
+	rand.Seed(int64(time.Now().Hour()))
+
+	for i := len(slice) - 1; i > 0; i-- {
+		j := rand.Intn(i + 1)
+		slice[i], slice[j] = slice[j], slice[i]
+	}
+}
+func shuffleStrings(slice []string) {
+	rand.Seed(time.Now().Unix())
+
+	for i := len(slice) - 1; i > 0; i-- {
+		j := rand.Intn(i + 1)
+		slice[i], slice[j] = slice[j], slice[i]
+	}
 }
