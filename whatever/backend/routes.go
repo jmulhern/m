@@ -116,14 +116,14 @@ func Routes() *http.ServeMux {
 		var questions []any
 		for _, assessment := range assessments {
 			possibleAnswers := append(assessment.Detractors, assessment.CorrectAnswers...)
-			shuffleStrings(possibleAnswers)
+			shufflePossibleAnswers(possibleAnswers)
 			questions = append(questions, map[string]any{
 				"question":         assessment.Question,
 				"possible_answers": possibleAnswers,
 				"correct_answers":  assessment.CorrectAnswers,
 			})
 		}
-		shuffle(questions)
+		shuffleQuestions(questions)
 
 		// convert to json
 		raw, _ = json.Marshal(questions[:25])
@@ -145,7 +145,7 @@ func Routes() *http.ServeMux {
 	return mux
 }
 
-func shuffle(slice []any) {
+func shuffleQuestions(slice []any) {
 	rand.Seed(int64(time.Now().Hour()))
 
 	for i := len(slice) - 1; i > 0; i-- {
@@ -153,7 +153,7 @@ func shuffle(slice []any) {
 		slice[i], slice[j] = slice[j], slice[i]
 	}
 }
-func shuffleStrings(slice []string) {
+func shufflePossibleAnswers(slice []string) {
 	rand.Seed(time.Now().Unix())
 
 	for i := len(slice) - 1; i > 0; i-- {
