@@ -153,7 +153,7 @@
   - Store a backup daily in an external drive.
   - Prevent any unauthorized access to AWS data centers.
 
-- question: One of the most important AWS best-practices to follow is the cloud architecture principle of elasticity. How does this principle improve your architecture’s design?
+- question: One of the most important AWS best-practices to follow is the cloud architecture principle of elasticity. How does this principle improve your architecture's design?
   correct-answers:
   - By automatically provisioning the required AWS resources based on changes in demand.
   detractors:
@@ -219,7 +219,7 @@
   - Amazon Cognito.
   - AWS KMS.
 
-- question: A company is deploying a new two-tier web application in AWS. Where should the most frequently accessed data be stored so that the application’s response time is optimal?
+- question: A company is deploying a new two-tier web application in AWS. Where should the most frequently accessed data be stored so that the application's response time is optimal?
   correct-answers:
   - Amazon ElastiCache.
   detractors:
@@ -367,7 +367,7 @@
   - Recommendations for Cost Optimization.
   - A dashboard detailing vulnerabilities in your applications.
 
-- question: You have deployed your application on multiple Amazon EC2 instances. Your customers complain that sometimes they can’t reach your application. Which AWS service allows you to monitor the performance of your EC2 instances to assist in troubleshooting these issues?
+- question: You have deployed your application on multiple Amazon EC2 instances. Your customers complain that sometimes they can't reach your application. Which AWS service allows you to monitor the performance of your EC2 instances to assist in troubleshooting these issues?
   correct-answers:
   - Amazon CloudWatch.
   detractors:
@@ -390,7 +390,7 @@
   detractors:
   - Amazon S3 provides unlimited storage for any type of data.
   - Amazon S3 stores any number of objects, but with object size limits.
-  - Amazon S3 provides 99.999999999% (11 9’s) of data durability.
+  - Amazon S3 provides 99.999999999% (11 9's) of data durability.
 
 - question: In the AWS Shared responsibility Model, which of the following are the responsibility of the customer? (Choose TWO)
   correct-answers:
@@ -711,7 +711,7 @@
   - Edge locations are used by CloudFront to distribute traffic across multiple instances to reduce latency.
   detractors:
   - Edge locations are used by CloudFront to cache the most recent responses.
-  - Edge locations are used by CloudFront to improve your end users’ experience when uploading files.
+  - Edge locations are used by CloudFront to improve your end users' experience when uploading files.
   - Edge locations are used by CloudFront to distribute content to global users with low latency.
 
 - question: What are the change management tools that helps AWS customers audit and monitor all resource changes in their AWS environment? (Choose TWO)
@@ -764,7 +764,7 @@
   - Removing all of your Cost Allocation Tags.
   - Deploying your AWS resources across multiple Availability Zones.
 
-- question: What is the AWS service/feature that takes advantage of Amazon CloudFront’s globally distributed edge locations to transfer files to S3 with higher upload speeds?
+- question: What is the AWS service/feature that takes advantage of Amazon CloudFront's globally distributed edge locations to transfer files to S3 with higher upload speeds?
   correct-answers:
   - S3 Transfer Acceleration.
   detractors:
@@ -832,8 +832,6 @@
   - She has properly built an encrypted system.
   - She has properly built a scalable system.
 
-################################################################################################################################################################
-
 # Practice Exam 3 - https://github.com/kananinirav/AWS-Certified-Cloud-Practitioner-Notes/blob/master/practice-exam/practice-exam-3.md
 - question: Where can you store files in AWS? (Choose TWO)
   correct-answers:
@@ -852,1025 +850,821 @@
   - Amazon Simple Email Service.
   - Amazon Simple Storage Service.
 
-    #3. Which of the following describes the payment model that AWS makes available for customers that can commit to using Amazon EC2 over a one or 3-year term to reduce their total computing costs?
-    #    - A. Pay less as AWS grows.
-    #    - B. Pay as you go.
-    #    - C. Pay less by using more.
-    #    - D. Save when you reserve.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: D
-    #    </details>
-    #
-    #4. A company is migrating its on-premises database to Amazon RDS. What should the company do to ensure Amazon RDS costs are kept to a minimum?
-    #    - A. Right-size before and after migration.
-    #    - B. Use a Multi-Region Active-Passive architecture.
-    #    - C. Combine On-demand Capacity Reservations with Saving Plans.
-    #    - D. Use a Multi-Region Active-Active architecture.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A
-    #    </details>
-    #
-    #5. What is the primary storage service used by Amazon RDS database instances?
-    #    - A. Amazon Glacier.
-    #    - B. Amazon EBS.
-    #    - C. Amazon EFS.
-    #    - D. Amazon S3.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: B
-    #    </details>
-    #
-    #6. A company is developing a new application using a microservices framework. The new application is having performance and latency issues. Which AWS Service should be used to troubleshoot these issues?
-    #    - A. AWS CodePipeline.
-    #    - B. AWS X-Ray.
-    #    - C. Amazon Inspector.
-    #    - D. AWS CloudTrail.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: B
-    #    </details>
-    #
-    #7. Which of the following AWS services is designed with native Multi-AZ fault tolerance in mind? (Choose TWO)
-    #    - A. Amazon Redshift.
-    #    - B. AWS Snowball.
-    #    - C. Amazon Simple Storage Service.
-    #    - D. Amazon EBS.
-    #    - E. Amazon DynamoDB.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: C, E
-    #    </details>
-    #
-    #8. What are the Amazon RDS features that can be used to improve the availability of your database? (Choose TWO)
-    #    - A. AWS Regions.
-    #    - B. Multi-AZ Deployment.
-    #    - C. Automatic patching.
-    #    - D. Read Replicas.
-    #    - E. Edge Locations.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: B, D
-    #    </details>
-    #
-    #9. Sarah has deployed an application in the Northern California (us-west-1) region. After examining the application’s traffic, she notices that about 30% of the traffic is coming from Asia. What can she do to reduce latency for the users in Asia?
-    #    - A. Replicate the current resources across multiple Availability Zones within the same region.
-    #    - B. Migrate the application to a hosting provider in Asia.
-    #    - C. Recreate the website content.
-    #    - D. Create a CDN using CloudFront, so that content is cached at Edge Locations close to and in Asia.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: D
-    #    </details>
-    #
-    #10. An organization runs many systems and uses many AWS products. Which of the following services enables them to control how each developer interacts with these products?
-    #    - A. AWS Identity and Access Management.
-    #    - B. Amazon RDS.
-    #    - C. Network Access Control Lists.
-    #    - D. Amazon EMR.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A
-    #    </details>
-    #
-    #11. Using Amazon EC2 falls under which of the following cloud computing models?
-    #    - A. Iaas & SaaS.
-    #    - B. IaaS.
-    #    - C. SaaS.
-    #    - D. PaaS.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: B
-    #    </details>
-    #
-    #12. Which of the below is a best-practice when building applications on AWS?
-    #    - A. Strengthen physical security by applying the principle of least privilege.
-    #    - B. Ensure that the application runs on hardware from trusted vendors.
-    #    - C. Use IAM policies to maintain performance.
-    #    - D. Decouple the components of the application so that they run independently.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: D
-    #    </details>
-    #
-    #13. Your company is designing a new application that will store and retrieve photos and videos. Which of the following services should you recommend as the underlying storage mechanism?
-    #    - A. Amazon EBS.
-    #    - B. Amazon SQS.
-    #    - C. Amazon Instance store.
-    #    - D. Amazon S3.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: D
-    #    </details>
-    #
-    #14. Amazon Glacier is an Amazon S3 storage class that is suitable for storing [...] & [...]. (Choose TWO)
-    #    - A. Active archives.
-    #    - B. Dynamic websites’ assets.
-    #    - C. Long-term analytic data.
-    #    - D. Active databases.
-    #    - E. Cached data.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A, C
-    #    </details>
-    #
-    #15. What does Amazon Elastic Beanstalk provide?
-    #    - A. A PaaS solution to automate application deployment.
-    #    - B. A compute engine for Amazon ECS.
-    #    - C. A scalable file storage solution for use with AWS and on-premises servers.
-    #    - D. A NoSQL database service.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A
-    #    </details>
-    #
-    #16. What is the AWS service that performs automated network assessments of Amazon EC2 instances to check for vulnerabilities?
-    #    - A. Amazon Kinesis.
-    #    - B. Security groups.
-    #    - C. Amazon Inspector.
-    #    - D. AWS Network Access Control Lists.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: C
-    #    </details>
-    #
-    #17. Under the Shared Responsibility Model, which of the following controls do customers fully inherit from AWS? (Choose TWO)
-    #    - A. Patch management controls.
-    #    - B. Database controls.
-    #    - C. Awareness & Training.
-    #    - D. Environmental controls.
-    #    - E. Physical controls.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: D, E
-    #    </details>
-    #
-    #18. A company needs to host a database in Amazon RDS for at least three years. Which of the following options would be the most cost-effective solution?
-    #    - A. Reserved instances     - No Upfront.
-    #    - B. Reserved instances     - Partial Upfront.
-    #    - C. On-Demand instances.
-    #    - D. Spot Instances.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: B
-    #    </details>
-    #
-    #19. Your application has recently experienced significant global growth, and international users are complaining of high latency. What is the AWS characteristic that can help improve your international users’ experience?
-    #    - A. Elasticity.
-    #    - B. Global reach.
-    #    - C. Data durability.
-    #    - D. High availability.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: B
-    #    </details>
-    #
-    #20. Savings Plans are available for which of the following AWS compute services? (Choose TWO)
-    #    - A. AWS Batch.
-    #    - B. AWS Outposts.
-    #    - C. Amazon Lightsail.
-    #    - D. Amazon EC2.
-    #    - E. AWS Lambda.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: D, E
-    #    </details>
-    #
-    #21. A company has business critical workloads hosted on AWS and they are unwilling to accept any downtime. Which of the following is a recommended best practice to protect their workloads in the event of an unexpected natural disaster?
-    #    - A. Replicate data across multiple Edge Locations worldwide and use Amazon CloudFront to perform automatic failover in the event of an outage.
-    #    - B. Deploy AWS resources across multiple Availability Zones within the same AWS Region.
-    #    - C. Create point-in-time backups in another subnet and recover this data when a disaster occurs.
-    #    - D. Deploy AWS resources to another AWS Region and implement an Active-Active disaster recovery strategy.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: D
-    #    </details>
-    #
-    #22. Which statement is correct with regards to AWS service limits? (Choose TWO)
-    #    - A. You can contact AWS support to increase the service limits.
-    #    - B. Each IAM user has the same service limit.
-    #    - C. There are no service limits on AWS.
-    #    - D. You can use the AWS Trusted Advisor to monitor your service limits.
-    #    - E. The Amazon Simple Email Service is responsible for sending email notifications when usage approaches a service limit.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A, D
-    #    </details>
-    #
-    #23. What is the AWS tool that enables you to use scripts to manage all AWS services and resources?
-    #    - A. AWS Console.
-    #    - B. AWS Service Catalog.
-    #    - C. AWS OpsWorks.
-    #    - D. AWS CLI.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: D
-    #    </details>
-    #
-    #24. What are the connectivity options that can be used to build hybrid cloud architectures? (Choose TWO)
-    #    - A. AWS Artifact.
-    #    - B. AWS Cloud9.
-    #    - C. AWS Direct Connect.
-    #    - D. AWS CloudTrail.
-    #    - E. AWS VPN.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: C, E
-    #    </details>
-    #
-    #25. A company has deployed a new web application on multiple Amazon EC2 instances. Which of the following should they use to ensure that the incoming HTTP traffic is distributed evenly across the instances?
-    #    - A. AWS EC2 Auto Recovery.
-    #    - B. AWS Auto Scaling.
-    #    - C. AWS Network Load Balancer.
-    #    - D. AWS Application Load Balancer.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: D
-    #    </details>
-    #
-    #26. Which of the following AWS offerings is a MySQL-compatible relational database service that can scale capacity automatically based on demand?
-    #    - A. Amazon Neptune.
-    #    - B. Amazon Aurora.
-    #    - C. Amazon RDS for SQL Server.
-    #    - D. Amazon RDS for PostgreSQL.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: B
-    #    </details>
-    #
-    #27. Which of the following can help protect your EC2 instances from DDoS attacks? (Choose TWO)
-    #    - A. AWS CloudHSM.
-    #    - B. Security Groups.
-    #    - C. AWS Batch.
-    #    - D. AWS IAM.
-    #    - E. Network Access Control Lists (Network ACLs).
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: B, E
-    #    </details>
-    #
-    #28. What is the AWS data warehouse service that supports a high level of query performance on large amounts of datasets?
-    #    - A. Amazon Redshift.
-    #    - B. Amazon Kinesis.
-    #    - C. Amazon DynamoDB.
-    #    - D.  Amazon RDS.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A
-    #    </details>
-    #
-    #29. Which of the following should be considered when performing a TCO analysis to compare the costs of running an application on AWS instead of on-premises?
-    #    - A. Application development.
-    #    - B. Market research.
-    #    - C. Business analysis.
-    #    - D. Physical hardware.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: D
-    #    </details>
-    #
-    #30. How are AWS customers billed for Linux-based Amazon EC2 usage?
-    #    - A. EC2 instances will be billed on one second increments, with a minimum of one minute.
-    #    - B. EC2 instances will be billed on one hour increments, with a minimum of one day.
-    #    - C. EC2 instances will be billed on one minute increments, with a minimum of one hour.
-    #    - D. EC2 instances will be billed on one day increments, with a minimum of one month.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A
-    #    </details>
-    #
-    #31. Which of the following will impact the price paid for an EC2 instance? (Choose TWO)
-    #    - A. Instance type.
-    #    - B. The Availability Zone where the instance is provisioned.
-    #    - C. Load balancing.
-    #    - D. Number of buckets.
-    #    - E. Number of private IPs.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A, B
-    #    </details>
-    #
-    #32. A customer spent a lot of time configuring a newly deployed Amazon EC2 instance. After the workload increases, the customer decides to provision another EC2 instance with an identical configuration. How can the customer achieve this?
-    #    - A. By creating an AWS Config template from the old instance and launching a new instance from it.
-    #    - B. By creating an EBS Snapshot of the old instance.
-    #    - C. By installing Aurora on EC2 and launching a new instance from it.
-    #    - D. By creating an AMI from the old instance and launching a new instance from it.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: D
-    #    </details>
-    #
-    #33. A company uses AWS Organizations to manage all of its AWS accounts. Which of the following allows the company to restrict what services and actions are allowed in each individual account?
-    #    - A. IAM Principals.
-    #    - B. AWS Service Control Policies (SCPs).
-    #    - C. IAM policies.
-    #    - D. AWS Fargate.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: B
-    #    </details>
-    #
-    #34. Which of the following statements describes the AWS Cloud’s agility?
-    #    - A. AWS allows you to host your applications in multiple regions around the world.
-    #    - B. AWS provides customizable hardware at the lowest possible cost.
-    #    - C. AWS allows you to provision resources in minutes.
-    #    - D. AWS allows you to pay upfront to reduce costs.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: C
-    #    </details>
-    #
-    #35. What are the benefits of using the Amazon Relational Database Service? (Choose TWO)
-    #    - A. Lower administrative burden.
-    #    - B. Complete control over the underlying host.
-    #    - C. Resizable compute capacity.
-    #    - D. Scales automatically to larger or smaller instance types.
-    #    - E. Supports the document and key-value data structure.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A, C
-    #    </details>
-    #
-    #36. What is the connectivity option that uses Internet Protocol Security (IPSec) to establish encrypted connectivity between an on-premises network and the AWS Cloud?
-    #    - A. Internet Gateway.
-    #    - B. AWS IQ.
-    #    - C. AWS Direct Connect.
-    #    - D. AWS Site-to-Site VPN.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: D
-    #    </details>
-    #
-    #37. What is the minimum level of AWS support that provides 24x7 access to technical support engineers via phone and chat?
-    #    - A. Enterprise Support.
-    #    - B. Developer Support.
-    #    - C. Basic Support.
-    #    - D. Business Support.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: D
-    #    </details>
-    #
-    #38. Which of the following is used to control network traffic in AWS? (Choose TWO)
-    #    - A. Network Access Control Lists (NACLs).
-    #    - B. Key Pairs.
-    #    - C. Access Keys.
-    #    - D. IAM Policies.
-    #    - E. Security Groups.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A, E
-    #    </details>
-    #
-    #39. A company has developed a media transcoding application in AWS. The application is designed to recover quickly from hardware failures. Which one of the following types of instance would be the most cost-effective choice to use?
-    #    - A. Reserved instances.
-    #    - B. Spot Instances.
-    #    - C. On-Demand instances.
-    #    - D. Dedicated instances.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: B
-    #    </details>
-    #
-    #40. Which AWS Service provides the current status of all AWS Services in all AWS Regions?
-    #    - A. AWS Service Health Dashboard.
-    #    - B. AWS Management Console.
-    #    - C. Amazon CloudWatch.
-    #    - D. AWS Personal Health Dashboard.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A
-    #    </details>
-    #
-    #41. Which AWS service or feature can be used to call AWS Services from different programming languages?
-    #    - A. AWS Software Development Kit.
-    #    - B. AWS Command Line Interface.
-    #    - C. AWS CodeDeploy.
-    #    - D. AWS Management Console.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A
-    #    </details>
-    #
-    #42. Which AWS Service can be used to register a new domain name?
-    #    - A. Amazon Personalize.
-    #    - B. Amazon Route 53.
-    #    - C. AWS KMS.
-    #    - D. AWS Config.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: B
-    #    </details>
-    #
-    #43. App development companies move their business to AWS to reduce time-to-market and improve customer satisfaction, what are the AWS automation tools that help them deploy their applications faster? (Choose TWO)
-    #    - A. AWS CloudFormation.
-    #    - B. AWS Migration Hub.
-    #    - C. AWS IAM.
-    #    - D. AWS Elastic Beanstalk.
-    #    - E. Amazon Macie.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A, D
-    #    </details>
-    #
-    #44. Which AWS service provides cost-optimization recommendations?
-    #    - A. AWS Trusted Advisor.
-    #    - B. AWS Pricing Calculator.
-    #    - C. Amazon QuickSight.
-    #    - D. AWS X-Ray.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A
-    #    </details>
-    #
-    #45. A company has hundreds of VPCs in multiple AWS Regions worldwide. What service does AWS offer to simplify the connection management among the VPCs?
-    #    - A. VPC Peering.
-    #    - B. AWS Transit Gateway.
-    #    - C. Amazon Connect.
-    #    - D. Security Groups.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: B
-    #    </details>
-    #
-    #46. What is one benefit and one drawback of buying a reserved EC2 instance? (Select TWO)
-    #    - A. Instances can be shut down by AWS at any time with no notification.
-    #    - B. Reserved instances require at least a one-year pricing commitment.
-    #    - C. There is no additional charge for using dedicated instances.
-    #    - D. Reserved instances provide a significant discount compared to on-demand instances.
-    #    - E.Reserved instances are best suited for periodic workloads.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: B, D
-    #    </details>
-    #
-    #47. Why does every AWS Region contain multiple Availability Zones?
-    #    - A. Multiple Availability Zones allows you to build resilient and highly available architectures.
-    #    - B. Multiple Availability Zones results in lower total cost compared to deploying in a single Availability Zone.
-    #    - C. Multiple Availability Zones allows for data replication and global reach.
-    #    - D. Multiple Availability Zones within a region increases the storage capacity available in that region.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A
-    #    </details>
-    #
-    #48. What is the most cost-effective purchasing option for running a set of EC2 instances that must always be available for a period of two months?
-    #    - A. On-Demand Instances.
-    #    - B. Spot Instances.
-    #    - C. Reserved Instances     - All Upfront.
-    #    - D. Reserved Instances     - No Upfront.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: A
-    #    </details>
-    #
-    #49. Which of the following is a benefit of running an application in multiple Availability Zones?
-    #    - A. Allows you to exceed AWS service limits.
-    #    - B. Reduces application response time between servers and global users.
-    #    - C. Increases available compute capacity.
-    #    - D. Increases the availability of your application.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: D
-    #    </details>
-    #
-    #50. Data security is one of the top priorities of AWS. How does AWS deal with old storage devices that have reached the end of their useful life?
-    #    - A. AWS sells the old devices to other hosting providers.
-    #    - B. AWS destroys the old devices in accordance with industry-standard practices.
-    #    - C. AWS sends the old devices for remanufacturing.
-    #    - D. AWS stores the old devices in a secure place.
-    #
-    #    <details markdown=1><summary markdown='span'>Answer</summary>
-  #      Correct answer: B
-#    </details>
+- question: Which of the following describes the payment model that AWS makes available for customers that can commit to using Amazon EC2 over a one or 3-year term to reduce their total computing costs?
+  correct-answers:
+  - Save when you reserve.
+  detractors:
+  - Pay less as AWS grows.
+  - Pay as you go.
+  - Pay less by using more.
 
-###############################
+- question:  A company is migrating its on-premises database to Amazon RDS. What should the company do to ensure Amazon RDS costs are kept to a minimum?
+  correct-answers:
+  - Right-size before and after migration.
+  detractors:
+  - Use a Multi-Region Active-Passive architecture.
+  - Combine On-demand Capacity Reservations with Saving Plans.
+  - Use a Multi-Region Active-Active architecture.
 
-    # ---
-      #layout: exam
-      #---
-      #
-      ## Practice Exam 4
-      #
-      #1. A developer needs to set up an SSL security certificate for a client's eCommerce website in order to use the HTTPS protocol. Which of the following AWS services can be used to deploy the required SSL server certificates? (Choose TWO)
-      #    - A. Amazon Route 53.
-      #    - B. AWS ACM.
-      #    - C. AWS Directory Service.
-      #    - D. AWS Identity & Access Management.
-      #    - E. AWS Data Pipeline.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A, B
-      #    </details>
-      #
-      #2. Which of the following AWS services scale automatically without your intervention? (Choose TWO)
-      #    - A. Amazon EC2.
-      #    - B. Amazon S3.
-      #    - C. AWS Lambda.
-      #    - D. Amazon EMR.
-      #    - E. Amazon EBS.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: B, C
-      #    </details>
-      #
-      #3. A company is planning to migrate an application from Amazon EC2 to AWS Lambda to use a serverless architecture. Which of the following will be the responsibility of AWS after migration? (Choose TWO)
-      #    - A. Application management.
-      #    - B. Capacity management.
-      #    - C. Access control.
-      #    - D. Operating system maintenance.
-      #    - E. Data management.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: B, D
-      #    </details>
-      #
-      #4. How do ELBs improve the reliability of your application?
-      #    - A. By distributing traffic across multiple S3 buckets.
-      #    - B. By replicating data to multiple availability zones.
-      #    - C. By creating database Read Replicas.
-      #    - D. By ensuring that only healthy targets receive traffic.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: D
-      #    </details>
-      #
-      #5. A company needs to migrate their website from on-premises to AWS. Security is a major concern for them, so they need to host their website on hardware that is NOT shared with other AWS customers. Which of the following EC2 instance options meets this requirement?
-      #    - A. On-demand instances.
-      #    - B. Spot instances.
-      #    - C. Dedicated instances.
-      #    - D. Reserved instances.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #6. A customer is planning to move billions of images and videos to be stored on Amazon S3. The customer has approximately 60 Petabytes of data to move. Which of the following AWS Services is the best choice to transfer the data to AWS?
-      #    - A. Snowball.
-      #    - B. S3 Transfer Acceleration.
-      #    - C. Snowmobile.
-      #    - D. Amazon VPC.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #7. A company plans to migrate a large amount of archived data to AWS. The archived data must be maintained for a period of 5 years and must be retrievable within 5 hours of a request. What is the most cost-effective AWS storage service to use?
-      #    - A. Amazon S3 Glacier.
-      #    - B. Amazon EFS.
-      #    - C. Amazon S3 Standard.
-      #    - D. Amazon EBS.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A
-      #    </details>
-      #
-      #8. Which AWS Service is used to manage user permissions?
-      #    - A. Security Groups.
-      #    - B. Amazon ECS.
-      #    - C. AWS IAM.
-      #    - D. AWS Support.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #9. Which support plan includes AWS Support Concierge Service?
-      #    - A. Premium Support.
-      #    - B. Business Support.
-      #    - C. Enterprise Support.
-      #    - D. Standard Support.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #10. A company needs to track resource changes using the API call history. Which AWS service can help the company achieve this goal?
-      #    - A. AWS Config.
-      #    - B. Amazon CloudWatch.
-      #    - C. AWS CloudTrail.
-      #    - D. AWS CloudFormation.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #11. What are the benefits of using an AWS-managed service? (Choose TWO)
-      #    - A. Provides complete control over the virtual infrastructure.
-      #    - B. Allows customers to deliver new solutions faster.
-      #    - C. Lowers operational complexity.
-      #    - D. Eliminates the need to encrypt data.
-      #    - E. Allows developers to control all patching related activities.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: B, C
-      #    </details>
-      #
-      #12. Which of the following are use cases for Amazon S3? (Choose TWO)
-      #    - A. Hosting static websites.
-      #    - B. Hosting websites that require sustained high CPU utilization.
-      #    - C. Cost-effective database and log storage.
-      #    - D. A media store for the CloudFront service.
-      #    - E. Processing data streams at any scale.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A, D
-      #    </details>
-      #
-      #13. What is the AWS’ recommendation regarding access keys?
-      #    - A. Delete all access keys and use passwords instead.
-      #    - B. Only share them with trusted people.
-      #    - C. Rotate them regularly.
-      #    - D. Save them within your application code.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #14. What is the AWS IAM feature that provides an additional layer of security on top of user-name and password authentication?
-      #    - A. Key Pair.
-      #    - B. Access Keys.
-      #    - C. SDK.
-      #    - D. MFA.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: D
-      #    </details>
-      #
-      #15. What is the benefit of using an API to access AWS Services?
-      #    - A. It improves the performance of AWS resources.
-      #    - B. It reduces the time needed to provision AWS resources.
-      #    - C. It reduces the number of developers necessary.
-      #    - D. It allows for programmatic management of AWS resources.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: D
-      #    </details>
-      #
-      #16. A company is planning to migrate a database with high read/write activity to AWS. What is the best storage option to use?
-      #    - A. AWS Storage Gateway.
-      #    - B. Amazon S3.
-      #    - C. Amazon EBS.
-      #    - D. Amazon Glacier.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #17. How can AWS customers track and avoid over-spending on underutilized reserved instances?
-      #    - A. Customers can add all AWS accounts to an AWS Organization, enable Consolidated Billing, and turn off Reserved Instance sharing.
-      #    - B. Customers can use Amazon Neptune to track and analyze their usage patterns, detect underutilized reserved instances, and then sell them on the Amazon EC2 Reserved Instance Marketplace.
-      #    - C. Customers can use the AWS Budgets service to track the reserved instances usage and set up alert notifications when their utilization drops below the threshold that they define.
-      #    - D. Customers can use Amazon CloudTrail to automatically check for unused reservations and get recommendations to reduce their bill.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #18. What is the AWS service that provides five times the performance of a standard MySQL database?
-      #    - A. Amazon Aurora.
-      #    - B. Amazon Redshift.
-      #    - C. Amazon DynamoDB.
-      #    - D. Amazon Neptune.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A
-      #    </details>
-      #
-      #19. What does AWS Service Catalog provide?
-      #    - A. It enables customers to quickly find descriptions and use cases for AWS services.
-      #    - B. It enables customers to explore the different catalogs of AWS services.
-      #    - C. It simplifies organizing and governing commonly deployed IT services.
-      #    - D. It allows developers to deploy infrastructure on AWS using familiar programming languages.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #20. For managed services like Amazon DynamoDB, which of the below is AWS responsible for? (Choose TWO)
-      #    - A. Protecting credentials.
-      #    - B. Logging access activity.
-      #    - C. Patching the database software.
-      #    - D. Operating system maintenance.
-      #    - E. Creating access policies.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C, D
-      #    </details>
-      #
-      #21. Which of the following AWS Services helps with planning application migration to the AWS Cloud?
-      #    - A. AWS Snowball Migration Service.
-      #    - B. AWS Application Discovery Service.
-      #    - C. AWS DMS.
-      #    - D. AWS Migration Hub.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: B
-      #    </details>
-      #
-      #22. A company is trying to analyze the costs applied to their AWS account recently. Which of the following provides them the most granular data about their AWS costs and usage?
-      #    - A. Amazon Machine Image.
-      #    - B. AWS Cost Explorer.
-      #    - C. AWS Cost & Usage Report.
-      #    - D. Amazon CloudWatch.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #23. Which statement best describes the concept of an AWS region?
-      #    - A. An AWS Region is a geographical location with a collection of Edge locations.
-      #    - B. An AWS Region is a virtual network dedicated only to a single AWS customer.
-      #    - C. An AWS Region is a geographical location with a collection of Availability Zones.
-      #    - D. An AWS Region represents the country where the AWS infrastructure exist.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #24. A company has discovered that multiple S3 buckets were deleted, but it is unclear who deleted the buckets. Which of the following can the company use to determine the identity that deleted the buckets?
-      #    - A. SNS logs.
-      #    - B. SQS logs.
-      #    - C. CloudWatch Logs.
-      #    - D. CloudTrail logs.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: D
-      #    </details>
-      #
-      #25. Which of the following are factors in determining the appropriate database technology to use for a specific workload? (Choose TWO)
-      #    - A. Availability Zones.
-      #    - B. Data sovereignty.
-      #    - C. The number of reads and writes per second.
-      #    - D. The nature of the queries.
-      #    - E. Software bugs.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C, D
-      #    </details>
-      #
-      #26. What are the benefits of implementing a tagging strategy for AWS resources? (Choose TWO)
-      #    - A. Quickly identify resources that belong to a specific project.
-      #    - B. Quickly identify software solutions on AWS.
-      #    - C. Track API calls in your AWS account.
-      #    - D. Quickly identify deleted resources and their metadata.
-      #    - E. Track AWS spending across multiple resources.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A, E
-      #    </details>
-      #
-      #27. What are AWS shared controls?
-      #    - A. Controls that are solely the responsibility of the customer based on the application they are deploying within AWS services.
-      #    - B. Controls that a customer inherits from AWS.
-      #    - C. Controls that apply to both the infrastructure layer and customer layers.
-      #    - D. Controls that the customer and AWS collaborate together upon to secure the infrastructure.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: D
-      #    </details>
-      #
-      #28. Which design principles relate to performance efficiency in AWS? (Choose TWO)
-      #    - A. Build multi-region architectures to better serve global customers.
-      #    - B. Apply security at all layers.
-      #    - C. Implement strong Identity and Access controls.
-      #    - D. Use serverless architectures.
-      #    - E. Enable audit logging.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A, D
-      #    </details>
-      #
-      #29. Which of the below are responsibilities of the customer when using Amazon EC2? (Choose TWO)
-      #    - A. Protecting sensitive data.
-      #    - B. Patching of the underlying infrastructure.
-      #    - C. Setup and operation of managed databases.
-      #    - D. Maintaining consistent hardware components.
-      #    - E. Installing and configuring third-party software.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A, E
-      #    </details>
-      #
-      #30. Why would an organization decide to use AWS over an on-premises data center? (Choose TWO)
-      #    - A. Free commercial software licenses.
-      #    - B. Free technical support.
-      #    - C. Elastic resources.
-      #    - D. On-site visits for auditing.
-      #    - E. Cost Savings.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C, E
-      #    </details>
-      #
-      #31. Which of the following AWS services can help you perform security analysis and regulatory compliance auditing? (Choose TWO)
-      #    - A. Amazon Inspector.
-      #    - B. AWS Virtual Private Gateway.
-      #    - C. AWS Batch.
-      #    - D. Amazon ECS.
-      #    - E. AWS Config.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A, E
-      #    </details>
-      #
-      #32. Which of the following is NOT a characteristic of Amazon Elastic Compute Cloud (Amazon EC2)?
-      #    - A. Amazon EC2 is considered a Serverless Web Service.
-      #    - B. Amazon EC2 eliminates the need to invest in hardware upfront.
-      #    - C. Amazon EC2 can launch as many or as few virtual servers as needed.
-      #    - D. Amazon EC2 offers scalable computing.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A
-      #    </details>
-      #
-      #33. What is the AWS Compute service that executes code only when triggered by events?
-      #    - A. AWS Lambda.
-      #    - B. Amazon CloudWatch.
-      #    - C. AWS Transit Gateway.
-      #    - D. Amazon EC2.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A
-      #    </details>
-      #
-      #34. Both AWS and traditional IT distributors provide a wide range of virtual servers to meet their customers’ requirements. What is the name of these virtual servers in AWS?
-      #    - A. Amazon EBS Snapshots.
-      #    - B. Amazon VPC.
-      #    - C. AWS Managed Servers.
-      #    - D. Amazon EC2 Instances.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: D
-      #    </details>
-      #
-      #35. What is the framework created by AWS Professional Services that helps organizations design a road map to successful cloud adoption?
-      #    - A. AWS Secrets Manager.
-      #    - B. AWS WAF.
-      #    - C. AWS CAF.
-      #    - D. Amazon EFS.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #36. TYMO Cloud Corp is looking forward to migrating their entire on-premises data center to AWS. What tool can they use to perform a cost-benefit analysis of moving to the AWS Cloud?
-      #    - A. AWS Cost Explorer.
-      #    - B. AWS TCO Calculator.
-      #    - C. AWS Budgets.
-      #    - D. AWS Pricing Calculator.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: B
-      #    </details>
-      #
-      #37. Which of the following activities supports the Operational Excellence pillar of the AWS Well-Architected Framework?
-      #    - A. Using AWS Trusted Advisor to find underutilized resources.
-      #    - B. Using AWS CloudTrail to record user activities.
-      #    - C. Using AWS CloudFormation to manage infrastructure as code.
-      #    - D. Deploying an application in multiple Availability Zones.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #38. Why do many startup companies prefer AWS over traditional on-premises solutions? (Choose TWO)
-      #    - A. AWS allows them to pay later when their business succeed.
-      #    - B. AWS can build complete data centers faster than any other Cloud provider.
-      #    - C. Using AWS, they can reduce time-to-market by focusing on business activities rather than on building and managing data centers.
-      #    - D. AWS removes the need to invest in operational expenditure.
-      #    - E. Using AWS allows companies to replace large capital expenditure with low variable costs.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C, E
-      #    </details>
-      #
-      #39. What are the benefits of using DynamoDB? (Choose TWO)
-      #    - A. Automatically scales to meet required throughput capacity.
-      #    - B. Provides resizable instances to match the current demand.
-      #    - C. Supports both relational and non-relational data models.
-      #    - D. Offers extremely low (single-digit millisecond) latency.
-      #    - E. Supports the most popular NoSQL database engines such as CouchDB and MongoDB.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A, D
-      #    </details>
-      #
-      #40. Which of the following can be used to protect data at rest on Amazon S3? (Choose TWO)
-      #    - A. Versioning.
-      #    - B. Deduplication.
-      #    - C. Permissions.
-      #    - D. Decryption.
-      #    - E. Conversion.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A, C
-      #    </details>
-      #
-      #41. As part of the AWS Migration Acceleration Program (MAP), what does AWS provide to accelerate Enterprise adoption of AWS? (Choose TWO)
-      #    - A. AWS Partners.
-      #    - B. AWS Artifact.
-      #    - C. AWS Professional Services.
-      #    - D. Amazon Athena.
-      #    - E. Amazon PinPoint.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A, C
-      #    </details>
-      #
-      #42. AWS recommends some practices to help organizations avoid unexpected charges on their bill. Which of the following is NOT one of these practices?
-      #    - A. Deleting unused EBS volumes after terminating an EC2instance.
-      #    - B. Deleting unused AutoScaling launch configuration.
-      #    - C. Deleting unused Elastic Load Balancers.
-      #    - D. Releasing unused Elastic IPs after terminating an EC2instance.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: B
-      #    </details>
-      #
-      #43. What is the AWS tool that can help a company visualize their AWS spending in the last few months?
-      #    - A. AWS Cost Explorer.
-      #    - B. AWS Pricing Calculator.
-      #    - C. AWS Budgets.
-      #    - D. AWS Consolidated Billing.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A
-      #    </details>
-      #
-      #44. When running a workload in AWS, the customer is NOT responsible for: (Select TWO)
-      #    - A. Running penetration tests.
-      #    - B. Reserving capacity.
-      #    - C. Data center operations.
-      #    - D. Auditing and regulatory compliance.
-      #    - E. Infrastructure security.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C, E
-      #    </details>
-      #
-      #45. Which AWS service can be used to send promotional text messages (SMS) to more than 200 countries worldwide?
-      #    - A. Amazon Simple Email Service (Amazon SES).
-      #    - B. Amazon Simple Storage Service (Amazon S3).
-      #    - C. Amazon Simple Notification Service (Amazon SNS).
-      #    - D. Amazon Simple Queue Service (Amazon SQS).
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #46. Which of the following allows you to create new RDS instances? (Choose TWO)
-      #    - A. AWS CodeDeploy.
-      #    - B. AWS Quick Starts.
-      #    - C. AWS CloudFormation.
-      #    - D. AWS DMS.
-      #    - E. AWS Management Console.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C, E
-      #    </details>
-      #
-      #47. One of the major advantages of using AWS is cost savings. What does AWS provide to reduce the cost of running Amazon EC2 instances?
-      #    - A. Low monthly instance maintenance costs.
-      #    - B. Low-cost instance tagging.
-      #    - C. Per-second instance billing.
-      #    - D. Low instance start-up fees.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: C
-      #    </details>
-      #
-      #48. Which AWS Group assists customers in achieving their desired business outcomes?
-      #    - A. AWS Security Team.
-      #    - B. AWS Professional Services.
-      #    - C. AWS Trusted Advisor.
-      #    - D. AWS Concierge Support Team.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: B
-      #    </details>
-      #
-      #49. Which AWS service or feature is used to manage the keys used to encrypt customer data?
-      #    - A. AWS KMS.
-      #    - B. AWS Service Control Policies (SCPs).
-      #    - C. Multi-Factor Authentication (MFA).
-      #    - D. Amazon Macie.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-      #      Correct answer: A
-      #    </details>
-      #
-      #50. Which AWS Service allows customers to download AWS SOC & PCI reports?
-      #    - A. AWS Well-Architected Tool.
-      #    - B. AWS Artifact.
-      #    - C. AWS Glue.
-      #    - D. Amazon Chime.
-      #
-      #    <details markdown=1><summary markdown='span'>Answer</summary>
-    #      Correct answer: B
-  #    </details>
+- question: What is the primary storage service used by Amazon RDS database instances?
+  correct-answers:
+  - Amazon EBS.
+  detractors:
+  - Amazon Glacier.
+  - Amazon EFS.
+  - Amazon S3.
 
+- question: A company is developing a new application using a microservices framework. The new application is having performance and latency issues. Which AWS Service should be used to troubleshoot these issues?
+  correct-answers:
+  - AWS X-Ray.
+  detractors:
+  - AWS CodePipeline.
+  - Amazon Inspector.
+  - AWS CloudTrail.
+
+- question: Which of the following AWS services is designed with native Multi-AZ fault tolerance in mind? (Choose TWO)
+  correct-answers:
+  - Amazon Simple Storage Service (S3).
+  - Amazon DynamoDB.
+  detractors:
+  - Amazon Redshift.
+  - AWS Snowball.
+  - Amazon EBS.
+
+- question: What are the Amazon RDS features that can be used to improve the availability of your database? (Choose TWO)
+  correct-answers:
+  - Multi-AZ Deployment.
+  - Read Replicas.
+  detractors:
+  - AWS Regions.
+  - Automatic patching.
+  - Edge Locations.
+
+- question: Sarah has deployed an application in the Northern California (us-west-1) region. After examining the application's traffic, she notices that about 30% of the traffic is coming from Asia. What can she do to reduce latency for the users in Asia?
+  correct-answers:
+  - Create a CDN using CloudFront, so that content is cached at Edge Locations close to and in Asia.
+  detractors:
+  - Replicate the current resources across multiple Availability Zones within the same region.
+  - Migrate the application to a hosting provider in Asia.
+  - Recreate the website content.
+
+- question: An organization runs many systems and uses many AWS products. Which of the following services enables them to control how each developer interacts with these products?
+  correct-answers:
+  - AWS Identity and Access Management.
+  detractors:
+  - Amazon RDS.
+  - Network Access Control Lists (NACLs).
+  - Amazon EMR.
+
+- question: Using Amazon EC2 falls under which of the following cloud computing models?
+  correct-answers:
+  - IaaS.
+  detractors:
+  - Iaas & SaaS.
+  - SaaS.
+  - PaaS.
+
+- question: Which of the below is a best-practice when building applications on AWS?
+  correct-answers:
+  - Decouple the components of the application so that they run independently.
+  detractors:
+  - Strengthen physical security by applying the principle of least privilege.
+  - Ensure that the application runs on hardware from trusted vendors.
+  - Use IAM policies to maintain performance.
+
+- question: Your company is designing a new application that will store and retrieve photos and videos. Which of the following services should you recommend as the underlying storage mechanism?
+  correct-answers:
+  - Amazon S3.
+  detractors:
+  - Amazon EBS.
+  - Amazon SQS.
+  - Amazon Instance store.
+
+- question: Amazon Glacier is an Amazon S3 storage class that is suitable for storing [...] & [...]. (Choose TWO)
+  correct-answers:
+  - Active archives.
+  - Long-term analytic data.
+  detractors:
+  - Dynamic websites' assets.
+  - Active databases.
+  - Cached data.
+
+- question: What does Amazon Elastic Beanstalk provide?
+  correct-answers:
+  - A PaaS solution to automate application deployment.
+  detractors:
+  - A compute engine for Amazon ECS.
+  - A scalable file storage solution for use with AWS and on-premises servers.
+  - A NoSQL database service.
+
+- question: What is the AWS service that performs automated network assessments of Amazon EC2 instances to check for vulnerabilities?
+  correct-answers:
+  - Amazon Inspector.
+  detractors:
+  - Amazon Kinesis.
+  - Security groups.
+  - AWS Network Access Control Lists (NACLs).
+
+- question: Under the Shared Responsibility Model, which of the following controls do customers fully inherit from AWS? (Choose TWO)
+  correct-answers:
+  - Environmental controls.
+  - Physical controls.
+  detractors:
+  - Patch management controls.
+  - Database controls.
+  - Awareness & Training.
+
+- question: A company needs to host a database in Amazon RDS for at least three years. Which of the following options would be the most cost-effective solution?
+  correct-answers:
+  - Reserved instances - Partial Upfront.
+  detractors:
+  - Reserved instances - No Upfront.
+  - On-Demand instances.
+  - Spot Instances.
+
+- question: Your application has recently experienced significant global growth, and international users are complaining of high latency. What is the AWS characteristic that can help improve your international users' experience?
+  correct-answers:
+  - Global reach.
+  detractors:
+  - Elasticity.
+  - Data durability.
+  - High availability.
+
+- question: Savings Plans are available for which of the following AWS compute services? (Choose TWO)
+  correct-answers:
+  - Amazon EC2.
+  - AWS Lambda.
+  detractors:
+  - AWS Batch.
+  - AWS Outposts.
+  - Amazon Lightsail.
+
+- question: A company has business critical workloads hosted on AWS and they are unwilling to accept any downtime. Which of the following is a recommended best practice to protect their workloads in the event of an unexpected natural disaster?
+  correct-answers:
+  - Deploy AWS resources to another AWS Region and implement an Active-Active disaster recovery strategy.
+  detractors:
+  - Replicate data across multiple Edge Locations worldwide and use Amazon CloudFront to perform automatic failover in the event of an outage.
+  - Deploy AWS resources across multiple Availability Zones within the same AWS Region.
+  - Create point-in-time backups in another subnet and recover this data when a disaster occurs.
+
+- question: Which statement is correct with regards to AWS service limits? (Choose TWO)
+  correct-answers:
+  - You can contact AWS support to increase the service limits.
+  - You can use the AWS Trusted Advisor to monitor your service limits.
+  detractors:
+  - Each IAM user has the same service limit.
+  - There are no service limits on AWS.
+  - The Amazon Simple Email Service is responsible for sending email notifications when usage approaches a service limit.
+
+- question: What is the AWS tool that enables you to use scripts to manage all AWS services and resources?
+  correct-answers:
+  - AWS CLI.
+  detractors:
+  - AWS Console.
+  - AWS Service Catalog.
+  - AWS OpsWorks.
+
+- question: What are the connectivity options that can be used to build hybrid cloud architectures? (Choose TWO)
+  correct-answers:
+  - AWS Direct Connect.
+  - AWS VPN.
+  detractors:
+  - AWS Artifact.
+  - AWS Cloud9.
+  - AWS CloudTrail.
+
+- question: A company has deployed a new web application on multiple Amazon EC2 instances. Which of the following should they use to ensure that the incoming HTTP traffic is distributed evenly across the instances?
+  correct-answers:
+  - AWS Application Load Balancer (ALB).
+  detractors:
+  - AWS EC2 Auto Recovery.
+  - AWS Auto Scaling.
+  - AWS Network Load Balancer (NLB).
+
+- question: Which of the following AWS offerings is a MySQL-compatible relational database service that can scale capacity automatically based on demand?
+  correct-answers:
+  - Amazon Aurora.
+  detractors:
+  - Amazon Neptune.
+  - Amazon RDS for SQL Server.
+  - Amazon RDS for PostgreSQL.
+
+- question: Which of the following can help protect your EC2 instances from DDoS attacks? (Choose TWO)
+  correct-answers:
+  - Security Groups.
+  - Network Access Control Lists (NACLs).
+  detractors:
+  - AWS CloudHSM.
+  - AWS Batch.
+  - AWS IAM.
+
+- question: What is the AWS data warehouse service that supports a high level of query performance on large amounts of datasets?
+  correct-answers:
+  - Amazon Redshift.
+  detractors:
+  - Amazon Kinesis.
+  - Amazon DynamoDB.
+  - Amazon RDS.
+
+- question: Which of the following should be considered when performing a TCO analysis to compare the costs of running an application on AWS instead of on-premises?
+  correct-answers:
+  - Physical hardware.
+  detractors:
+  - Application development.
+  - Market research.
+  - Business analysis.
+
+- question: How are AWS customers billed for Linux-based Amazon EC2 usage?
+  correct-answers:
+  - EC2 instances will be billed on one second increments, with a minimum of one minute.
+  detractors:
+  - EC2 instances will be billed on one hour increments, with a minimum of one day.
+  - EC2 instances will be billed on one minute increments, with a minimum of one hour.
+  - EC2 instances will be billed on one day increments, with a minimum of one month.
+
+- question: Which of the following will impact the price paid for an EC2 instance? (Choose TWO)
+  correct-answers:
+  - Instance type.
+  - The Availability Zone where the instance is provisioned.
+  detractors:
+  - Load balancing.
+  - Number of buckets.
+  - Number of private IPs.
+
+- question: A customer spent a lot of time configuring a newly deployed Amazon EC2 instance. After the workload increases, the customer decides to provision another EC2 instance with an identical configuration. How can the customer achieve this?
+  correct-answers:
+  - By creating an AMI from the old instance and launching a new instance from it.
+  detractors:
+  - By creating an AWS Config template from the old instance and launching a new instance from it.
+  - By creating an EBS Snapshot of the old instance.
+  - By installing Aurora on EC2 and launching a new instance from it.
+
+- question: A company uses AWS Organizations to manage all of its AWS accounts. Which of the following allows the company to restrict what services and actions are allowed in each individual account?
+  correct-answers:
+  - AWS Service Control Policies (SCPs).
+  detractors:
+  - IAM Principals.
+  - IAM Policies.
+  - AWS Fargate.
+
+- question: Which of the following statements describes the AWS Cloud's agility?
+  correct-answers:
+  - AWS allows you to provision resources in minutes.
+  detractors:
+  - AWS allows you to host your applications in multiple regions around the world.
+  - AWS provides customizable hardware at the lowest possible cost.
+  - AWS allows you to pay upfront to reduce costs.
+
+- question: What are the benefits of using the Amazon Relational Database Service? (Choose TWO)
+  correct-answers:
+  - Lower administrative burden.
+  - Resizable compute capacity.
+  detractors:
+  - Complete control over the underlying host.
+  - Scales automatically to larger or smaller instance types.
+  - Supports the document and key-value data structure.
+
+- question: What is the connectivity option that uses Internet Protocol Security (IPSec) to establish encrypted connectivity between an on-premises network and the AWS Cloud?
+  correct-answers:
+  - AWS Site-to-Site VPN.
+  detractors:
+  - Internet Gateway.
+  - AWS IQ.
+  - AWS Direct Connect.
+
+- question: What is the minimum level of AWS support that provides 24x7 access to technical support engineers via phone and chat?
+  correct-answers:
+  - Business Support.
+  detractors:
+  - Enterprise Support.
+  - Developer Support.
+  - Basic Support.
+
+- question: Which of the following is used to control network traffic in AWS? (Choose TWO)
+  correct-answers:
+  - Network Access Control Lists (NACLs).
+  - Security Groups.
+  detractors:
+  - Key Pairs.
+  - Access Keys.
+  - IAM Policies.
+
+- question: A company has developed a media transcoding application in AWS. The application is designed to recover quickly from hardware failures. Which one of the following types of instance would be the most cost-effective choice to use?
+  correct-answers:
+  - Spot Instances.
+  detractors:
+  - Reserved instances.
+  - On-Demand instances.
+  - Dedicated instances.
+
+- question: Which AWS Service provides the current status of all AWS Services in all AWS Regions?
+  correct-answers:
+  - AWS Service Health Dashboard.
+  detractors:
+  - AWS Management Console.
+  - Amazon CloudWatch.
+  - AWS Personal Health Dashboard.
+
+- question: Which AWS service or feature can be used to call AWS Services from different programming languages?
+  correct-answers:
+  - AWS Software Development Kit (SDK).
+  detractors:
+  - AWS Command Line Interface.
+  - AWS CodeDeploy.
+  - AWS Management Console.
+
+- question: Which AWS Service can be used to register a new domain name?
+  correct-answers:
+  - Amazon Route 53.
+  detractors:
+  - Amazon Personalize.
+  - AWS KMS.
+  - AWS Config.
+
+- question: App development companies move their business to AWS to reduce time-to-market and improve customer satisfaction, what are the AWS automation tools that help them deploy their applications faster? (Choose TWO)
+  correct-answers:
+  - AWS CloudFormation.
+  - AWS Elastic Beanstalk.
+  detractors:
+  - AWS Migration Hub.
+  - AWS IAM.
+  - Amazon Macie.
+
+- question: Which AWS service provides cost-optimization recommendations?
+  correct-answers:
+  - AWS Trusted Advisor.
+  detractors:
+  - AWS Pricing Calculator.
+  - Amazon QuickSight.
+  - AWS X-Ray.
+
+- question: A company has hundreds of VPCs in multiple AWS Regions worldwide. What service does AWS offer to simplify the connection management among the VPCs?
+  correct-answers:
+  - AWS Transit Gateway.
+  detractors:
+  - VPC Peering.
+  - Amazon Connect.
+  - Security Groups.
+
+- question: What is one benefit and one drawback of buying a reserved EC2 instance? (Select TWO)
+  correct-answers:
+  - Reserved instances require at least a one-year pricing commitment.
+  - Reserved instances provide a significant discount compared to on-demand instances.
+  detractors:
+  - Instances can be shut down by AWS at any time with no notification.
+  - There is no additional charge for using dedicated instances.
+  - Reserved instances are best suited for periodic workloads.
+
+- question: Why does every AWS Region contain multiple Availability Zones?
+  correct-answers:
+  - Multiple Availability Zones allows you to build resilient and highly available architectures.
+  detractors:
+  - Multiple Availability Zones results in lower total cost compared to deploying in a single Availability Zone.
+  - Multiple Availability Zones allows for data replication and global reach.
+  - Multiple Availability Zones within a region increases the storage capacity available in that region.
+
+- question: What is the most cost-effective purchasing option for running a set of EC2 instances that must always be available for a period of two months?
+  correct-answers:
+  - On-Demand Instances.
+  detractors:
+  - Spot Instances.
+  - Reserved Instances - All Upfront.
+  - Reserved Instances - No Upfront.
+
+- question: Which of the following is a benefit of running an application in multiple Availability Zones?
+  correct-answers:
+  - Increases the availability of your application.
+  detractors:
+  - Allows you to exceed AWS service limits.
+  - Reduces application response time between servers and global users.
+  - Increases available compute capacity.
+
+- question: Data security is one of the top priorities of AWS. How does AWS deal with old storage devices that have reached the end of their useful life?
+  correct-answers:
+  - AWS destroys the old devices in accordance with industry-standard practices.
+  detractors:
+  - AWS sells the old devices to other hosting providers.
+  - AWS sends the old devices for re-manufacturing.
+  - AWS stores the old devices in a secure place.
+
+# Practice Exam 4 - https://github.com/kananinirav/AWS-Certified-Cloud-Practitioner-Notes/blob/master/practice-exam/practice-exam-4.md
+- question: A developer needs to set up an SSL security certificate for a client's eCommerce website in order to use the HTTPS protocol. Which of the following AWS services can be used to deploy the required SSL server certificates? (Choose TWO)
+  correct-answers:
+  - Amazon Route 53.
+  - AWS ACM.
+  detractors:
+  - AWS Directory Service.
+  - AWS Identity & Access Management (IAM).
+  - AWS Data Pipeline.
+
+- question: Which of the following AWS services scale automatically without your intervention? (Choose TWO)
+  correct-answers:
+  - Amazon S3.
+  - AWS Lambda.
+  detractors:
+  - Amazon EC2.
+  - Amazon EMR.
+  - Amazon EBS.
+
+- question: A company is planning to migrate an application from Amazon EC2 to AWS Lambda to use a serverless architecture. Which of the following will be the responsibility of AWS after migration? (Choose TWO)
+  correct-answers:
+  - Capacity management.
+  - Operating system maintenance.
+  detractors:
+  - Application management.
+  - Access control.
+  - Data management.
+
+- question: How do ELBs improve the reliability of your application?
+  correct-answers:
+  - By ensuring that only healthy targets receive traffic.
+  detractors:
+  - By distributing traffic across multiple S3 buckets.
+  - By replicating data to multiple availability zones.
+  - By creating database Read Replicas.
+
+- question: A company needs to migrate their website from on-premises to AWS. Security is a major concern for them, so they need to host their website on hardware that is NOT shared with other AWS customers. Which of the following EC2 instance options meets this requirement?
+  correct-answers:
+  - Dedicated instances.
+  detractors:
+  - On-demand instances.
+  - Spot instances.
+  - Reserved instances.
+
+- question: A customer is planning to move billions of images and videos to be stored on Amazon S3. The customer has approximately 60 Petabytes of data to move. Which of the following AWS Services is the best choice to transfer the data to AWS?
+  correct-answers:
+  - Snowmobile.
+  detractors:
+  - Snowball.
+  - S3 Transfer Acceleration.
+  - Amazon VPC.
+
+- question: A company plans to migrate a large amount of archived data to AWS. The archived data must be maintained for a period of 5 years and must be retrievable within 5 hours of a request. What is the most cost-effective AWS storage service to use?
+  correct-answers:
+  - Amazon S3 Glacier.
+  detractors:
+  - Amazon EFS.
+  - Amazon S3 Standard.
+  - Amazon EBS.
+
+- question: Which AWS Service is used to manage user permissions?
+  correct-answers:
+  - AWS IAM.
+  detractors:
+  - Security Groups.
+  - Amazon ECS.
+  - AWS Support.
+
+- question: Which support plan includes AWS Support Concierge Service?
+  correct-answers:
+  - Enterprise Support.
+  detractors:
+  - Premium Support.
+  - Business Support.
+  - Standard Support.
+
+- question: A company needs to track resource changes using the API call history. Which AWS service can help the company achieve this goal?
+  correct-answers:
+  - AWS CloudTrail.
+  detractors:
+  - AWS Config.
+  - Amazon CloudWatch.
+  - AWS CloudFormation.
+
+- question: What are the benefits of using an AWS-managed service? (Choose TWO)
+  correct-answers:
+  - Allows customers to deliver new solutions faster.
+  - Lowers operational complexity.
+  detractors:
+  - Provides complete control over the virtual infrastructure.
+  - Eliminates the need to encrypt data.
+  - Allows developers to control all patching related activities.
+
+- question: Which of the following are use cases for Amazon S3? (Choose TWO)
+  correct-answers:
+  - Hosting static websites.
+  - A media store for the CloudFront service.
+  detractors:
+  - Hosting websites that require sustained high CPU utilization.
+  - Cost-effective database and log storage.
+  - Processing data streams at any scale.
+
+- question:  What is the AWS' recommendation regarding access keys?
+  correct-answers:
+  - Rotate them regularly.
+  detractors:
+  - Delete all access keys and use passwords instead.
+  - Only share them with trusted people.
+  - Save them within your application code.
+
+- question: What is the AWS IAM feature that provides an additional layer of security on top of user-name and password authentication?
+  correct-answers:
+  - MFA.
+  detractors:
+  - Key Pair.
+  - Access Keys.
+  - SDK.
+
+- question: What is the benefit of using an API to access AWS Services?
+  correct-answers:
+  - It allows for programmatic management of AWS resources.
+  detractors:
+  - It improves the performance of AWS resources.
+  - It reduces the time needed to provision AWS resources.
+  - It reduces the number of developers necessary.
+
+- question: A company is planning to migrate a database with high read/write activity to AWS. What is the best storage option to use?
+  correct-answers:
+  - Amazon EBS.
+  detractors:
+  - AWS Storage Gateway.
+  - Amazon S3.
+  - Amazon Glacier.
+
+- question: How can AWS customers track and avoid over-spending on underutilized reserved instances?
+  correct-answers:
+  - Customers can use the AWS Budgets service to track the reserved instances usage and set up alert notifications when their utilization drops below the threshold that they define.
+  detractors:
+  - Customers can add all AWS accounts to an AWS Organization, enable Consolidated Billing, and turn off Reserved Instance sharing.
+  - Customers can use Amazon Neptune to track and analyze their usage patterns, detect underutilized reserved instances, and then sell them on the Amazon EC2 Reserved Instance Marketplace.
+  - Customers can use Amazon CloudTrail to automatically check for unused reservations and get recommendations to reduce their bill.
+
+- question: What is the AWS service that provides five times the performance of a standard MySQL database?
+  correct-answers:
+  - Amazon Aurora.
+  detractors:
+  - Amazon Redshift.
+  - Amazon DynamoDB.
+  - Amazon Neptune.
+
+- question: What does AWS Service Catalog provide?
+  correct-answers:
+  - It simplifies organizing and governing commonly deployed IT services.
+  detractors:
+  - It enables customers to quickly find descriptions and use cases for AWS services.
+  - It enables customers to explore the different catalogs of AWS services.
+  - It allows developers to deploy infrastructure on AWS using familiar programming languages.
+
+- question: For managed services like Amazon DynamoDB, which of the below is AWS responsible for? (Choose TWO)
+  correct-answers:
+  - Patching the database software.
+  - Operating system maintenance.
+  detractors:
+  - Protecting credentials.
+  - Logging access activity.
+  - Creating access policies.
+
+- question: Which of the following AWS Services helps with planning application migration to the AWS Cloud?
+  correct-answers:
+  - AWS Application Discovery Service.
+  detractors:
+  - AWS Snowball Migration Service.
+  - AWS DMS.
+  - AWS Migration Hub.
+
+- question: A company is trying to analyze the costs applied to their AWS account recently. Which of the following provides them the most granular data about their AWS costs and usage?
+  correct-answers:
+  - AWS Cost & Usage Report.
+  detractors:
+  - Amazon Machine Image.
+  - AWS Cost Explorer.
+  - Amazon CloudWatch.
+
+- question: Which statement best describes the concept of an AWS region?
+  correct-answers:
+  - An AWS Region is a geographical location with a collection of Availability Zones.
+  detractors:
+  - An AWS Region is a geographical location with a collection of Edge locations.
+  - An AWS Region is a virtual network dedicated only to a single AWS customer.
+  - An AWS Region represents the country where the AWS infrastructure exist.
+
+- question: A company has discovered that multiple S3 buckets were deleted, but it is unclear who deleted the buckets. Which of the following can the company use to determine the identity that deleted the buckets?
+  correct-answers:
+  - CloudTrail logs.
+  detractors:
+  - SNS logs.
+  - SQS logs.
+  - CloudWatch Logs.
+
+- question: Which of the following are factors in determining the appropriate database technology to use for a specific workload? (Choose TWO)
+  correct-answers:
+  - The number of reads and writes per second.
+  - The nature of the queries.
+  detractors:
+  - Availability Zones.
+  - Data sovereignty.
+  - Software bugs.
+
+- question: What are the benefits of implementing a tagging strategy for AWS resources? (Choose TWO)
+  correct-answers:
+  - Quickly identify resources that belong to a specific project.
+  - Track AWS spending across multiple resources.
+  detractors:
+  - Quickly identify software solutions on AWS.
+  - Track API calls in your AWS account.
+  - Quickly identify deleted resources and their metadata.
+
+- question: What are AWS shared controls?
+  correct-answers:
+  - Controls that the customer and AWS collaborate together upon to secure the infrastructure.
+  detractors:
+  - Controls that are solely the responsibility of the customer based on the application they are deploying within AWS services.
+  - Controls that a customer inherits from AWS.
+  - Controls that apply to both the infrastructure layer and customer layers.
+
+- question: Which design principles relate to performance efficiency in AWS? (Choose TWO)
+  correct-answers:
+  - Build multi-region architectures to better serve global customers.
+  - Use serverless architectures.
+  detractors:
+  - Apply security at all layers.
+  - Implement strong Identity and Access controls.
+  - Enable audit logging.
+
+- question: Which of the below are responsibilities of the customer when using Amazon EC2? (Choose TWO)
+  correct-answers:
+  - Protecting sensitive data.
+  - Installing and configuring third-party software.
+  detractors:
+  - Patching of the underlying infrastructure.
+  - Setup and operation of managed databases.
+  - Maintaining consistent hardware components.
+
+- question: Why would an organization decide to use AWS over an on-premises data center? (Choose TWO)
+  correct-answers:
+  - Elastic resources.
+  - Cost Savings.
+  detractors:
+  - Free commercial software licenses.
+  - Free technical support.
+  - On-site visits for auditing.
+
+- question: Which of the following AWS services can help you perform security analysis and regulatory compliance auditing? (Choose TWO)
+  correct-answers:
+  - Amazon Inspector.
+  - AWS Config.
+  detractors:
+  - AWS Virtual Private Gateway.
+  - AWS Batch.
+  - Amazon ECS.
+
+- question: Which of the following is NOT a characteristic of Amazon Elastic Compute Cloud (Amazon EC2)?
+  correct-answers:
+  - Amazon EC2 is considered a Serverless Web Service.
+  detractors:
+  - Amazon EC2 eliminates the need to invest in hardware upfront.
+  - Amazon EC2 can launch as many or as few virtual servers as needed.
+  - Amazon EC2 offers scalable computing.
+
+- question: What is the AWS Compute service that executes code only when triggered by events?
+  correct-answers:
+  - AWS Lambda.
+  detractors:
+  - Amazon CloudWatch.
+  - AWS Transit Gateway.
+  - Amazon EC2.
+
+- question: Both AWS and traditional IT distributors provide a wide range of virtual servers to meet their customers' requirements. What is the name of these virtual servers in AWS?
+  correct-answers:
+  - Amazon EC2 Instances.
+  detractors:
+  - Amazon EBS Snapshots.
+  - Amazon VPC.
+  - AWS Managed Servers.
+
+- question: What is the framework created by AWS Professional Services that helps organizations design a road map to successful cloud adoption?
+  correct-answers:
+  - AWS CAF.
+  detractors:
+  - AWS Secrets Manager.
+  - AWS WAF.
+  - Amazon EFS.
+
+- question: TYMO Cloud Corp is looking forward to migrating their entire on-premises data center to AWS. What tool can they use to perform a cost-benefit analysis of moving to the AWS Cloud?
+  correct-answers:
+  - AWS TCO Calculator.
+  detractors:
+  - AWS Cost Explorer.
+  - AWS Budgets.
+  - AWS Pricing Calculator.
+
+- question: Which of the following activities supports the Operational Excellence pillar of the AWS Well-Architected Framework?
+  correct-answers:
+  - Using AWS CloudFormation to manage infrastructure as code.
+  detractors:
+  - Using AWS Trusted Advisor to find underutilized resources.
+  - Using AWS CloudTrail to record user activities.
+  - Deploying an application in multiple Availability Zones.
+
+- question: Why do many startup companies prefer AWS over traditional on-premises solutions? (Choose TWO)
+  correct-answers:
+  - Using AWS, they can reduce time-to-market by focusing on business activities rather than on building and managing data centers.
+  - Using AWS allows companies to replace large capital expenditure with low variable costs.
+  detractors:
+  - AWS allows them to pay later when their business succeed.
+  - AWS can build complete data centers faster than any other Cloud provider.
+  - AWS removes the need to invest in operational expenditure.
+
+- question: What are the benefits of using DynamoDB? (Choose TWO)
+  correct-answers:
+  - Automatically scales to meet required throughput capacity.
+  - Offers extremely low (single-digit millisecond) latency.
+  detractors:
+  - Provides resizable instances to match the current demand.
+  - Supports both relational and non-relational data models.
+  - Supports the most popular NoSQL database engines such as CouchDB and MongoDB.
+
+- question: Which of the following can be used to protect data at rest on Amazon S3? (Choose TWO)
+  correct-answers:
+  - Versioning.
+  - Permissions.
+  detractors:
+  - Deduplication.
+  - Decryption.
+  - Conversion.
+
+- question: As part of the AWS Migration Acceleration Program (MAP), what does AWS provide to accelerate Enterprise adoption of AWS? (Choose TWO)
+  correct-answers:
+  - AWS Partners.
+  - AWS Professional Services.
+  detractors:
+  - AWS Artifact.
+  - Amazon Athena.
+  - Amazon PinPoint.
+
+- question: AWS recommends some practices to help organizations avoid unexpected charges on their bill. Which of the following is NOT one of these practices?
+  correct-answers:
+  - Deleting unused AutoScaling launch configuration.
+  detractors:
+  - Deleting unused EBS volumes after terminating an EC2instance.
+  - Deleting unused Elastic Load Balancers.
+  - Releasing unused Elastic IPs after terminating an EC2instance.
+
+- question: What is the AWS tool that can help a company visualize their AWS spending in the last few months?
+  correct-answers:
+  - AWS Cost Explorer.
+  detractors:
+  - AWS Pricing Calculator.
+  - AWS Budgets.
+  - AWS Consolidated Billing.
+
+- question: When running a workload in AWS, the customer is NOT responsible for (Select TWO)
+  correct-answers:
+  - Data center operations.
+  - Infrastructure security.
+  detractors:
+  - Running penetration tests.
+  - Reserving capacity.
+  - Auditing and regulatory compliance.
+
+- question: Which AWS service can be used to send promotional text messages (SMS) to more than 200 countries worldwide?
+  correct-answers:
+  - Amazon Simple Notification Service (Amazon SNS).
+  detractors:
+  - Amazon Simple Email Service (Amazon SES).
+  - Amazon Simple Storage Service (Amazon S3).
+  - Amazon Simple Queue Service (Amazon SQS).
+
+- question: Which of the following allows you to create new RDS instances? (Choose TWO)
+  correct-answers:
+  - AWS CloudFormation.
+  - AWS Management Console.
+  detractors:
+  - AWS CodeDeploy.
+  - AWS Quick Starts.
+  - AWS DMS.
+
+- question: One of the major advantages of using AWS is cost savings. What does AWS provide to reduce the cost of running Amazon EC2 instances?
+  correct-answers:
+  - Per-second instance billing.
+  detractors:
+  - Low monthly instance maintenance costs.
+  - Low-cost instance tagging.
+  - Low instance start-up fees.
+
+- question: Which AWS Group assists customers in achieving their desired business outcomes?
+  correct-answers:
+  - AWS Professional Services.
+  detractors:
+  - AWS Security Team.
+  - AWS Trusted Advisor.
+  - AWS Concierge Support Team.
+
+- question: Which AWS service or feature is used to manage the keys used to encrypt customer data?
+  correct-answers:
+  - AWS KMS.
+  detractors:
+  - AWS Service Control Policies (SCPs).
+  - Multi-Factor Authentication (MFA).
+  - Amazon Macie.
+
+- question: Which AWS Service allows customers to download AWS SOC & PCI reports?
+  correct-answers:
+  - AWS Artifact.
+  detractors:
+  - AWS Well-Architected Tool.
+  - AWS Glue.
+  - Amazon Chime.
 
     # ---
     #layout: exam
@@ -2026,7 +1820,7 @@
     #    </details>
     #
     #15. Which of the following factors should be considered when determining the region in which AWS Resources will be deployed? (Choose TWO)
-    #    - A. The AWS Region’s security level.
+    #    - A. The AWS Region's security level.
     #    - B. Data sovereignty.
     #    - C. Cost.
     #    - D. The planned number of VPCs.
@@ -2066,7 +1860,7 @@
     #      Correct answer: C
     #    </details>
     #
-    #19. Which of the following are examples of the customer’s responsibility to implement “security IN the cloud”? (Choose TWO)
+    #19. Which of the following are examples of the customer's responsibility to implement “security IN the cloud”? (Choose TWO)
     #    - A. Building a schema for an application.
     #    - B. Replacing physical hardware.
     #    - C. Creating a new hypervisor.
@@ -2138,7 +1932,7 @@
     #      Correct answer: D
     #    </details>
     #
-    #26. An external auditor is requesting a log of all accesses to the AWS resources in the company’s account. Which of the following services will provide the auditor with the requested information?
+    #26. An external auditor is requesting a log of all accesses to the AWS resources in the company's account. Which of the following services will provide the auditor with the requested information?
     #    - A. AWS CloudTrail.
     #    - B. Amazon CloudFront.
     #    - C. AWS CloudFormation.
@@ -2250,7 +2044,7 @@
     #      Correct answer: B
     #    </details>
     #
-    #37. A company is migrating a web application to AWS. The application’s compute capacity is continually utilized throughout the year. Which of the below options offers the company the most cost-effective solution?
+    #37. A company is migrating a web application to AWS. The application's compute capacity is continually utilized throughout the year. Which of the below options offers the company the most cost-effective solution?
     #    - A. On-demand Instances.
     #    - B. Dedicated Hosts.
     #    - C. Spot Instances.
@@ -2331,7 +2125,7 @@
     #      Correct answer: B
     #    </details>
     #
-    #45. What should you do if you see resources, which you don’t remember creating, in the AWS Management Console? (Choose TWO)
+    #45. What should you do if you see resources, which you don't remember creating, in the AWS Management Console? (Choose TWO)
     #    - A. Stop all running services and open an investigation.
     #    - B. Give your root account password to AWS Support so that they can assist in troubleshooting and securing the account.
     #    - C. Check the AWS CloudTrail logs and delete all IAM users that have access to your resources.
@@ -2375,8 +2169,8 @@
     #49. Which of the following are true regarding the languages that are supported on AWS Lambda? (Choose TWO)
     #    - A. Lambda only supports Python and Node.js, but third party plugins are available to convert code in other languages to these formats.
     #    - B. Lambda natively supports a number of programming languages such as Node.js, Python, and Java.
-    #    - C. Lambda is AWS’ proprietary programming language for microservices.
-    #    - D. Lambda doesn’t support programming languages; it is a serverless compute service.
+    #    - C. Lambda is AWS' proprietary programming language for microservices.
+    #    - D. Lambda doesn't support programming languages; it is a serverless compute service.
     #    - E. Lambda can support any programming language using an API.
     #
     #    <details markdown=1><summary markdown='span'>Answer</summary>
@@ -2496,7 +2290,7 @@
     #      Correct answer: A, E
     #    </details>
     #
-    #10. A company’s AWS workflow requires that it periodically perform large-scale image and video processing jobs. The customer is seeking to minimize cost and has stated that the amount of time it takes to process these jobs is not critical, but that cost minimization is the most important factor in designing the solution. Which EC2 instance class is best suited for this processing?
+    #10. A company's AWS workflow requires that it periodically perform large-scale image and video processing jobs. The customer is seeking to minimize cost and has stated that the amount of time it takes to process these jobs is not critical, but that cost minimization is the most important factor in designing the solution. Which EC2 instance class is best suited for this processing?
     #    - A. EC2 On-Demand Instances.
     #    - B. EC2 Reserved Instances     - No Upfront.
     #    - C. EC2 Spot Instances.
@@ -2762,7 +2556,7 @@
     #    </details>
     #
     #36. What best describes penetration testing?
-    #    - A. Testing your application’s response time from different locations.
+    #    - A. Testing your application's response time from different locations.
     #    - B. Testing your network to find security vulnerabilities that an attacker could exploit.
     #    - C. Testing your instances to check for the unhealthy ones.
     #    - D. Testing your software for bugs and errors.
@@ -2792,7 +2586,7 @@
     #      Correct answer: C
     #    </details>
     #
-    #39. A developer wants to quickly deploy and manage his application in the AWS Cloud, but he doesn’t have any experience with cloud computing. Which of the following AWS services would help the developer achieve his goal?
+    #39. A developer wants to quickly deploy and manage his application in the AWS Cloud, but he doesn't have any experience with cloud computing. Which of the following AWS services would help the developer achieve his goal?
     #    - A. AWS Fargate.
     #    - B. AWS Batch.
     #    - C. Amazon Personalize.
@@ -3293,7 +3087,7 @@
     #
     #37. How does AWS help customers achieve compliance in the cloud?
     #    - A. It's not possible to meet regulatory compliance requirements in the Cloud.
-    #    - B. AWS applies the most common Cloud security standards, and is responsible for complying with customers’ applicable laws and regulations.
+    #    - B. AWS applies the most common Cloud security standards, and is responsible for complying with customers' applicable laws and regulations.
     #    - C. AWS has many common assurance certifications such as ISO 9001 and HIPAA.
     #    - D. Many AWS services are assessed regularly to comply with local laws and regulations.
     #
@@ -3324,7 +3118,7 @@
     #40. What are the benefits of the AWS Organizations service? (Choose TWO)
     #    - A. Control access to AWS services.
     #    - B. Help organizations design and maintain an accelerated path to successful cloud adoption.
-    #    - C. Manage your organization’s payment methods.
+    #    - C. Manage your organization's payment methods.
     #    - D. Help organization achieve their desired business outcomes with AWS.
     #    - E. Consolidate billing across multiple AWS accounts.
     #
