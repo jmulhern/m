@@ -1,6 +1,7 @@
 import React, { useEffect, useState, Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import { Dialog, Transition } from "@headlessui/react"; // Import Dialog and Transition from Headless UI
+import Spinner from "./Spinner"; // Adjust the path based on your file structure
 
 const Questions = () => {
     const navigate = useNavigate();
@@ -21,6 +22,7 @@ const Questions = () => {
     // State variables for the explanation modal
     const [showModal, setShowModal] = useState(false); // Controls modal visibility
     const [explanation, setExplanation] = useState(""); // Stores the explanation text
+    const [loadingExplain, setLoadingExplain] = useState(false); // Add this line with other useState hooks
 
     // Fetch question data from the API
     useEffect(() => {
@@ -110,6 +112,7 @@ const Questions = () => {
 
     // Function to handle the "Explain" button click
     const handleExplain = async () => {
+        setLoadingExplain(true); // Start loading
         const payload = {
             question: currentQuestion.question,
             correct_answers: currentQuestion.correct_answers,
@@ -137,6 +140,8 @@ const Questions = () => {
         } catch (error) {
             console.error("Error fetching explanation:", error);
             alert("Failed to fetch explanation. Please try again.");
+        } finally {
+            setLoadingExplain(false); // End loading
         }
     };
 
@@ -288,9 +293,19 @@ const Questions = () => {
                         {!answerStatus.isCorrect && (
                             <button
                                 onClick={handleExplain}
-                                className="flex-1 py-3 sm:py-4 rounded-lg text-white font-bold bg-blue-500 hover:bg-blue-700 transition-colors duration-200"
+                                disabled={loadingExplain} // Disable button when loading
+                                className={`flex-1 py-3 sm:py-4 rounded-lg text-white font-bold bg-blue-500 hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center ${
+                                    loadingExplain ? "cursor-not-allowed opacity-70" : ""
+                                }`}
                             >
-                                Explain
+                                {loadingExplain ? (
+                                    <>
+                                        <Spinner />
+                                        Loading...
+                                    </>
+                                ) : (
+                                    "Explain"
+                                )}
                             </button>
                         )}
                     </div>
