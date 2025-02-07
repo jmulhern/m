@@ -3,6 +3,7 @@ package whatever
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/anthropics/anthropic-sdk-go"
 	"gopkg.in/yaml.v3"
 	"io"
 	"math/rand"
@@ -13,6 +14,8 @@ import (
 )
 
 func Routes() *http.ServeMux {
+	ai := anthropic.NewClient()
+
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /dist/whatever.output.css", func(w http.ResponseWriter, r *http.Request) {
 		filename := "dist/whatever.output.css"
@@ -127,6 +130,36 @@ func Routes() *http.ServeMux {
 
 		// convert to json
 		raw, _ = json.Marshal(questions[:25])
+		w.Header().Add("Content-Type", "application/json")
+		_, _ = w.Write(raw)
+	})
+	mux.HandleFunc("POST /api/explain", func(w http.ResponseWriter, r *http.Request) {
+		raw, _ := io.ReadAll(r.Body)
+
+		var data map[string]any
+		_ = json.Unmarshal(raw, &data)
+
+		prompt := fmt.Sprintf(`
+Given the question: %s
+
+The correct answer is: %s
+
+The person being asked the question answered incorrectly with: %s
+
+Give an explanation of why their answer is wrong and how it relates to the correct answer. Keep the response to only two sentences at most.
+`, data["question"], data["correct_answers"], data["incorrect_answers"])
+		fmt.Println(prompt)
+		message, _ := ai.Messages.New(r.Context(), anthropic.MessageNewParams{
+			Model:     anthropic.F(anthropic.ModelClaude3_5SonnetLatest),
+			MaxTokens: anthropic.F(int64(1024)),
+			Messages: anthropic.F([]anthropic.MessageParam{
+				anthropic.NewUserMessage(anthropic.NewTextBlock(prompt)),
+			}),
+		})
+
+		raw, _ = json.Marshal(map[string]any{
+			"explanation": message.Content[0].Text,
+		})
 		w.Header().Add("Content-Type", "application/json")
 		_, _ = w.Write(raw)
 	})

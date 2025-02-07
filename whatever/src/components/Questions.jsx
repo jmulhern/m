@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import { useNavigate } from "react-router-dom";
+import { Dialog, Transition } from "@headlessui/react"; // Import Dialog and Transition from Headless UI
 
 const Questions = () => {
     const navigate = useNavigate();
@@ -10,9 +11,16 @@ const Questions = () => {
     const [answerStatus, setAnswerStatus] = useState({}); // Tracks submission status
     const [isSubmitted, setIsSubmitted] = useState(false); // Tracks if the user has submitted answers
 
-    // New state variables for tracking correct and incorrect answers
+    // New state variables for tracking correct and incorrect counts
     const [correctCount, setCorrectCount] = useState(0);
     const [incorrectCount, setIncorrectCount] = useState(0);
+
+    // New state to store incorrect answers for the current question
+    const [incorrectAnswers, setIncorrectAnswers] = useState([]);
+
+    // State variables for the explanation modal
+    const [showModal, setShowModal] = useState(false); // Controls modal visibility
+    const [explanation, setExplanation] = useState(""); // Stores the explanation text
 
     // Fetch question data from the API
     useEffect(() => {
@@ -78,6 +86,12 @@ const Questions = () => {
             setCorrectCount(correctCount + 1);
         } else {
             setIncorrectCount(incorrectCount + 1);
+
+            // Store incorrect answers for the current question
+            const incorrect = selectedAnswers.filter(
+                (ans) => !currentQuestion.correct_answers.includes(ans)
+            );
+            setIncorrectAnswers(incorrect);
         }
     };
 
@@ -89,6 +103,47 @@ const Questions = () => {
         setIsSubmitted(false);
         setCorrectCount(0);
         setIncorrectCount(0);
+        setIncorrectAnswers([]);
+        setShowModal(false); // Close the modal if open
+        setExplanation("");
+    };
+
+    // Function to handle the "Explain" button click
+    const handleExplain = async () => {
+        const payload = {
+            question: currentQuestion.question,
+            correct_answers: currentQuestion.correct_answers,
+            incorrect_answers: incorrectAnswers,
+        };
+
+        try {
+            const response = await fetch("/api/explain", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json(); // Parse the response as JSON
+
+            // Assuming the API returns an 'explanation' field
+            setExplanation(data.explanation);
+            setShowModal(true); // Open the modal
+        } catch (error) {
+            console.error("Error fetching explanation:", error);
+            alert("Failed to fetch explanation. Please try again.");
+        }
+    };
+
+    // Function to close the modal
+    const handleCloseModal = () => {
+        setShowModal(false);
+        setExplanation("");
     };
 
     // Handle continue to next question
@@ -98,6 +153,7 @@ const Questions = () => {
             setSelectedAnswers([]);
             setAnswerStatus({});
             setIsSubmitted(false);
+            setIncorrectAnswers([]); // Reset incorrect answers for the next question
         } else {
             // Optionally, navigate to a results page or show a completion message
             navigate("/");
@@ -214,7 +270,7 @@ const Questions = () => {
                         className={`w-full py-3 sm:py-4 rounded-lg text-white font-bold ${
                             selectedAnswers.length === 0
                                 ? "bg-gray-500 cursor-not-allowed"
-                                : "bg-orange-600"
+                                : "bg-orange-600 hover:bg-orange-700"
                         } transition-colors duration-200`}
                     >
                         Submit
@@ -222,14 +278,83 @@ const Questions = () => {
                 )}
 
                 {isSubmitted && (
-                    <button
-                        onClick={handleContinue}
-                        className="w-full py-3 sm:py-4 rounded-lg text-white font-bold bg-green-500 hover:bg-green-700 transition-colors duration-200"
-                    >
-                        Continue
-                    </button>
+                    <div className="flex space-x-4">
+                        <button
+                            onClick={handleContinue}
+                            className="flex-1 py-3 sm:py-4 rounded-lg text-white font-bold bg-green-500 hover:bg-green-700 transition-colors duration-200"
+                        >
+                            Continue
+                        </button>
+                        {!answerStatus.isCorrect && (
+                            <button
+                                onClick={handleExplain}
+                                className="flex-1 py-3 sm:py-4 rounded-lg text-white font-bold bg-blue-500 hover:bg-blue-700 transition-colors duration-200"
+                            >
+                                Explain
+                            </button>
+                        )}
+                    </div>
                 )}
             </div>
+
+            {/* Explanation Modal */}
+            <Transition appear show={showModal} as={Fragment}>
+                <Dialog as="div" className="fixed inset-0 z-20 overflow-y-auto" onClose={handleCloseModal}>
+                    <div className="min-h-screen px-4 text-center">
+                        <Transition.Child
+                            as={Fragment}
+                            enter="ease-out duration-300"
+                            enterFrom="opacity-0"
+                            enterTo="opacity-100"
+                            leave="ease-in duration-200"
+                            leaveFrom="opacity-100"
+                            leaveTo="opacity-0"
+                        >
+                            <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-30" />
+                        </Transition.Child>
+
+                        {/* This element is to trick the browser into centering the modal contents. */}
+                        <span className="inline-block h-screen align-middle" aria-hidden="true">
+                            &#8203;
+                        </span>
+                        <Transition.Child
+                            as={Fragment}
+                            enter="ease-out duration-300"
+                            enterFrom="opacity-0 scale-95"
+                            enterTo="opacity-100 scale-100"
+                            leave="ease-in duration-200"
+                            leaveFrom="opacity-100 scale-100"
+                            leaveTo="opacity-0 scale-95"
+                        >
+                            <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-gray-800 shadow-xl rounded-lg">
+                                <Dialog.Title
+                                    as="h3"
+                                    className="text-lg font-medium leading-6 text-white mb-4"
+                                >
+                                    Explanation
+                                </Dialog.Title>
+                                <div className="mt-2">
+                                    {explanation ? (
+                                        <p className="text-gray-200">{explanation}</p>
+                                    ) : (
+                                        <p className="text-gray-200">No explanation available.</p>
+                                    )}
+                                </div>
+
+                                <div className="mt-4">
+                                    <button
+                                        type="button"
+                                        className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                                        onClick={handleCloseModal}
+                                    >
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </Transition.Child>
+                    </div>
+                </Dialog>
+            </Transition>
         </div>
     );
 };
