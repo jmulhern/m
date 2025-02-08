@@ -6,7 +6,7 @@ type Assessment struct {
 	Questions []Question `yaml:"questions" json:"questions"`
 }
 type Question struct {
-	Question       string   `yaml:"question" json:"question"`
+	PromptText     string   `yaml:"prompt_text" json:"prompt_text"`
 	Detractors     []string `yaml:"detractors" json:"detractors"`
 	CorrectAnswers []string `yaml:"correct-answers" json:"correct_answers"`
 }

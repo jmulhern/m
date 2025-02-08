@@ -15,7 +15,7 @@ export default function App() {
         <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/w/:id" element={<Assessments />} />
-            <Route path="/scoreboard" element={<Scoreboard />} />
+            <Route path="/w/:id/scoreboard" element={<Scoreboard />} />
         </Routes>
       </Router>
     </QueryClientProvider>

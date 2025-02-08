@@ -1,14 +1,14 @@
 name: Random Trivia
 pick: 5
 questions:
-- question:  What is a baby kangaroo called?
+- prompt_text: What is a baby kangaroo called?
   correct-answers:
   -  Joey
   detractors:
   -  Calf
   -  Pup
   -  Kit
-- question:  What is a group of cats called?
+- prompt_text: What is a group of cats called?
   correct-answers:
   -  A clowder
   detractors:
@@ -16,7 +16,7 @@ questions:
   -  A chaos
   -  A gaggle
 
-- question:  Which country is known as the "Land of the Rising Sun"?
+- prompt_text: Which country is known as the "Land of the Rising Sun"?
   correct-answers:
   -  Japan
   detractors:
@@ -24,7 +24,7 @@ questions:
   -  South Korea
   -  Thailand
 
-- question:  What is cognitive dissonance?
+- prompt_text: What is cognitive dissonance?
   correct-answers:
   -  Conflict between attitudes and behaviors
   detractors:
@@ -32,7 +32,7 @@ questions:
   -  Heightened emotional states
   -  Enhanced cognitive function
 
-- question: If someone "spills the tea," what are they doing in modern slang?
+- prompt_text: If someone "spills the tea," what are they doing in modern slang?
   correct-answers:
   - Sharing gossip
   detractors:
@@ -40,7 +40,7 @@ questions:
   - Drinking tea
   - Avoiding work
 
-- question: Where would you find the world’s smallest street, Ebenezer Place?
+- prompt_text: Where would you find the world’s smallest street, Ebenezer Place?
   correct-answers:
   - Scotland
   detractors:
@@ -48,7 +48,7 @@ questions:
   - Brazil
   - Japan
 
-- question: Where can you find the world’s most crooked street?
+- prompt_text: Where can you find the world’s most crooked street?
   correct-answers:
   - San Francisco, USA
   detractors:
@@ -56,7 +56,7 @@ questions:
   - Istanbul, Turkey
   - Sydney, Australia
 
-- question: What does "bae" stand for in slang?
+- prompt_text: What does "bae" stand for in slang?
   correct-answers:
   - Before Anyone Else
   detractors:
@@ -64,7 +64,7 @@ questions:
   - Bacon And Eggs
   - Big And Exciting
 
-- question: In what country can you stay in an ice hotel constructed every winter?
+- prompt_text: In what country can you stay in an ice hotel constructed every winter?
   correct-answers:
   - Finland
   detractors:
@@ -72,7 +72,7 @@ questions:
   - Norway
   - Russia
 
-- question: If someone mentions they visited the "Big Easy," which city are they referring to?
+- prompt_text: If someone mentions they visited the "Big Easy," which city are they referring to?
   correct-answers:
   - New Orleans
   detractors:
@@ -80,7 +80,7 @@ questions:
   - Miami
   - Seattle
 
-- question: What animal is known for its ability to regenerate lost limbs?
+- prompt_text: What animal is known for its ability to regenerate lost limbs?
   correct-answers:
   - Starfish
   detractors:
@@ -88,7 +88,7 @@ questions:
   - Crab
   - Frog
 
-- question: What is a common name for a group of flamingos?
+- prompt_text: What is a common name for a group of flamingos?
   correct-answers:
   - A parade
   detractors:
@@ -96,7 +96,7 @@ questions:
   - A crop
   - An alliance
 
-- question: Which animal's fingerprints are almost identical to human fingerprints?
+- prompt_text: Which animal's fingerprints are almost identical to human fingerprints?
   correct-answers:
   - Koala
   detractors:
@@ -104,7 +104,7 @@ questions:
   - Dolphin
   - Lizard
 
-- question: What does it mean if someone says they have been "ghosted"?
+- prompt_text: What does it mean if someone says they have been "ghosted"?
   correct-answers:
   - They've been ignored or avoided
   detractors:
@@ -112,7 +112,7 @@ questions:
   - They lost internet connection
   - They've lost their keys
 
-- question: In what country can you take a selfie with a wild Quokka, known as the happiest animal on earth?
+- prompt_text: In what country can you take a selfie with a wild Quokka, known as the happiest animal on earth?
   correct-answers:
   - Australia
   detractors:
@@ -120,7 +120,7 @@ questions:
   - France
   - South Africa
 
-- question: What type of cloud is fluffy and looks like cotton candy in the sky?
+- prompt_text: What type of cloud is fluffy and looks like cotton candy in the sky?
   correct-answers:
   - Cumulus
   detractors:
@@ -128,7 +128,7 @@ questions:
   - Nimbus
   - Cirrus
 
-- question: What is the function of the uvula, the little dangly thing at the back of the throat?
+- prompt_text: What is the function of the uvula, the little dangly thing at the back of the throat?
   correct-answers:
   - Speech articulation
   detractors:
@@ -136,7 +136,7 @@ questions:
   - Taste detection
   - Decor
 
-- question: What is the national animal of Scotland?
+- prompt_text: What is the national animal of Scotland?
   correct-answers:
   - Unicorn
   detractors:
@@ -144,7 +144,7 @@ questions:
   - Dragon
   - Phoenix
 
-- question: What do honey bees collect and use to create honey?
+- prompt_text: What do honey bees collect and use to create honey?
   correct-answers:
   - Nectar
   detractors:
@@ -152,7 +152,7 @@ questions:
   - Water
   - Pollen
 
-- question: Which fruit is known as the “king of fruits”?
+- prompt_text: Which fruit is known as the “king of fruits”?
   correct-answers:
   - Mango
   detractors:
@@ -160,7 +160,7 @@ questions:
   - Banana
   - Pineapple
 
-- question: What common vegetable is also known as a courgette?
+- prompt_text: What common vegetable is also known as a courgette?
   correct-answers:
   - Zucchini
   detractors:
@@ -168,7 +168,7 @@ questions:
   - Potato
   - Peas
 
-- question: What is the tiny piece of plastic at the end of a shoelace called?
+- prompt_text: What is the tiny piece of plastic at the end of a shoelace called?
   correct-answers:
   - Aglet
   detractors:
@@ -176,7 +176,7 @@ questions:
   - Bracket
   - Loop
 
-- question: What is the main ingredient of the traditional Japanese drink sake?
+- prompt_text: What is the main ingredient of the traditional Japanese drink sake?
   correct-answers:
   - Rice
   detractors:
@@ -184,7 +184,7 @@ questions:
   - Barley
   - Corn
 
-- question: What is the largest type of bear?
+- prompt_text: What is the largest type of bear?
   correct-answers:
   - Polar Bear
   detractors:
@@ -192,7 +192,7 @@ questions:
   - Panda Bear
   - Black Bear
 
-- question: In which country did table tennis originate?
+- prompt_text: In which country did table tennis originate?
   correct-answers:
   - England
   detractors:
@@ -200,7 +200,7 @@ questions:
   - USA
   - India
 
-- question: What is the only fruit that has its seeds on the outside?
+- prompt_text: What is the only fruit that has its seeds on the outside?
   correct-answers:
   - Strawberry
   detractors:
@@ -208,7 +208,7 @@ questions:
   - Peach
   - Plum
 
-- question: Which bird is often associated with delivering babies in folklore?
+- prompt_text: Which bird is often associated with delivering babies in folklore?
   correct-answers:
   - Stork
   detractors:
@@ -216,7 +216,7 @@ questions:
   - Owl
   - Robin
 
-- question: What musical instrument is Ringo Starr famous for playing?
+- prompt_text: What musical instrument is Ringo Starr famous for playing?
   correct-answers:
   - Drums
   detractors:
@@ -224,7 +224,7 @@ questions:
   - Piano
   - Violin
 
-- question: Which planet is known as the "Red Planet"?
+- prompt_text: Which planet is known as the "Red Planet"?
   correct-answers:
   - Mars
   detractors:
@@ -232,7 +232,7 @@ questions:
   - Venus
   - Jupiter
 
-- question: What do you call a male bee that mates with the queen?
+- prompt_text: What do you call a male bee that mates with the queen?
   correct-answers:
   - Drone
   detractors:
@@ -240,7 +240,7 @@ questions:
   - Worker
   - Guard
 
-- question: What kind of tree do acorns come from?
+- prompt_text: What kind of tree do acorns come from?
   correct-answers:
   - Oak
   detractors:
@@ -248,7 +248,7 @@ questions:
   - Maple
   - Birch
 
-- question: How many lives is a cat said to have?
+- prompt_text: How many lives is a cat said to have?
   correct-answers:
   - "9"
   detractors:
@@ -256,7 +256,7 @@ questions:
   - "7"
   - "3"
 
-- question: What do you call a fear of heights?
+- prompt_text: What do you call a fear of heights?
   correct-answers:
   - Acrophobia
   detractors:
@@ -264,7 +264,7 @@ questions:
   - Agoraphobia
   - Claustrophobia
 
-- question: Which animal's poop is cube-shaped?
+- prompt_text: Which animal's poop is cube-shaped?
   correct-answers:
   - Wombat
   detractors:
@@ -276,7 +276,7 @@ questions:
   #  b)
   #  c)
   #  d)
-- question: What did the crocodile swallow in “Peter Pan”?
+- prompt_text: What did the crocodile swallow in “Peter Pan”?
   correct-answers:
   - A clock
   detractors:
@@ -284,7 +284,7 @@ questions:
   - A pipe
   - A book
 
-- question: What letter is not included in any of the 50 US state names?
+- prompt_text: What letter is not included in any of the 50 US state names?
   correct-answers:
   - Q
   detractors:
@@ -292,7 +292,7 @@ questions:
   - X
   - P
 
-- question: What is the scientific name for a wolf?
+- prompt_text: What is the scientific name for a wolf?
   correct-answers:
   - Canis lupus
   detractors:
@@ -300,7 +300,7 @@ questions:
   - Panthera leo
   - Equus caballus
 
-- question: In the game of chess, which piece can only move diagonally?
+- prompt_text: In the game of chess, which piece can only move diagonally?
   correct-answers:
   - Bishop
   detractors:
@@ -308,7 +308,7 @@ questions:
   - Knight
   - Queen
 
-- question: What is the only mammal capable of true flight?
+- prompt_text: What is the only mammal capable of true flight?
   correct-answers:
   - Bat
   detractors:
@@ -316,7 +316,7 @@ questions:
   - Parrot
   - Flying fish
 
-- question: What was the first feature-length animated movie ever released?
+- prompt_text: What was the first feature-length animated movie ever released?
   correct-answers:
   - Snow White and the Seven Dwarfs
   detractors:
@@ -324,7 +324,7 @@ questions:
   - Cinderella
   - The Lion King
 
-- question: What was the first toy to be advertised on television?
+- prompt_text: What was the first toy to be advertised on television?
   correct-answers:
   - Mr. Potato Head
   detractors:
@@ -332,7 +332,7 @@ questions:
   - Slinky
   - Rubik's Cube
 
-- question: What type of fish is Nemo in the movie “Finding Nemo”?
+- prompt_text: What type of fish is Nemo in the movie “Finding Nemo”?
   correct-answers:
   - Clownfish
   detractors:
@@ -340,7 +340,7 @@ questions:
   - Betta fish
   - Guppy
 
-- question: In what state is Area 51 located?
+- prompt_text: In what state is Area 51 located?
   correct-answers:
   - Nevada
   detractors:
@@ -348,7 +348,7 @@ questions:
   - Arizona
   - Utah
 
-- question: What is the hardest substance in the human body?
+- prompt_text: What is the hardest substance in the human body?
   correct-answers:
   - Enamel
   detractors:
@@ -356,7 +356,7 @@ questions:
   - Nail
   - Cartilage
 
-- question: In French, what does the phrase "cul-de-sac" literally mean?
+- prompt_text: In French, what does the phrase "cul-de-sac" literally mean?
   correct-answers:
   - Dead end
   detractors:
@@ -364,7 +364,7 @@ questions:
   - Turn left
   - Red light
 
-- question: What does the word “loquacious” mean?
+- prompt_text: What does the word “loquacious” mean?
   correct-answers:
   - Talkative
   detractors:
@@ -372,7 +372,7 @@ questions:
   - Angry
   - Sleepy
 
-- question: What mythical bird is known for rising from its ashes?
+- prompt_text: What mythical bird is known for rising from its ashes?
   correct-answers:
   - Phoenix
   detractors:
@@ -380,7 +380,7 @@ questions:
   - Griffin
   - Minotaur
 
-- question: What organ in the human body can regrow itself?
+- prompt_text: What organ in the human body can regrow itself?
   correct-answers:
   - Liver
   detractors:
@@ -388,7 +388,7 @@ questions:
   - Heart
   - Lungs
 
-- question: Which planet in our solar system has the most moons?
+- prompt_text: Which planet in our solar system has the most moons?
   correct-answers:
   - Saturn
   detractors:
@@ -396,7 +396,7 @@ questions:
   - Jupiter
   - Neptune
 
-- question: What is a group of ravens called?
+- prompt_text: What is a group of ravens called?
   correct-answers:
   - Unkindness
   detractors:
@@ -404,7 +404,7 @@ questions:
   - Murder
   - Gaggle
 
-- question: Which country is the largest producer of coffee in the world?
+- prompt_text: Which country is the largest producer of coffee in the world?
   correct-answers:
   - Brazil
   detractors:
@@ -412,7 +412,7 @@ questions:
   - Vietnam
   - Ethiopia
 
-- question: What do you call a baby goat?
+- prompt_text: What do you call a baby goat?
   correct-answers:
   - Kid
   detractors:
@@ -420,7 +420,7 @@ questions:
   - Foal
   - Cub
 
-- question: Which cartoon character lives in a pineapple under the sea?
+- prompt_text: Which cartoon character lives in a pineapple under the sea?
   correct-answers:
   - SpongeBob SquarePants
   detractors:
@@ -428,7 +428,7 @@ questions:
   - Donald Duck
   - Bugs Bunny
 
-- question: How many noses does a slug have?
+- prompt_text: How many noses does a slug have?
   correct-answers:
   - Four
   detractors:
@@ -436,7 +436,7 @@ questions:
   - Two
   - Six
 
-- question: What is the name of Sherlock Holmes' assistant?
+- prompt_text: What is the name of Sherlock Holmes' assistant?
   correct-answers:
   - Watson
   detractors:
@@ -444,7 +444,7 @@ questions:
   - Lestrade
   - Moriarty
 
-- question: What do pandas primarily eat?
+- prompt_text: What do pandas primarily eat?
   correct-answers:
   - Bamboo
   detractors:
@@ -452,7 +452,7 @@ questions:
   - Meat
   - Grass
 
-- question: What is the only mammal that can't jump?
+- prompt_text: What is the only mammal that can't jump?
   correct-answers:
   - Elephant
   detractors:
@@ -460,7 +460,7 @@ questions:
   - Hippo
   - Giraffe
 
-- question: Which animal is known to have the longest lifespan?
+- prompt_text: Which animal is known to have the longest lifespan?
   correct-answers:
   - Giant Tortoise
   detractors:

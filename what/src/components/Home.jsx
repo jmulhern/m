@@ -1,39 +1,89 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import moment from "moment-timezone";
 
 const Home = () => {
-    const [assessments, setAssessments] = useState([]); // State to store assessments
-    const [loading, setLoading] = useState(true); // Loading state
-    const [error, setError] = useState(null); // Error state
+    const [assessments, setAssessments] = useState([]);
+    const [filteredAssessments, setFilteredAssessments] = useState([]);
+    const [searchQuery, setSearchQuery] = useState(""); // State for search query
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [timeLeft, setTimeLeft] = useState("");
 
-    const navigate = useNavigate(); // Navigation hook
+    const navigate = useNavigate();
+    const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD-HH");
 
-    // Fetch assessments from the endpoint
     useEffect(() => {
         const fetchAssessments = async () => {
             try {
-                const response = await fetch("/api/assessments"); // Fetch data
+                const response = await fetch("/api/assessments");
                 if (!response.ok) {
-                    throw new Error(`HTTP error: ${response.status}`); // Handle non-200 responses
+                    throw new Error(`HTTP error: ${response.status}`);
                 }
-                const data = await response.json(); // Parse JSON
-                setAssessments(data); // Set the assessments to state
-                setLoading(false); // Turn off loading
+                const data = await response.json();
+                setAssessments(data);
+                setFilteredAssessments(data); // Initialize filtered list
+                setLoading(false);
             } catch (err) {
-                setError(err.message); // Capture any errors
-                setLoading(false); // Turn off loading
+                setError(err.message);
+                setLoading(false);
             }
         };
 
-        fetchAssessments(); // Call the fetch function
+        fetchAssessments();
+
+        calculateTimeLeft();
+        const interval = setInterval(calculateTimeLeft, 1000);
+        return () => clearInterval(interval);
     }, []);
 
-    // Handle Navigation
-    const handleNavigation = (id) => {
-        navigate(`/w/${id}`); // Navigate using ID
+    useEffect(() => {
+        // Filter assessments whenever the search query changes
+        setFilteredAssessments(
+            assessments.filter((assessment) =>
+                assessment.name.toLowerCase().includes(searchQuery.toLowerCase())
+            )
+        );
+    }, [searchQuery, assessments]);
+
+    const calculateTimeLeft = () => {
+        const now = new Date();
+        const arizonaOffset = -7 * 60;
+        const currentArizonaTime = new Date(
+            now.getTime() + now.getTimezoneOffset() * 60000 + arizonaOffset * 60000
+        );
+
+        const nextHour = new Date(currentArizonaTime);
+        nextHour.setMinutes(0, 0, 0);
+        nextHour.setHours(currentArizonaTime.getHours() + 1);
+
+        const diff = nextHour - currentArizonaTime;
+
+        const hoursLeft = Math.floor(diff / (1000 * 60 * 60));
+        const minutesLeft = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const secondsLeft = Math.floor((diff % (1000 * 60)) / 1000);
+
+        setTimeLeft(`${hoursLeft > 0 ? hoursLeft + "h " : ""}${minutesLeft}m ${secondsLeft}s`);
     };
 
-    // Show a loading spinner or error message if applicable
+    const handleNavigation = (id) => {
+        const localStorageKey = `${today}-${id}`;
+        const existingData = localStorage.getItem(localStorageKey);
+
+        console.log(existingData);
+        if (existingData === null) {
+            navigate(`/w/${id}`);
+        } else {
+            navigate(`/w/${id}/scoreboard`, {
+                state: {
+                    name: existingData.name,    // Assessment Name
+                    correctCount: existingData.correctCount,
+                    incorrectCount: existingData.incorrectCount,
+                },
+            });
+        }
+    };
+
     if (loading) {
         return (
             <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
@@ -51,25 +101,95 @@ const Home = () => {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
-            {/* Adjusted margin for the heading */}
-            <h1 className="text-7xl font-bold mt-16 mb-10">What?</h1>
+        <div className="flex flex-col min-h-screen bg-gray-900 text-white">
+            {/* Toolbar */}
+            <header className="w-full bg-gray-800 py-4 shadow-md">
+                <div className="flex items-center justify-between max-w-4xl mx-auto px-4">
+                    {/* Left: Title */}
+                    <h1 className="text-2xl font-bold text-gray-100">What?</h1>
 
-            {/* Card container wrapping the list */}
-            <div className="bg-gray-800 rounded-lg shadow-md p-6 w-full max-w-lg mx-4">
-                <ul className="space-y-4 text-lg text-gray-300">
-                    {assessments.map((assessment) => (
-                        <li
-                            key={assessment.id}
-                            className="cursor-pointer transition hover:text-orange-400 duration-200 flex items-center gap-2"
-                            onClick={() => handleNavigation(assessment.id)} // Use ID for navigation
-                        >
-                            <i className={`${assessment.icon} text-xl`}></i> {/* Dynamic icon */}
-                            {assessment.name}
-                        </li>
-                    ))}
-                </ul>
-            </div>
+                    {/* Center: Search Bar */}
+                    <div className="flex-1 mx-6">
+                        <input
+                            type="text"
+                            placeholder="Search assessments..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)} // Update search query on input
+                            className="w-full p-2 bg-gray-700 text-gray-200 placeholder-gray-400 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+                        />
+                    </div>
+
+                    {/* Right: Icon */}
+                    <div>
+                        <p className="text-yellow-400 font-semibold text-center">
+                            <i className="fas fa-clock px-1"></i> {timeLeft}
+                        </p>
+                    </div>
+                </div>
+            </header>
+
+            {/* Assessments List */}
+            <main className="flex-1 flex flex-col items-center justify-center mt-8">
+                <div className="bg-gray-800 rounded-md shadow-md p-6 w-full max-w-4xl">
+                    <ul className="divide-y divide-gray-700">
+                        {filteredAssessments.map((assessment) => {
+                            const localStorageKey = `${today}-${assessment.id}`;
+                            const storedData = localStorage.getItem(localStorageKey);
+
+                            let correctCount = 0;
+                            let incorrectCount = 0;
+
+                            if (storedData !== null) {
+                                const parsedData = JSON.parse(storedData);
+                                correctCount = parsedData.correctCount || 0;
+                                incorrectCount = parsedData.incorrectCount || 0;
+                            }
+
+                            return (
+                                <li
+                                    key={assessment.id}
+                                    className="grid grid-cols-[auto_auto_1fr] py-4 gap-6 items-center  cursor-pointer transition duration-200 px-4"
+                                    onClick={() => handleNavigation(assessment.id)}
+                                >
+                                    {/* Column 1: Scores */}
+                                    <div className="flex items-center justify-center space-x-2">
+                                        {storedData ? (
+                                            <>
+                                                <div className="text-center">
+                                                    <i className="fas fa-check text-green-500 text-lg"></i>
+                                                    <div className="text-sm text-green-500">
+                                                        {correctCount}
+                                                    </div>
+                                                </div>
+                                                <div className="text-center">
+                                                    <i className="fas fa-xmark text-red-500 text-lg"></i>
+                                                    <div className="text-sm text-red-500">
+                                                        {incorrectCount}
+                                                    </div>
+                                                </div>
+                                            </>
+                                        ) : (
+                                            <i className={`${assessment.icon} text-gray-300 text-2xl`}></i>
+                                        )}
+                                    </div>
+
+                                    {/* Column 3: Assessment Name */}
+                                    <div>
+                                        <span className="text-lg font-medium text-gray-300 hover:text-yellow-500 transition duration-200">
+                                            {assessment.name}
+                                        </span>
+                                    </div>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                    {filteredAssessments.length === 0 && (
+                        <p className="text-center text-gray-500 mt-6">
+                            No assessments match your search.
+                        </p>
+                    )}
+                </div>
+            </main>
         </div>
     );
 };

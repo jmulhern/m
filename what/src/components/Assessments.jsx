@@ -3,10 +3,12 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { Dialog, Transition } from "@headlessui/react"; // Import Dialog and Transition from Headless UI
 import Spinner from "./Spinner"; // Adjust the path based on your file structure
-import Toolbar from "./Toolbar"; // Import the Toolbar component
+import Toolbar from "./Toolbar";
+import moment from "moment-timezone"; // Import the Toolbar component
 
 const Assessments = () => {
     const { id } = useParams();
+    const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD-HH");
 
     const navigate = useNavigate();
     const [assessmentName, setAssessmentName] = useState("");
@@ -78,6 +80,7 @@ const Assessments = () => {
     };
 
     // Handle submit of selected answers
+    // Handle submit of selected answers
     const handleSubmit = () => {
         const correctAnswers = currentQuestion.correct_answers.map((ans) => ans.toLowerCase());
         const selected = selectedAnswers.map((ans) => ans.toLowerCase());
@@ -100,14 +103,28 @@ const Assessments = () => {
         } else {
             setIncorrectCount(incorrectCount + 1);
 
-            // Store incorrect answers for the current question
+            // Save incorrect answers for the current question (if needed)
             const incorrect = selectedAnswers.filter(
                 (ans) => !currentQuestion.correct_answers.includes(ans)
             );
             setIncorrectAnswers(incorrect);
         }
-    };
 
+        // Save the question info to localStorage
+        const storageKey = `${today}-${id}-${currentQuestionIndex + 1}`; // Unique key for this question
+        const questionData = {
+            question: currentQuestion.question,           // Question text
+            correctAnswers: currentQuestion.correct_answers, // Correct answers array
+            chosenAnswers: selectedAnswers,              // Selected answers array
+            isCorrect,                                   // Boolean indicating correctness
+        };
+
+        try {
+            localStorage.setItem(storageKey, JSON.stringify(questionData)); // Save to localStorage
+        } catch (err) {
+            console.error("Error saving to localStorage: ", err); // Log any issues
+        }
+    };
     // Function to handle the "Explain" button click
     const handleExplain = async () => {
         setLoadingExplain(true); // Start loading
@@ -161,6 +178,15 @@ const Assessments = () => {
             // Optionally, navigate to a results page or show a completion message
             navigate("/");
         }
+    };
+
+    // Handle continue to next question
+    const handleDone = () => {
+        const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD-HH");
+        const key = `${today}-${id}`;
+
+        localStorage.setItem(key, JSON.stringify({name: assessmentName, correctCount: correctCount, incorrectCount: incorrectCount}));
+        navigate(`/w/${id}/scoreboard`);
     };
 
     if (loading) {
@@ -277,22 +303,14 @@ const Assessments = () => {
                         {/* Show "Done" button when on the last question */}
                         {currentQuestionIndex === questions.length - 1 ? (
                             <button
-                                onClick={() =>
-                                    navigate("/scoreboard", {
-                                        state: {
-                                            name: assessmentName,
-                                            correctCount: correctCount,
-                                            incorrectCount: incorrectCount,
-                                        },
-                                    })
-                                }
+                                onClick={handleDone}
                                 className="flex-1 py-3 sm:py-4 rounded-lg text-white font-bold bg-green-500 hover:bg-green-700 transition-colors duration-200"
                             >
                                 Done
                             </button>
                         ) : (
                             <button
-                                onClick={handleContinue} // Handle continue to next question
+                                onClick={handleContinue} // Handle continue to the next question
                                 className="flex-1 py-3 sm:py-4 rounded-lg text-white font-bold bg-green-500 hover:bg-green-700 transition-colors duration-200"
                             >
                                 Continue

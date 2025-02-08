@@ -6,6 +6,7 @@ import (
 	"github.com/anthropics/anthropic-sdk-go"
 	"gopkg.in/yaml.v3"
 	"io"
+	"log"
 	"math/rand"
 	"net/http"
 	"os"
@@ -81,18 +82,27 @@ func Routes() *http.ServeMux {
 
 		// read from yaml
 		filename := fmt.Sprintf("what/private/data/assessments/%s.yaml", name)
-		file, _ := os.Open(filename)
-		raw, _ := io.ReadAll(file)
+		file, err := os.Open(filename)
+		if err != nil {
+			log.Fatalln(err)
+		}
+		raw, err := io.ReadAll(file)
+		if err != nil {
+			log.Fatalln(err)
+		}
 
 		var assessment Assessment
-		_ = yaml.Unmarshal(raw, &assessment)
+		err = yaml.Unmarshal(raw, &assessment)
+		if err != nil {
+			log.Fatalln(err)
+		}
 
 		var questions []any
 		for _, question := range assessment.Questions {
 			possibleAnswers := append(question.Detractors, question.CorrectAnswers...)
 			shufflePossibleAnswers(possibleAnswers)
 			questions = append(questions, map[string]any{
-				"question":         question.Question,
+				"question":         question.PromptText,
 				"possible_answers": possibleAnswers,
 				"correct_answers":  question.CorrectAnswers,
 			})

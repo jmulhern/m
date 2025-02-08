@@ -1,14 +1,31 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import {useLocation, useNavigate, useParams} from "react-router-dom";
+import moment from "moment-timezone";
 
 const Scoreboard = () => {
     const location = useLocation(); // Access location object
-    const navigate = useNavigate(); // For navigation
-    const { name, correctCount, incorrectCount } = location.state || {}; // Extract passed state
+    const navigate = useNavigate();
 
+    const { id } = useParams();// For navigation
+    const [name, setName] = useState("");
+    const [correctCount, setCorrectCount] = useState(0);
+    const [incorrectCount, setIncorrectCount] = useState(0);
     const [timeLeft, setTimeLeft] = useState("");
 
     useEffect(() => {
+        const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD-HH");
+        const key = `${today}-${id}`; // Construct the key using the current date and assessment ID.
+        const pastAssessmentRaw = localStorage.getItem(key); // Retrieve the item from localStorage.
+
+        if (pastAssessmentRaw) {
+            const pastAssessment = JSON.parse(pastAssessmentRaw)
+            setName(pastAssessment.name)
+            setCorrectCount(pastAssessment.correctCount)
+            setIncorrectCount(pastAssessment.incorrectCount)
+        } else {
+            navigate("/")
+        }
+
         const calculateTimeLeft = () => {
             // Get the current time in UTC
             const now = new Date();
@@ -41,7 +58,7 @@ const Scoreboard = () => {
 
         // Clean up the interval on component unmount
         return () => clearInterval(interval);
-    }, []);
+    })
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900">
