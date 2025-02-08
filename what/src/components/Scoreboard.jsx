@@ -64,17 +64,17 @@ const Scoreboard = () => {
                 {/* Countdown Timer Section */}
                 <div className="mt-4">
                     <p className="text-yellow-400 text-center font-semibold">
-                        <span>{timeLeft}</span>
+                        <span><i className="fas fa-solid fa-rotate px-1"></i> {timeLeft}</span>
                     </p>
                 </div>
 
                 {/* Back to Home Button */}
                 <div className="mt-6 flex justify-center">
                     <button
-                        className="hover:text-red-400 text-white font-semibold py-2 px-4 rounded flex items-center"
+                        className="hover:text-gray-400 text-white font-semibold py-2 px-4 rounded flex items-center"
                         onClick={() => navigate("/")}
                     >
-                        <i className="fas fa-sharp fa-solid fa-crab mr-2"></i>
+                        <i className="fas fa-sharp fa-solid fa-home mr-2"></i>
                     </button>
                 </div>
 

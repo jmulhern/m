@@ -52,22 +52,24 @@ const Home = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
-            {/* Large centered text */}
-            <h1 className="text-7xl font-bold mb-10">What?</h1>
+            {/* Adjusted margin for the heading */}
+            <h1 className="text-7xl font-bold mt-16 mb-10">What?</h1>
 
-            {/* Vertical list of assessments */}
-            <ul className="space-y-4 text-xl text-gray-300">
-                {assessments.map((assessment) => (
-                    <li
-                        key={assessment.id}
-                        className="cursor-pointer transition hover:text-orange-400 duration-200 flex items-center gap-2"
-                        onClick={() => handleNavigation(assessment.id)} // Use ID for navigation
-                    >
-                        <i className={`${assessment.icon} text-lg`}></i> {/* Dynamic icon */}
-                        {assessment.name}
-                    </li>
-                ))}
-            </ul>
+            {/* Card container wrapping the list */}
+            <div className="bg-gray-800 rounded-lg shadow-md p-6 w-full max-w-lg mx-4">
+                <ul className="space-y-4 text-lg text-gray-300">
+                    {assessments.map((assessment) => (
+                        <li
+                            key={assessment.id}
+                            className="cursor-pointer transition hover:text-orange-400 duration-200 flex items-center gap-2"
+                            onClick={() => handleNavigation(assessment.id)} // Use ID for navigation
+                        >
+                            <i className={`${assessment.icon} text-xl`}></i> {/* Dynamic icon */}
+                            {assessment.name}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 };
