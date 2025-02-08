@@ -218,8 +218,8 @@ const Assessments = () => {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 pt-4 px-4">
-            {/* Use Toolbar Component */}
+        <div className="flex flex-col items-center  bg-gray-900 pt-4 px-4">
+        {/* Use Toolbar Component */}
             <Toolbar
                 assessmentName={assessmentName}
                 navigate={navigate}
@@ -229,7 +229,7 @@ const Assessments = () => {
                 incorrectCount={incorrectCount}
             />
 
-            <div className="w-full max-w-3xl mt-2 sm:mt-4">
+            <div className="w-full max-w-3xl mt-20">
                 {/* Current Question Card */}
                 <div
                     className={`mb-8 bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg border transition-colors duration-300 ${

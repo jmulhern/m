@@ -81,7 +81,7 @@ const Scoreboard = () => {
                 {/* Countdown Timer Section */}
                 <div className="mt-4">
                     <p className="text-yellow-400 text-center font-semibold">
-                        <span><i className="fas fa-solid fa-rotate px-1"></i> {timeLeft}</span>
+                        <span><i className="fas fa-solid fa-clock px-1"></i> {timeLeft}</span>
                     </p>
                 </div>
 

@@ -101,11 +101,12 @@ const Home = () => {
     }
 
     return (
-        <div className="flex flex-col min-h-screen bg-gray-900 text-white">
-            {/* Toolbar */}
-            <header className="w-full bg-gray-800 py-4 shadow-md">
-                <div className="flex items-center justify-between max-w-4xl mx-auto px-4">
-                    {/* Left: Title */}
+        <div className="flex flex-col items-center  bg-gray-900 pt-4 px-4">
+
+        {/* Floating Toolbar */}
+            <header className="toolbar fixed top-0 left-0 w-full bg-gray-800 text-white shadow-md z-10">
+                <div className="container mx-auto p-4 flex justify-between items-center">
+                {/* Left: Title */}
                     <h1 className="text-2xl font-bold text-gray-100">What?</h1>
 
                     {/* Center: Search Bar */}
@@ -129,7 +130,7 @@ const Home = () => {
             </header>
 
             {/* Assessments List */}
-            <main className="flex-1 flex flex-col items-center justify-center mt-8">
+            <main className="w-full max-w-3xl mt-20">
                 <div className="bg-gray-800 rounded-md shadow-md p-6 w-full max-w-4xl">
                     <ul className="divide-y divide-gray-700">
                         {filteredAssessments.map((assessment) => {
