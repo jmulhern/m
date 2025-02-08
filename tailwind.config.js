@@ -7,6 +7,8 @@ module.exports = {
     "./johnmulhern/public/**/*.html",
     "./sportsball/src/**/*.{html,js,jsx}",
     "./sportsball/public/**/*.html",
+    "./what/src/**/*.{html,js,jsx}",
+    "./what/public/**/*.html",
     "./whatever/src/**/*.{html,js,jsx}",
     "./whatever/public/**/*.html"
   ],

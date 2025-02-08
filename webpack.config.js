@@ -7,6 +7,7 @@ module.exports = {
     greasyshadows: './greasyshadows/src/index.js',
     johnmulhern: './johnmulhern/src/index.js',
     sportsball: './sportsball/src/index.js',
+    what: './what/src/index.js',
     whatever: './whatever/src/index.js',
   },
   mode: "development",

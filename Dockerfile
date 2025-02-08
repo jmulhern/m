@@ -40,6 +40,9 @@ COPY johnmulhern/public johnmulhern/public
 COPY johnmulhern/private johnmulhern/private
 # sportsball
 COPY sportsball/public sportsball/public
+# what
+COPY what/public what/public
+COPY what/private what/private
 # whatever
 COPY whatever/public whatever/public
 COPY whatever/private whatever/private

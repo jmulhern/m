@@ -11,6 +11,7 @@ type Server struct {
 	greasyshadows    *http.ServeMux
 	johnmulhern      *http.ServeMux
 	sportsball       *http.ServeMux
+	what             *http.ServeMux
 	whatever         *http.ServeMux
 }
 
@@ -29,6 +30,8 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		s.johnmulhern.ServeHTTP(w, r)
 	case domainParts[0] == "sportsball":
 		s.sportsball.ServeHTTP(w, r)
+	case domainParts[0] == "what":
+		s.what.ServeHTTP(w, r)
 	case domainParts[0] == "whatever":
 		s.whatever.ServeHTTP(w, r)
 	default:

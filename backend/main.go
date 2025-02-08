@@ -9,6 +9,7 @@ import (
 	greasyshadows "github.com/jmulhern/m/greasyshadows/backend"
 	johnmulhern "github.com/jmulhern/m/johnmulhern/backend"
 	sportsball "github.com/jmulhern/m/sportsball/backend"
+	what "github.com/jmulhern/m/what/backend"
 	whatever "github.com/jmulhern/m/whatever/backend"
 )
 
@@ -18,6 +19,7 @@ func Start(port int) {
 		greasyshadows:    greasyshadows.Routes(),
 		johnmulhern:      johnmulhern.Routes(),
 		sportsball:       sportsball.Routes(),
+		what:             what.Routes(),
 		whatever:         whatever.Routes(),
 	}
 	log.Printf("listening on :%d", port)

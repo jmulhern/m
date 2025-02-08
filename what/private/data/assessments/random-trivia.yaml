@@ -1,0 +1,468 @@
+name: Random Trivia
+questions:
+- question:  What is a baby kangaroo called?
+  correct-answers:
+  -  Joey
+  detractors:
+  -  Calf
+  -  Pup
+  -  Kit
+- question:  What is a group of cats called?
+  correct-answers:
+  -  A clowder
+  detractors:
+  -  A cuddle
+  -  A chaos
+  -  A gaggle
+
+- question:  Which country is known as the "Land of the Rising Sun"?
+  correct-answers:
+  -  Japan
+  detractors:
+  -  China
+  -  South Korea
+  -  Thailand
+
+- question:  What is cognitive dissonance?
+  correct-answers:
+  -  Conflict between attitudes and behaviors
+  detractors:
+  -  Increased social interaction
+  -  Heightened emotional states
+  -  Enhanced cognitive function
+
+- question: If someone "spills the tea," what are they doing in modern slang?
+  correct-answers:
+  - Sharing gossip
+  detractors:
+  - Making a mess
+  - Drinking tea
+  - Avoiding work
+
+- question: Where would you find the world’s smallest street, Ebenezer Place?
+  correct-answers:
+  - Scotland
+  detractors:
+  - Italy
+  - Brazil
+  - Japan
+
+- question: Where can you find the world’s most crooked street?
+  correct-answers:
+  - San Francisco, USA
+  detractors:
+  - Paris, France
+  - Istanbul, Turkey
+  - Sydney, Australia
+
+- question: What does "bae" stand for in slang?
+  correct-answers:
+  - Before Anyone Else
+  detractors:
+  - Best At Everything
+  - Bacon And Eggs
+  - Big And Exciting
+
+- question: In what country can you stay in an ice hotel constructed every winter?
+  correct-answers:
+  - Finland
+  detractors:
+  - Canada
+  - Norway
+  - Russia
+
+- question: If someone mentions they visited the "Big Easy," which city are they referring to?
+  correct-answers:
+  - New Orleans
+  detractors:
+  - Los Angeles
+  - Miami
+  - Seattle
+
+- question: What animal is known for its ability to regenerate lost limbs?
+  correct-answers:
+  - Starfish
+  detractors:
+  - Snake
+  - Crab
+  - Frog
+
+- question: What is a common name for a group of flamingos?
+  correct-answers:
+  - A parade
+  detractors:
+  - A gaggle
+  - A crop
+  - An alliance
+
+- question: Which animal's fingerprints are almost identical to human fingerprints?
+  correct-answers:
+  - Koala
+  detractors:
+  - Crow
+  - Dolphin
+  - Lizard
+
+- question: What does it mean if someone says they have been "ghosted"?
+  correct-answers:
+  - They've been ignored or avoided
+  detractors:
+  - They got scared
+  - They lost internet connection
+  - They've lost their keys
+
+- question: In what country can you take a selfie with a wild Quokka, known as the happiest animal on earth?
+  correct-answers:
+  - Australia
+  detractors:
+  - USA
+  - France
+  - South Africa
+
+- question: What type of cloud is fluffy and looks like cotton candy in the sky?
+  correct-answers:
+  - Cumulus
+  detractors:
+  - Stratus
+  - Nimbus
+  - Cirrus
+
+- question: What is the function of the uvula, the little dangly thing at the back of the throat?
+  correct-answers:
+  - Speech articulation
+  detractors:
+  - Swallowing control
+  - Taste detection
+  - Decor
+
+- question: What is the national animal of Scotland?
+  correct-answers:
+  - Unicorn
+  detractors:
+  - Lion
+  - Dragon
+  - Phoenix
+
+- question: What do honey bees collect and use to create honey?
+  correct-answers:
+  - Nectar
+  detractors:
+  - Sugar
+  - Water
+  - Pollen
+
+- question: Which fruit is known as the “king of fruits”?
+  correct-answers:
+  - Mango
+  detractors:
+  - Apple
+  - Banana
+  - Pineapple
+
+- question: What common vegetable is also known as a courgette?
+  correct-answers:
+  - Zucchini
+  detractors:
+  - Carrot
+  - Potato
+  - Peas
+
+- question: What is the tiny piece of plastic at the end of a shoelace called?
+  correct-answers:
+  - Aglet
+  detractors:
+  - Tag
+  - Bracket
+  - Loop
+
+- question: What is the main ingredient of the traditional Japanese drink sake?
+  correct-answers:
+  - Rice
+  detractors:
+  - Wheat
+  - Barley
+  - Corn
+
+- question: What is the largest type of bear?
+  correct-answers:
+  - Polar Bear
+  detractors:
+  - Grizzly Bear
+  - Panda Bear
+  - Black Bear
+
+- question: In which country did table tennis originate?
+  correct-answers:
+  - England
+  detractors:
+  - China
+  - USA
+  - India
+
+- question: What is the only fruit that has its seeds on the outside?
+  correct-answers:
+  - Strawberry
+  detractors:
+  - Kiwi
+  - Peach
+  - Plum
+
+- question: Which bird is often associated with delivering babies in folklore?
+  correct-answers:
+  - Stork
+  detractors:
+  - Eagle
+  - Owl
+  - Robin
+
+- question: What musical instrument is Ringo Starr famous for playing?
+  correct-answers:
+  - Drums
+  detractors:
+  - Guitar
+  - Piano
+  - Violin
+
+- question: Which planet is known as the "Red Planet"?
+  correct-answers:
+  - Mars
+  detractors:
+  - Earth
+  - Venus
+  - Jupiter
+
+- question: What do you call a male bee that mates with the queen?
+  correct-answers:
+  - Drone
+  detractors:
+  - King bee
+  - Worker
+  - Guard
+
+- question: What kind of tree do acorns come from?
+  correct-answers:
+  - Oak
+  detractors:
+  - Pine
+  - Maple
+  - Birch
+
+- question: How many lives is a cat said to have?
+  correct-answers:
+  - "9"
+  detractors:
+  - "5"
+  - "7"
+  - "3"
+
+- question: What do you call a fear of heights?
+  correct-answers:
+  - Acrophobia
+  detractors:
+  - Arachnophobia
+  - Agoraphobia
+  - Claustrophobia
+
+- question: Which animal's poop is cube-shaped?
+  correct-answers:
+  - Wombat
+  detractors:
+  - Kangaroo
+  - Elephant
+  - Koala
+  #
+  #  a)
+  #  b)
+  #  c)
+  #  d)
+- question: What did the crocodile swallow in “Peter Pan”?
+  correct-answers:
+  - A clock
+  detractors:
+  - A shoe
+  - A pipe
+  - A book
+
+- question: What letter is not included in any of the 50 US state names?
+  correct-answers:
+  - Q
+  detractors:
+  - Z
+  - X
+  - P
+
+- question: What is the scientific name for a wolf?
+  correct-answers:
+  - Canis lupus
+  detractors:
+  - Felis catus
+  - Panthera leo
+  - Equus caballus
+
+- question: In the game of chess, which piece can only move diagonally?
+  correct-answers:
+  - Bishop
+  detractors:
+  - Rook
+  - Knight
+  - Queen
+
+- question: What is the only mammal capable of true flight?
+  correct-answers:
+  - Bat
+  detractors:
+  - Squirrel
+  - Parrot
+  - Flying fish
+
+- question: What was the first feature-length animated movie ever released?
+  correct-answers:
+  - Snow White and the Seven Dwarfs
+  detractors:
+  - Bambi
+  - Cinderella
+  - The Lion King
+
+- question: What was the first toy to be advertised on television?
+  correct-answers:
+  - Mr. Potato Head
+  detractors:
+  - Barbie
+  - Slinky
+  - Rubik's Cube
+
+- question: What type of fish is Nemo in the movie “Finding Nemo”?
+  correct-answers:
+  - Clownfish
+  detractors:
+  - Goldfish
+  - Betta fish
+  - Guppy
+
+- question: In what state is Area 51 located?
+  correct-answers:
+  - Nevada
+  detractors:
+  - New Mexico
+  - Arizona
+  - Utah
+
+- question: What is the hardest substance in the human body?
+  correct-answers:
+  - Enamel
+  detractors:
+  - Bone
+  - Nail
+  - Cartilage
+
+- question: In French, what does the phrase "cul-de-sac" literally mean?
+  correct-answers:
+  - Dead end
+  detractors:
+  - One way
+  - Turn left
+  - Red light
+
+- question: What does the word “loquacious” mean?
+  correct-answers:
+  - Talkative
+  detractors:
+  - Quiet
+  - Angry
+  - Sleepy
+
+- question: What mythical bird is known for rising from its ashes?
+  correct-answers:
+  - Phoenix
+  detractors:
+  - Dragon
+  - Griffin
+  - Minotaur
+
+- question: What organ in the human body can regrow itself?
+  correct-answers:
+  - Liver
+  detractors:
+  - Stomach
+  - Heart
+  - Lungs
+
+- question: Which planet in our solar system has the most moons?
+  correct-answers:
+  - Saturn
+  detractors:
+  - Earth
+  - Jupiter
+  - Neptune
+
+- question: What is a group of ravens called?
+  correct-answers:
+  - Unkindness
+  detractors:
+  - Flock
+  - Murder
+  - Gaggle
+
+- question: Which country is the largest producer of coffee in the world?
+  correct-answers:
+  - Brazil
+  detractors:
+  - Colombia
+  - Vietnam
+  - Ethiopia
+
+- question: What do you call a baby goat?
+  correct-answers:
+  - Kid
+  detractors:
+  - Calf
+  - Foal
+  - Cub
+
+- question: Which cartoon character lives in a pineapple under the sea?
+  correct-answers:
+  - SpongeBob SquarePants
+  detractors:
+  - Mickey Mouse
+  - Donald Duck
+  - Bugs Bunny
+
+- question: How many noses does a slug have?
+  correct-answers:
+  - Four
+  detractors:
+  - One
+  - Two
+  - Six
+
+- question: What is the name of Sherlock Holmes' assistant?
+  correct-answers:
+  - Watson
+  detractors:
+  - Hudson
+  - Lestrade
+  - Moriarty
+
+- question: What do pandas primarily eat?
+  correct-answers:
+  - Bamboo
+  detractors:
+  - Fish
+  - Meat
+  - Grass
+
+- question: What is the only mammal that can't jump?
+  correct-answers:
+  - Elephant
+  detractors:
+  - Rhino
+  - Hippo
+  - Giraffe
+
+- question: Which animal is known to have the longest lifespan?
+  correct-answers:
+  - Giant Tortoise
+  detractors:
+  - Elephant
+  - Blue Whale
+  - Parrot
