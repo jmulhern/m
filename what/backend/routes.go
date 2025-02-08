@@ -58,6 +58,24 @@ func Routes() *http.ServeMux {
 	})
 
 	// api
+	mux.HandleFunc("GET /api/assessments", func(w http.ResponseWriter, r *http.Request) {
+
+		// convert to json
+		raw, _ := json.Marshal([]map[string]any{
+			{
+				"id":   "aws-cloud-practitioner",
+				"name": "AWS Cloud Practitioner",
+				"icon": "fa-brands fa-aws",
+			},
+			{
+				"id":   "random-trivia",
+				"name": "Random Trivia",
+				"icon": "fa-solid fa-block-question",
+			},
+		})
+		w.Header().Add("Content-Type", "application/json")
+		_, _ = w.Write(raw)
+	})
 	mux.HandleFunc("GET /api/assessments/{name}", func(w http.ResponseWriter, r *http.Request) {
 		name := r.PathValue("name")
 
@@ -84,7 +102,7 @@ func Routes() *http.ServeMux {
 		// convert to json
 		raw, _ = json.Marshal(map[string]any{
 			"name":      assessment.Name,
-			"questions": questions[:10],
+			"questions": questions[:assessment.Pick],
 		})
 		w.Header().Add("Content-Type", "application/json")
 		_, _ = w.Write(raw)
@@ -135,19 +153,24 @@ Give an explanation of why their answer is wrong and how it relates to the corre
 }
 
 func shuffleQuestions(slice []any) {
+	// Create a new random source based on the current time
 	phoenix, _ := time.LoadLocation("America/Phoenix")
-	rand.Seed(int64(time.Now().In(phoenix).YearDay()))
+	source := rand.NewSource(time.Now().In(phoenix).UnixNano())
+	r := rand.New(source) // Create a new random generator using the source
 
 	for i := len(slice) - 1; i > 0; i-- {
-		j := rand.Intn(i + 1)
+		j := r.Intn(i + 1) // Use the new random generator
 		slice[i], slice[j] = slice[j], slice[i]
 	}
 }
+
 func shufflePossibleAnswers(slice []string) {
-	rand.Seed(time.Now().Unix())
+	// Create a new random source based on the current time
+	source := rand.NewSource(time.Now().UnixNano())
+	r := rand.New(source) // Create a new random generator using the source
 
 	for i := len(slice) - 1; i > 0; i-- {
-		j := rand.Intn(i + 1)
+		j := r.Intn(i + 1) // Use the local random generator
 		slice[i], slice[j] = slice[j], slice[i]
 	}
 }

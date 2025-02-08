@@ -1,4 +1,5 @@
 name: Random Trivia
+pick: 5
 questions:
 - question:  What is a baby kangaroo called?
   correct-answers:

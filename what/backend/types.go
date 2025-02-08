@@ -2,6 +2,7 @@ package what
 
 type Assessment struct {
 	Name      string     `yaml:"name" json:"name"`
+	Pick      int        `yaml:"pick" json:"pick"`
 	Questions []Question `yaml:"questions" json:"questions"`
 }
 type Question struct {

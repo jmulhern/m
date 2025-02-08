@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { Dialog, Transition } from "@headlessui/react"; // Import Dialog and Transition from Headless UI
 import Spinner from "./Spinner"; // Adjust the path based on your file structure
+import Toolbar from "./Toolbar"; // Import the Toolbar component
 
 const Assessments = () => {
     const { id } = useParams();
@@ -57,16 +58,22 @@ const Assessments = () => {
         fetchQuestions();
     }, []);
 
-    // Handle click on a possible answer
     const handleTextClick = (chosenAnswer) => {
         if (isSubmitted) return; // Prevent changes after submission
+
+        const maxSelectableAnswers = currentQuestion.correct_answers.length; // Determine the max answers allowed
 
         if (selectedAnswers.includes(chosenAnswer)) {
             // Deselect the answer
             setSelectedAnswers(selectedAnswers.filter((answer) => answer !== chosenAnswer));
+        } else if (maxSelectableAnswers === 1) {
+            // If only one answer allowed, replace the existing selection with the new one
+            setSelectedAnswers([chosenAnswer]);
         } else {
-            // Select the answer
-            setSelectedAnswers([...selectedAnswers, chosenAnswer]);
+            // Otherwise, add the new answer only if we haven't reached the limit
+            if (selectedAnswers.length < maxSelectableAnswers) {
+                setSelectedAnswers([...selectedAnswers, chosenAnswer]);
+            }
         }
     };
 
@@ -99,19 +106,6 @@ const Assessments = () => {
             );
             setIncorrectAnswers(incorrect);
         }
-    };
-
-    // Handle reset of the quiz
-    const handleReset = () => {
-        setCurrentQuestionIndex(0);
-        setSelectedAnswers([]);
-        setAnswerStatus({});
-        setIsSubmitted(false);
-        setCorrectCount(0);
-        setIncorrectCount(0);
-        setIncorrectAnswers([]);
-        setShowModal(false); // Close the modal if open
-        setExplanation("");
     };
 
     // Function to handle the "Explain" button click
@@ -199,28 +193,15 @@ const Assessments = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 pt-4 px-4">
-            {/* Floating Toolbar */}
-            <div className="fixed top-0 left-0 right-0 bg-gray-800 text-white flex justify-between items-center p-4 shadow-lg z-10">
-                {/* Right Side: Correct and Incorrect Counts */}
-                <div className="text-lg font-semibold">
-                    <span className="text-green-500 mr-2">{correctCount}</span><span className="text-red-500">{incorrectCount}</span>
-                </div>
-
-
-                {/* Center: Question Number */}
-                <div className="text-lg font-semibold">
-                    <button
-                        onClick={() => navigate("/")}
-                        className="hover:text-gray-900 transition duration-200"
-                    >{assessmentName}</button>
-                </div>
-
-
-                {/* Left Side: AWS Cloud Practitioner */}
-                <div className="text-lg font-semibold">
-                    {currentQuestionIndex + 1} of {questions.length}
-                </div>
-            </div>
+            {/* Use Toolbar Component */}
+            <Toolbar
+                assessmentName={assessmentName}
+                navigate={navigate}
+                currentQuestionIndex={currentQuestionIndex}
+                totalQuestions={questions.length}
+                correctCount={correctCount}
+                incorrectCount={incorrectCount}
+            />
 
             <div className="w-full max-w-3xl mt-2 sm:mt-4">
                 {/* Current Question Card */}
@@ -275,13 +256,13 @@ const Assessments = () => {
                 </div>
             </div>
 
-            {/* Persistent Submit Button */}
+            {/* Persistent Submit or Navigation Buttons */}
             <div className="w-full px-4 max-w-3xl mb-4">
                 {!isSubmitted && (
                     <button
                         onClick={handleSubmit}
                         disabled={selectedAnswers.length === 0}
-                        className={`w-full py-3 sm:py-4 rounded-lg text-white font-bold ${
+                        className={`w-full py-3 sm:py-4 rounded-lg text-gray-200 font-bold ${
                             selectedAnswers.length === 0
                                 ? "bg-gray-500 cursor-not-allowed"
                                 : "bg-orange-600 hover:bg-orange-700"
@@ -293,16 +274,35 @@ const Assessments = () => {
 
                 {isSubmitted && (
                     <div className="flex space-x-4">
-                        <button
-                            onClick={handleContinue}
-                            className="flex-1 py-3 sm:py-4 rounded-lg text-white font-bold bg-green-500 hover:bg-green-700 transition-colors duration-200"
-                        >
-                            Continue
-                        </button>
+                        {/* Show "Done" button when on the last question */}
+                        {currentQuestionIndex === questions.length - 1 ? (
+                            <button
+                                onClick={() =>
+                                    navigate("/scoreboard", {
+                                        state: {
+                                            name: assessmentName,
+                                            correctCount: correctCount,
+                                            incorrectCount: incorrectCount,
+                                        },
+                                    })
+                                }
+                                className="flex-1 py-3 sm:py-4 rounded-lg text-white font-bold bg-green-500 hover:bg-green-700 transition-colors duration-200"
+                            >
+                                Done
+                            </button>
+                        ) : (
+                            <button
+                                onClick={handleContinue} // Handle continue to next question
+                                className="flex-1 py-3 sm:py-4 rounded-lg text-white font-bold bg-green-500 hover:bg-green-700 transition-colors duration-200"
+                            >
+                                Continue
+                            </button>
+                        )}
+                        {/* Optionally render Explain button if answer is incorrect */}
                         {!answerStatus.isCorrect && (
                             <button
                                 onClick={handleExplain}
-                                disabled={loadingExplain} // Disable button when loading
+                                disabled={loadingExplain} // Disable button while loading
                                 className={`flex-1 py-3 sm:py-4 rounded-lg text-white font-bold bg-blue-500 hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center ${
                                     loadingExplain ? "cursor-not-allowed opacity-70" : ""
                                 }`}
@@ -320,7 +320,6 @@ const Assessments = () => {
                     </div>
                 )}
             </div>
-
             {/* Explanation Modal */}
             <Transition appear show={showModal} as={Fragment}>
                 <Dialog as="div" className="fixed inset-0 z-20 overflow-y-auto" onClose={handleCloseModal}>
