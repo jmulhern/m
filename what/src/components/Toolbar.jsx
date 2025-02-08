@@ -62,26 +62,26 @@ const Toolbar = ({
     };
 
     return (
-        <div className="fixed top-0 left-0 right-0 bg-gray-800 text-white flex justify-between items-center p-4 shadow-lg z-10">
+        <div className="fixed top-0 left-0 right-0 bg-gray-800 text-white flex justify-between items-center py-2 px-3 shadow-lg z-10">
 
             {/* Left - Correct and Incorrect Counts */}
-            <div className="flex gap-8">
+            <div className="flex gap-4">
                 {/* Correct Count */}
                 <div className="flex flex-col items-center text-green-500">
                     <i className="fa-solid fa-check text-2xl"></i>
-                    <span>{correctCount}</span>
+                    <span className="text-base font-medium">{correctCount}</span>
                 </div>
 
                 {/* Incorrect Count */}
                 <div className="flex flex-col items-center text-red-500">
                     <i className="fa-solid fa-xmark text-2xl"></i>
-                    <span>{incorrectCount}</span>
+                    <span className="text-base font-medium">{incorrectCount}</span>
                 </div>
             </div>
 
             {/* Center - Assessment Name and Current Question */}
             <div className="flex flex-col items-center grow">
-                <span className="text-gray-300">{assessmentName}</span>
+                <span className="text-gray-300 text-lg font-medium">{assessmentName}</span>
                 <span className="text-gray-400 text-sm">{currentQuestionIndex + 1} of {totalQuestions}</span>
             </div>
 
@@ -103,6 +103,6 @@ const Toolbar = ({
             />
         </div>
     );
-}
+};
 
 export default Toolbar;
