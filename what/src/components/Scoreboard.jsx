@@ -14,40 +14,7 @@ const Scoreboard = () => {
     const [timeLeft, setTimeLeft] = useState("");
 
     useEffect(() => {
-        const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD-HH");
-        const key = `${today}-${id}`; // Construct the key using the current date and assessment ID.
-        const pastAssessmentRaw = localStorage.getItem(key); // Retrieve the item from localStorage.
-        if (pastAssessmentRaw) {
-            const pastAssessment = JSON.parse(pastAssessmentRaw);
-            setName(pastAssessment.name);
-            setCorrectCount(pastAssessment.correctCount);
-            setIncorrectCount(pastAssessment.incorrectCount);
-
-            // Total number of questions
-            const totalQuestions = pastAssessment.correctCount + pastAssessment.incorrectCount;
-
-            // Define the base key
-            const baseKey = `${today}-${id}`;
-
-            // Loop through all questions
-            let storedQuestions = [];
-            for (let index = 0; index <= totalQuestions; index++) {
-                // Construct the specific question key
-                const questionKey = `${baseKey}-${index}`;
-
-                // Retrieve the specific question data from localStorage
-                const questionData = localStorage.getItem(questionKey);
-
-                // Parse and log the question data if it exists
-                if (questionData) {
-                    storedQuestions.push(JSON.parse(questionData));
-                }
-                setAnsweredQuestions(storedQuestions);
-            }
-        } else {
-            navigate("/")
-        }
-
+        // Helper: Calculate remaining time
         const calculateTimeLeft = () => {
             const now = new Date();
             const arizonaOffset = -7 * 60;
@@ -68,13 +35,45 @@ const Scoreboard = () => {
             setTimeLeft(`${hoursLeft > 0 ? hoursLeft + "h " : ""}${minutesLeft}m ${secondsLeft}s`);
         };
 
-        // Calculate time left immediately and start an interval
-        calculateTimeLeft();
-        const interval = setInterval(calculateTimeLeft, 1000);
+        // Load assessment and questions from localStorage
+        const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD-HH");
+        const key = `${today}-${id}`;
+        const pastAssessmentRaw = localStorage.getItem(key);
 
-        // Clean up the interval on component unmount
+        if (pastAssessmentRaw) {
+            const pastAssessment = JSON.parse(pastAssessmentRaw);
+
+            // Set basic info
+            setName(pastAssessment.name);
+            setCorrectCount(pastAssessment.correctCount);
+            setIncorrectCount(pastAssessment.incorrectCount);
+
+            // Calculate questions
+            const totalQuestions = pastAssessment.correctCount + pastAssessment.incorrectCount;
+            const storedQuestions = []; // Collect data into an array first
+
+            for (let index = 0; index <= totalQuestions; index++) {
+                const questionKey = `${key}-${index}`;
+                const questionData = localStorage.getItem(questionKey);
+
+                if (questionData) {
+                    storedQuestions.push(JSON.parse(questionData));
+                }
+            }
+            // Update state once after the loop
+            setAnsweredQuestions(storedQuestions);
+        } else {
+            // Navigate away if no data found
+            navigate("/");
+        }
+
+        // Calculate the time left immediately
+        calculateTimeLeft();
+        const interval = setInterval(calculateTimeLeft, 1000); // Update every second
+
+        // Cleanup interval on unmount
         return () => clearInterval(interval);
-    })
+    }, [id, navigate]); // Depend on "id" and "navigate"
 
     return (
         <div className="flex flex-col items-center  bg-gray-900 p-4">
@@ -84,27 +83,17 @@ const Scoreboard = () => {
                 <div className="container mx-auto p-4 flex justify-between items-center">
                     {/* Left - Correct and Incorrect Counts */}
                     <div>
-                        <p className="text-yellow-400 font-semibold text-center">
-                            <i className="fas fa-clock px-1"></i> {timeLeft}
-                        </p>
+                        <button
+                            onClick={() => navigate("/")}
+                            className="text-gray-300 hover:text-gray-400 focus:outline-none"
+                        >
+                            <i className="fa-solid fa-home text-2xl mr-2"></i>
+                        </button>
                     </div>
 
                     {/* Left: Title */}
                     <div className="flex items-center space-x-2">
                         <h1 className="text-2xl font-bold text-gray-100 px-2">{name ?? "..."}?</h1>
-                        <div className="flex gap-4">
-                            {/* Correct Count */}
-                            <div className="flex flex-col items-center text-green-500">
-                                <i className="fa-solid fa-check text-2xl"></i>
-                                <span className="text-base font-medium">{correctCount}</span>
-                            </div>
-
-                            {/* Incorrect Count */}
-                            <div className="flex flex-col items-center text-red-500">
-                                <i className="fa-solid fa-xmark text-2xl"></i>
-                                <span className="text-base font-medium">{incorrectCount}</span>
-                            </div>
-                        </div>
                     </div>
 
 
@@ -120,7 +109,31 @@ const Scoreboard = () => {
                 </div>
             </header>
 
-            <main className="w-full max-w-3xl mt-20">
+            {/* New Correct/Incorrect Section */}
+            <section className="w-full max-w-3xl mt-20">
+                <div className="flex justify-between items-center bg-gray-800 rounded-md shadow-md p-6 w-full">
+                    <div className="flex gap-8 mr-4">
+                        {/* Correct Count */}
+                        <div className="flex flex-col items-center text-green-500">
+                            <i className="fa-solid fa-check text-2xl"></i>
+                            <span className="text-base font-medium">{correctCount}</span>
+                        </div>
+
+                        {/* Incorrect Count */}
+                        <div className="flex flex-col items-center text-red-500">
+                            <i className="fa-solid fa-xmark text-2xl"></i>
+                            <span className="text-base font-medium">{incorrectCount}</span>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col items-center text-yellow-400 ml-4">
+                        <i className="fa-solid fa-clock text-2xl"></i>
+                        <span className="text-base font-medium">{timeLeft}</span>
+                    </div>
+                </div>
+            </section>
+
+            <main className="w-full max-w-3xl mt-6 mb-16">
                 <div className="bg-gray-800 rounded-md shadow-md p-6 w-full max-w-4xl">
                     <ul className="divide-y divide-gray-700">
                         {answeredQuestions.map((question, index) => {

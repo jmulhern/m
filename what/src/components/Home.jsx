@@ -69,8 +69,6 @@ const Home = () => {
     const handleNavigation = (id) => {
         const localStorageKey = `${today}-${id}`;
         const existingData = localStorage.getItem(localStorageKey);
-
-        console.log(existingData);
         if (existingData === null) {
             navigate(`/w/${id}`);
         } else {
