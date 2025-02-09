@@ -163,9 +163,7 @@ Give an explanation of why their answer is wrong and how it relates to the corre
 }
 
 func shuffleQuestions(slice []any) {
-	// Create a new random source based on the current time
-	phoenix, _ := time.LoadLocation("America/Phoenix")
-	source := rand.NewSource(time.Now().In(phoenix).UnixNano())
+	source := rand.NewSource(int64(time.Now().UTC().Add(-7 * time.Hour).YearDay()))
 	r := rand.New(source) // Create a new random generator using the source
 
 	for i := len(slice) - 1; i > 0; i-- {
@@ -175,7 +173,6 @@ func shuffleQuestions(slice []any) {
 }
 
 func shufflePossibleAnswers(slice []string) {
-	// Create a new random source based on the current time
 	source := rand.NewSource(time.Now().UnixNano())
 	r := rand.New(source) // Create a new random generator using the source
 

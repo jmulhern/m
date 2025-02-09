@@ -126,7 +126,7 @@ const Home = () => {
                             type="text"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)} // Update search query on input
-                            className="w-full px-2 py-1 bg-gray-700 text-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+                            className="w-full px-2 py-1 bg-gray-700 text-gray-200 rounded-md focus:outline-none"
                             placeholder="Search..."
                         />
                     </div>
@@ -151,44 +151,45 @@ const Home = () => {
                             return (
                                 <li
                                     key={assessment.id}
-                                    className="grid grid-cols-[auto_auto_1fr] py-4 gap-6 items-center cursor-pointer transition duration-200 px-4"
+                                    className={`grid grid-cols-[1fr_auto] py-4 gap-6 items-center cursor-pointer transition duration-200 px-4 text-gray-300 hover:text-yellow-500 `}
                                     onClick={() => handleNavigation(assessment.id)}
                                 >
-                                    {/* Column 1: Scores */}
-                                    <div className="flex items-center justify-center space-x-2">
-                                        {storedData ? (
-                                            <>
-                                                <div className="text-center">
-                                                    <i className="fas fa-check text-green-500 text-lg"></i>
-                                                    <div className="text-sm text-green-500">
-                                                        {correctCount}
-                                                    </div>
-                                                </div>
-                                                <div className="text-center">
-                                                    <i className="fas fa-xmark text-red-500 text-lg"></i>
-                                                    <div className="text-sm text-red-500">
-                                                        {incorrectCount}
-                                                    </div>
-                                                </div>
-                                            </>
-                                        ) : (
-                                            <i className={`${assessment.icon} text-gray-300 text-2xl`}></i>
-                                        )}
-                                    </div>
 
-                                    {/* Column 3: Assessment Name */}
+
+                                {/* Column 2: Scores */}
                                     <div>
-                                        <span className="text-lg font-medium text-gray-300 hover:text-yellow-500 transition duration-200">
+                                        <span className={`text-lg font-medium  transition duration-200  `}>
+                                             <i className={`${assessment.icon} mx-2`}></i>
                                             {assessment.name}
                                         </span>
                                     </div>
+
+                                    {/* New Column (Column 1): "100 Emoji" Icon and Number */}
+                                    {storedData ? (
+                                    <div className="flex items-center justify-center space-x-2 ml-auto">
+                                        <div className="text-center">
+                                            <i className="fas fa-check text-green-500 text-lg"></i>
+                                            <div className="text-sm text-green-500">{correctCount}</div>
+                                        </div>
+                                        <div className="text-center">
+                                            <i className="fas fa-xmark text-red-500 text-lg"></i>
+                                            <div className="text-sm text-red-500">{incorrectCount}</div>
+                                        </div>
+                                    </div>) : (<div className="flex items-center justify-center space-x-2 ml-auto">
+                                        <div className="text-center ">
+                                            <i className="fa-solid fa-play"></i>
+                                            <div className="text-sm">Start</div>
+                                        </div>
+                                    </div>)}
+
+
                                 </li>
                             );
                         })}
                     </ul>
                     {filteredAssessments.length === 0 && (
                         <p className="text-center text-gray-500 mt-6">
-                            No assessments match your search.
+                            Didn't find nothing...
                         </p>
                     )}
                 </div>
