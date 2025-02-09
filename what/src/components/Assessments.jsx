@@ -8,7 +8,7 @@ import moment from "moment-timezone"; // Import the Toolbar component
 
 const Assessments = () => {
     const { id } = useParams();
-    const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD-HH");
+    const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD");
 
     const navigate = useNavigate();
     const [assessmentName, setAssessmentName] = useState("");
@@ -182,7 +182,7 @@ const Assessments = () => {
 
     // Handle continue to next question
     const handleDone = () => {
-        const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD-HH");
+        const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD");
         const key = `${today}-${id}`;
 
         localStorage.setItem(key, JSON.stringify({name: assessmentName, correctCount: correctCount, incorrectCount: incorrectCount}));

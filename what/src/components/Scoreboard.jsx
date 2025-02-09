@@ -22,11 +22,11 @@ const Scoreboard = () => {
                 now.getTime() + now.getTimezoneOffset() * 60000 + arizonaOffset * 60000
             );
 
-            const nextHour = new Date(currentArizonaTime);
-            nextHour.setMinutes(0, 0, 0);
-            nextHour.setHours(currentArizonaTime.getHours() + 1);
+            const nextDay = new Date(currentArizonaTime);
+            nextDay.setHours(0, 0, 0, 0);
+            nextDay.setDate(currentArizonaTime.getDate() + 1);
+            const diff = nextDay - currentArizonaTime;
 
-            const diff = nextHour - currentArizonaTime;
 
             const hoursLeft = Math.floor(diff / (1000 * 60 * 60));
             const minutesLeft = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -36,7 +36,7 @@ const Scoreboard = () => {
         };
 
         // Load assessment and questions from localStorage
-        const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD-HH");
+        const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD");
         const key = `${today}-${id}`;
         const pastAssessmentRaw = localStorage.getItem(key);
 
@@ -87,13 +87,8 @@ const Scoreboard = () => {
                             onClick={() => navigate("/")}
                             className="text-gray-300 hover:text-gray-400 focus:outline-none"
                         >
-                            <i className="fa-solid fa-home text-2xl mr-2"></i>
+                            <i className="invisible fa-solid fa-home text-2xl mr-2"></i>
                         </button>
-                    </div>
-
-                    {/* Left: Title */}
-                    <div className="flex items-center space-x-2">
-                        <h1 className="text-2xl font-bold text-gray-100 px-2">{name ?? "..."}?</h1>
                     </div>
 
 
@@ -112,6 +107,9 @@ const Scoreboard = () => {
             {/* New Correct/Incorrect Section */}
             <section className="w-full max-w-3xl mt-20">
                 <div className="flex justify-between items-center bg-gray-800 rounded-md shadow-md p-6 w-full">
+                    <div className="flex justify-center items-center space-x-2">
+                        <h1 className="text-2xl font-bold text-gray-100 px-2">{name}</h1>
+                    </div>
                     <div className="flex gap-8 mr-4">
                         {/* Correct Count */}
                         <div className="flex flex-col items-center text-green-500">
@@ -124,11 +122,6 @@ const Scoreboard = () => {
                             <i className="fa-solid fa-xmark text-2xl"></i>
                             <span className="text-base font-medium">{incorrectCount}</span>
                         </div>
-                    </div>
-
-                    <div className="flex flex-col items-center text-yellow-400 ml-4">
-                        <i className="fa-solid fa-clock text-2xl"></i>
-                        <span className="text-base font-medium">{timeLeft}</span>
                     </div>
                 </div>
             </section>

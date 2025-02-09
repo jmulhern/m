@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import moment from "moment-timezone";
+import OverallDetails from "./OverallDetails";
 
 const Home = () => {
     const [assessments, setAssessments] = useState([]);
@@ -11,7 +12,7 @@ const Home = () => {
     const [timeLeft, setTimeLeft] = useState("");
 
     const navigate = useNavigate();
-    const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD-HH");
+    const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD");
 
     useEffect(() => {
         const fetchAssessments = async () => {
@@ -53,11 +54,10 @@ const Home = () => {
             now.getTime() + now.getTimezoneOffset() * 60000 + arizonaOffset * 60000
         );
 
-        const nextHour = new Date(currentArizonaTime);
-        nextHour.setMinutes(0, 0, 0);
-        nextHour.setHours(currentArizonaTime.getHours() + 1);
-
-        const diff = nextHour - currentArizonaTime;
+        const nextDay = new Date(currentArizonaTime);
+        nextDay.setHours(0, 0, 0, 0);
+        nextDay.setDate(currentArizonaTime.getDate() + 1);
+        const diff = nextDay - currentArizonaTime;
 
         const hoursLeft = Math.floor(diff / (1000 * 60 * 60));
         const minutesLeft = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -85,7 +85,7 @@ const Home = () => {
     if (loading) {
         return (
             <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
-                <p>Loading assessments...</p>
+                <p>Loading...</p>
             </div>
         );
     }
@@ -101,39 +101,38 @@ const Home = () => {
     return (
         <div className="flex flex-col items-center bg-gray-900 pt-4 px-4">
 
-        {/* Floating Toolbar */}
+            {/* Floating Toolbar */}
             <header className="toolbar fixed top-0 left-0 w-full bg-gray-800 text-white shadow-md z-10">
                 <div className="container mx-auto p-4 flex justify-between items-center">
-                {/* Left: Title */}
+                    {/* Left: Title */}
                     <h1 className="text-2xl font-bold text-gray-100">What?</h1>
+                    {/* Right: Timer */}
+                    <OverallDetails timeLeft={timeLeft} />
+                </div>
+            </header>
 
-                    {/* Center: Search Bar */}
-                    <div className="flex items-center flex-1 mx-6 bg-gray-700 rounded-md border border-gray-600">
+            {/* Assessments Section */}
+            <main className="w-full max-w-3xl mt-20 flex flex-col items-center">
+
+                {/* Search Bar */}
+                <div className="w-full max-w-3xl mb-6">
+                    <div className="flex items-center bg-gray-700 rounded-md border border-gray-600 p-2">
                         {/* Search Icon */}
                         <div className="p-2">
                             <i className="fas fa-search text-gray-400"></i>
                         </div>
-
                         {/* Search Input Field */}
                         <input
                             type="text"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)} // Update search query on input
-                            className="w-full p-2 bg-gray-700 text-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+                            className="w-full px-2 py-1 bg-gray-700 text-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+                            placeholder="Search..."
                         />
                     </div>
-
-                    {/* Right: Icon */}
-                    <div>
-                        <p className="text-yellow-400 font-semibold text-center">
-                            <i className="fas fa-clock px-1"></i> {timeLeft}
-                        </p>
-                    </div>
                 </div>
-            </header>
 
-            {/* Assessments List */}
-            <main className="w-full max-w-3xl mt-20">
+                {/* Assessments List */}
                 <div className="bg-gray-800 rounded-md shadow-md p-6 w-full max-w-4xl">
                     <ul className="divide-y divide-gray-700">
                         {filteredAssessments.map((assessment) => {
@@ -152,7 +151,7 @@ const Home = () => {
                             return (
                                 <li
                                     key={assessment.id}
-                                    className="grid grid-cols-[auto_auto_1fr] py-4 gap-6 items-center  cursor-pointer transition duration-200 px-4"
+                                    className="grid grid-cols-[auto_auto_1fr] py-4 gap-6 items-center cursor-pointer transition duration-200 px-4"
                                     onClick={() => handleNavigation(assessment.id)}
                                 >
                                     {/* Column 1: Scores */}
