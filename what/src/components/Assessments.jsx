@@ -218,7 +218,7 @@ const Assessments = () => {
     }
 
     return (
-        <div className="flex flex-col items-center  bg-gray-900 pt-4 px-4">
+        <div className="flex flex-col items-center  bg-gray-900 p-4">
         {/* Use Toolbar Component */}
             <Toolbar
                 assessmentName={assessmentName}
@@ -247,19 +247,19 @@ const Assessments = () => {
 
                     {/* Loop over the possible answers */}
                     <div className="space-y-2">
-                        {currentQuestion.possible_answers.map((answer, idx) => {
+                        {currentQuestion.possible_answers.map((answer) => {
                             const isSelected = selectedAnswers.includes(answer);
+                            const isAnswerCorrect = currentQuestion.correct_answers.includes(answer);
                             let buttonClass =
-                                "w-full text-left font-medium py-2 sm:py-3 px-3 sm:px-4 rounded transition duration-200 ";
+                                "w-full text-left font-medium py-2 sm:py-3 px-3 sm:px-4 rounded transition duration-200 flex items-center gap-2 ";
 
                             if (isSubmitted) {
-                                const isAnswerCorrect = currentQuestion.correct_answers.includes(answer);
                                 if (isAnswerCorrect) {
-                                    buttonClass += "bg-green-600 text-white ";
+                                    buttonClass += "text-green-400 ";
                                 } else if (isSelected && !isAnswerCorrect) {
-                                    buttonClass += "bg-red-600 text-white ";
+                                    buttonClass += "text-red-400 ";
                                 } else {
-                                    buttonClass += "bg-gray-600 text-white ";
+                                    buttonClass += "text-gray-600 ";
                                 }
                             } else {
                                 buttonClass += isSelected
@@ -269,12 +269,24 @@ const Assessments = () => {
 
                             return (
                                 <button
-                                    key={idx}
+                                    key={answer} // Use "answer" instead of index for a unique key
                                     onClick={() => handleTextClick(answer)}
                                     disabled={isSubmitted} // Disable buttons after submission
                                     className={buttonClass}
                                 >
-                                    {String.fromCharCode(65 + idx)}. {answer}
+                                    {/* Conditionally render icons */}
+                                    {isSubmitted && (
+                                        isAnswerCorrect ? (
+                                            <i className="fas fa-check text-green-400"></i>
+                                        ) : isSelected && !isAnswerCorrect ? (
+                                            <i className="fas fa-times text-red-400"></i>
+                                        ) : null
+                                    )}
+
+                                    {/* Render the answer */}
+                                    <span>
+                            {String.fromCharCode(65 + currentQuestion.possible_answers.indexOf(answer))}. {answer}
+                        </span>
                                 </button>
                             );
                         })}
@@ -283,7 +295,7 @@ const Assessments = () => {
             </div>
 
             {/* Persistent Submit or Navigation Buttons */}
-            <div className="w-full px-4 max-w-3xl mb-4">
+            <div className="w-full px-4 max-w-3xl mb-6">
                 {!isSubmitted && (
                     <button
                         onClick={handleSubmit}
@@ -338,6 +350,7 @@ const Assessments = () => {
                     </div>
                 )}
             </div>
+
             {/* Explanation Modal */}
             <Transition appear show={showModal} as={Fragment}>
                 <Dialog as="div" className="fixed inset-0 z-20 overflow-y-auto" onClose={handleCloseModal}>

@@ -467,3 +467,330 @@ questions:
   - Elephant
   - Blue Whale
   - Parrot
+
+- prompt_text: Nvidia's headquarters are based in which Silicon Valley city?
+  correct-answers:
+  - Santa Clara
+  detractors:
+  - Palo Alto
+  - Cupertino
+  - Mountain View
+
+- prompt_text: Who was the leader of the Communist Party of Yugoslavia?
+  correct-answers:
+  - Josip Broz Tito
+  detractors:
+  - Karadjordje Petrovic
+  - Milos Obilic
+  - Aleskandar Petrovic
+
+- prompt_text: There are 86400 seconds in a day.
+  correct-answers:
+  - True
+  detractors:
+  - False
+
+- prompt_text: This trope refers to minor characters that are killed off to show how a monster works.
+  correct-answers:
+  - Red Shirt
+  detractors:
+  - Minions
+  - Expendables
+  - Cannon Fodder
+
+- prompt_text: What country is the second largest in the world by area?
+  correct-answers:
+  - Canada
+  detractors:
+  - Russia
+  - China
+  - United States of America
+
+- prompt_text: What is the Linnean name of the domestic apple tree?
+  correct-answers:
+  - Malus pumila
+  detractors:
+  - Malus americana
+  - Pomus domestica
+  - Appelus delectica
+
+- prompt_text: "\"Green Eggs And Ham\" is a book by which author?"
+  correct-answers:
+  - Dr. Seuss
+  detractors:
+  - Beatrix Potter
+  - Roald Dahl
+  - A.A. Milne
+
+- prompt_text: Which company designed the "Betamax" video cassette format?
+  correct-answers:
+  - Sony
+  detractors:
+  - Panasonic
+  - LG
+  - Fujitsu
+
+- prompt_text: Which of these musicals won the Tony Award for Best Musical?
+  correct-answers:
+  - Rent
+  detractors:
+  - The Color Purple
+  - American Idiot
+  - Newsies
+
+- prompt_text: What is the name of the protagonist of J.D. Salinger's novel Catcher in the Rye?
+  correct-answers:
+  - Holden Caulfield
+  detractors:
+  - Fletcher Christian
+  - Jay Gatsby
+  - Randall Flagg
+
+- prompt_text: Frank Lloyd Wright was the architect behind what famous building?
+  correct-answers:
+  - The Guggenheim
+  detractors:
+  - Villa Savoye
+  - Sydney Opera House
+  - The Space Needle
+
+- prompt_text: In the "Halo" franchise, in what country is New Mombasa?
+  correct-answers:
+  - Kenya
+  detractors:
+  - India
+  - Turkey
+  - Slovakia
+
+- prompt_text: Which movie contains the quote, "Say hello to my little friend!"?
+  correct-answers:
+  - Scarface
+  detractors:
+  - Reservoir Dogs
+  - Heat
+  - Goodfellas
+
+- prompt_text: Which of the following countries banned the use of personal genetic ancestry tests?
+  correct-answers:
+  - Germany
+  detractors:
+  - Austria
+  - Canada
+  - Sweden
+
+- prompt_text: Who painted The Starry Night?
+  correct-answers:
+  - Vincent van Gogh
+  detractors:
+  - Pablo Picasso
+  - Leonardo da Vinci
+  - Michelangelo
+
+- prompt_text: This movie contains the quote, "Houston, we have a problem."
+  correct-answers:
+  - Apollo 13
+  detractors:
+  - The Right Stuff
+  - Capricorn One
+  - Marooned
+
+- prompt_text: Which of these Roman gods doesn't have a counterpart in Greek mythology?
+  correct-answers:
+  - Janus
+  detractors:
+  - Vulcan
+  - Juno
+  - Mars
+
+- prompt_text: A minotaur is half human half what?
+  correct-answers:
+  - Bull
+  detractors:
+  - Cow
+  - Horse
+  - Eagle
+
+- prompt_text: What is the name of the Greek god of peaceful deaths?
+  correct-answers:
+  - Thanatos
+  detractors:
+  - Tartarus
+  - Hades
+  - Moros
+
+- prompt_text: Which Greek god/goddess tossed a golden apple with the words "for the fairest" into the middle of the feast of the gods?
+  correct-answers:
+  - Eris
+  detractors:
+  - Hades
+  - Ares
+  - Artemis
+
+- prompt_text: The Norse god Odin has two pet crows named "Huginn" and "Muninn". What do their names mean?
+  correct-answers:
+  - Thought & Memory
+  detractors:
+  - Power & Peace
+  - War & Learning
+  - Sleeping & Waking
+
+- prompt_text: Hera is god of...
+  correct-answers:
+  - Marriage
+  detractors:
+  - Agriculture
+  - Sea
+  - War
+
+- prompt_text: Hel was the daughter of which Norse Mythological figure?
+  correct-answers:
+  - Loki
+  detractors:
+  - Thor
+  - Odin
+  - Balder
+
+- prompt_text: The dish Fugu, is made from what family of fish?
+  correct-answers:
+  - Pufferfish
+  detractors:
+  - Bass
+  - Salmon
+  - Mackerel
+
+- prompt_text: For what reason would a spotted hyena "laugh"?
+  correct-answers:
+  - Nervousness
+  detractors:
+  - Excitement
+  - Aggression
+  - Exhaustion
+
+- prompt_text: What are rhino's horn made of?
+  correct-answers:
+  - Keratin
+  detractors:
+  - Bone
+  - Ivory
+  - Skin
+
+- prompt_text: What is the name for a male bee that comes from an unfertilized egg?
+  correct-answers:
+  - Drone
+  detractors:
+  - Soldier
+  - Worker
+  - Male
+
+- prompt_text: Which of these species is not extinct?
+  correct-answers:
+  - Komodo dragon
+  detractors:
+  - Japanese sea lion
+  - Tasmanian tiger
+  - Saudi gazelle
+
+- prompt_text: What is the common term for bovine spongiform encephalopathy (BSE)?
+  correct-answers:
+  - Mad Cow disease
+  detractors:
+  - Weil's disease
+  - Milk fever
+  - Foot-and-mouth disease
+
+- prompt_text: Cashmere is the wool from which kind of animal?
+  correct-answers:
+  - Goat
+  detractors:
+  - Sheep
+  - Camel
+  - Llama
+
+- prompt_text: What does "hippopotamus" mean and in what language?
+  correct-answers:
+  - River Horse (Greek)
+  detractors:
+  - River Horse (Latin)
+  - Fat Pig (Greek)
+  - Fat Pig (Latin)
+
+- prompt_text: What type of animal is a natterjack?
+  correct-answers:
+  - Toad
+  detractors:
+  - Bird
+  - Fish
+  - Insect
+
+- prompt_text: Tigers have one colour of skin despite the stripey fur.
+  correct-answers:
+  - False
+  detractors:
+  - True
+
+- prompt_text: What is the fastest animal?
+  correct-answers:
+  - Peregrine Falcon
+  detractors:
+  - Golden Eagle
+  - Cheetah
+  - Horsefly
+
+- prompt_text: What is the scientific name of the Common Chimpanzee?
+  correct-answers:
+  - Pan troglodytes
+  detractors:
+  - Gorilla gorilla
+  - Pan paniscus
+  - Panthera leo
+
+- prompt_text: What is the scientific name for the "Polar Bear"?
+  correct-answers:
+  - Ursus Maritimus
+  detractors:
+  - Polar Bear
+  - Ursus Spelaeus
+  - Ursus Arctos
+
+- prompt_text: What is the world's longest venomous snake?
+  correct-answers:
+  - King Cobra
+  detractors:
+  - Green Anaconda
+  - Inland Taipan
+  - Yellow Bellied Sea Snake
+
+- prompt_text: A carnivorous animal eats flesh, what does a nucivorous animal eat?
+  correct-answers:
+  - Nuts
+  detractors:
+  - Nothing
+  - Fruit
+  - Seaweed
+
+- prompt_text: What is the name of the family that the domestic cat is a member of?
+  correct-answers:
+  - Felidae
+  detractors:
+  - Felinae
+  - Felis
+  - Cat
+
+- prompt_text: What dog breed is one of the oldest breeds of dog and has flourished since before 400 BCE?
+  correct-answers:
+  - Pugs
+  detractors:
+  - Bulldogs
+  - Boxers
+  - Chihuahua
+
+- prompt_text: What color is a polar bear's skin?
+  correct-answers:
+  - Black
+  detractors:
+  - White
+  - Pink
+  - Green
+
+
+

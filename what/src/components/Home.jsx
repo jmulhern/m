@@ -101,7 +101,7 @@ const Home = () => {
     }
 
     return (
-        <div className="flex flex-col items-center  bg-gray-900 pt-4 px-4">
+        <div className="flex flex-col items-center bg-gray-900 pt-4 px-4">
 
         {/* Floating Toolbar */}
             <header className="toolbar fixed top-0 left-0 w-full bg-gray-800 text-white shadow-md z-10">
@@ -110,13 +110,18 @@ const Home = () => {
                     <h1 className="text-2xl font-bold text-gray-100">What?</h1>
 
                     {/* Center: Search Bar */}
-                    <div className="flex-1 mx-6">
+                    <div className="flex items-center flex-1 mx-6 bg-gray-700 rounded-md border border-gray-600">
+                        {/* Search Icon */}
+                        <div className="p-2">
+                            <i className="fas fa-search text-gray-400"></i>
+                        </div>
+
+                        {/* Search Input Field */}
                         <input
                             type="text"
-                            placeholder="You know what to do..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)} // Update search query on input
-                            className="w-full p-2 bg-gray-700 text-gray-200 placeholder-gray-400 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+                            className="w-full p-2 bg-gray-700 text-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
                         />
                     </div>
 
