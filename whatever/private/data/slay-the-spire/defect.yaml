@@ -1,0 +1,133 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- name: S
+  items:
+  - Ball Lightning
+  - Barrage
+  - Biased Cognition
+  - Charge Battery
+  - Claw ++
+  - Compile Driver
+  - Cool Headed
+  - Core Surge
+  - Defragment +
+  - Dual Cast
+  - Echo Form +
+  - Electro Dynamics
+  - Genetic Algorithm
+  - Hologram
+  - Loop
+  - Seek
+
+- name: A
+  items:
+  - Bullseye
+  - Capacitor
+  - Chill
+  - Cold Snap
+  - Consume
+  - Darkness
+  - Doom and Gloom
+  - Equilibrium
+  - Glacier +
+  - Heatsinks -
+  - Rainbow -
+  - Recycle
+  - Self Repair -
+  - Skim
+  - Static Discharge
+  - Turbo
+
+- name: B
+  items:
+  - Aggregate
+  - All for One
+  - Amplify
+  - Boot Sequence
+  - Buffer
+  - Fission
+  - Force Field
+  - Go for the Eyes
+  - Hyperbeam
+  - Machine Learning
+  - Reboot
+  - Recursion
+  - Rip and Tear
+  - Steam Barrier
+  - Storm
+  - Sweeping Beam
+
+- name: C
+  items:
+  - Beam Cell
+  - FTL
+  - Leap
+  - Melter
+  - Metero Strike
+  - Multi-Cast
+  - Rebound
+  - Reinforced Body
+  - Reprogram
+  - Stack +
+
+- name: D
+  items:
+  - Auto-Shields
+  - Blizzard
+  - Chaos
+  - Creative AI
+  - Double Energy
+  - Fusion
+  - Overclock
+  - Sunder
+  - Tempest
+  - Thunder Strike
+  - White Noise
+  - Zap
+
+- name: F
+  items:
+  - Hello World
+  - Scrape
+  - Streamline
+  - Strike -

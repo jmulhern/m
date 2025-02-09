@@ -25,6 +25,7 @@ export default function App() {
           <Route path="/slay-the-spire" element={<SlayTheSpire />}/>
           <Route path="/relic" element={<TierList id="relic" name="Relics" />}/>
           <Route path="/ironclad" element={<TierList id="ironclad" name="Ironclad" />}/>
+          <Route path="/defect" element={<TierList id="defect" name="Defect" />}/>
           <Route path="/the-watcher" element={<TierList id="the-watcher" name="The Watcher" />}/>
           <Route path="/questions" element={<Questions />}/>
           <Route path="/gameover" element={<GameOver />}/>

@@ -16,6 +16,13 @@ const SlayTheSpire = () => {
             </button>
 
             <button
+                onClick={() => navigate("/defect")}
+                className="mt-4 text-white font-bold underline hover:text-blue-400"
+            >
+                Defect
+            </button>
+
+            <button
                 onClick={() => navigate("/the-watcher")}
                 className="mt-4 text-white font-bold underline hover:text-purple-400"
             >
