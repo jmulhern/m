@@ -182,53 +182,61 @@ const Assessments = () => {
 
     // Handle continue to next question
     const handleDone = () => {
-
         const assessmentDataRaw = localStorage.getItem(id); // Retrieve the data from localStorage
+        let updatedAssessmentData;
+
+        // Check if there's already data saved for this assessment
         if (assessmentDataRaw) {
-            // Parse existing data
             const assessmentData = JSON.parse(assessmentDataRaw);
 
-            // Ensure `perfects` is properly initialized
-            assessmentData.perfects = assessmentData.perfects || 0;
-
-            // Increment `perfects` only if `incorrectCount` is 0
-            if (incorrectCount === 0) {
-                assessmentData.perfects += 1;
-            }
-
-            // Save the updated data back to localStorage
-            try {
-                localStorage.setItem(id, JSON.stringify(assessmentData));
-            } catch (err) {
-                console.error("Error saving to localStorage: ", err); // Handle storage errors gracefully
-            }
-        } else {
-            // If data does not exist, initialize and set default values
-            const newAssessmentData = {
-                perfects: incorrectCount === 0 ? 1 : 0,
-                // Add any other default properties as needed
+            // Ensure all fields exist (fallback to 0 if missing)
+            updatedAssessmentData = {
+                perfects: assessmentData.perfects || 0,
+                goods: assessmentData.goods || 0,
+                total: assessmentData.total || 0,
             };
-
-            try {
-                localStorage.setItem(id, JSON.stringify(newAssessmentData));
-            } catch (err) {
-                console.error("Error saving to localStorage: ", err); // Handle storage errors gracefully
-            }
+        } else {
+            // Initialize default values if no existing data
+            updatedAssessmentData = {
+                perfects: 0,
+                goods: 0,
+                total: 0,
+            };
         }
 
-        const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD");
-        const key = `${today}-${id}`;
+        // Update the counts based on performance
+        if (incorrectCount === 0) {
+            updatedAssessmentData.perfects += 1; // Increment perfects if no incorrect answers
+        } else if (correctCount / (correctCount + incorrectCount) > 0.75) {
+            updatedAssessmentData.goods += 1; // Increment goods if performance exceeds 75%
+        }
+        updatedAssessmentData.total += 1; // Increment total attempts
+
+        // Save the updated data back to localStorage
         try {
-            localStorage.setItem(key, JSON.stringify(
-                {name: assessmentName,
-                    correctCount: correctCount,
-                    incorrectCount: incorrectCount
-                }));
+            localStorage.setItem(id, JSON.stringify(updatedAssessmentData));
         } catch (err) {
-            console.error("Error saving to localStorage: ", err); // Log any issues
+            console.error("Error saving to localStorage: ", err); // Handle errors gracefully
         }
 
+        // Additionally, save session data with today's timestamp
+        const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD");
+        const sessionKey = `${today}-${id}`;
 
+        try {
+            localStorage.setItem(
+                sessionKey,
+                JSON.stringify({
+                    name: assessmentName, // Name of the assessment
+                    correctCount: correctCount,
+                    incorrectCount: incorrectCount,
+                })
+            );
+        } catch (err) {
+            console.error("Error saving to localStorage: ", err); // Handle any potential errors
+        }
+
+        // Navigate to the scoreboard page for the assessment
         navigate(`/w/${id}/scoreboard`);
     };
 

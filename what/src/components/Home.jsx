@@ -159,16 +159,23 @@ const Home = () => {
                                         <div className="text-center">
                                             {/* Dynamically set the gem icon color */}
                                             <i
-                                                className={`fas fa-gem text-lg ${
+                                                className={`fas text-lg ${
                                                     (() => {
                                                         const storedData = localStorage.getItem(assessment.id); // Fetch data from localStorage using assessment.id
                                                         if (storedData) {
                                                             const parsedData = JSON.parse(storedData);
-                                                            return parsedData.perfects && parsedData.perfects > 0
-                                                                ? "text-blue-500" // Blue if perfects > 0
-                                                                : "text-gray-400"; // Gray if perfects === 0
+                                                            if (parsedData.perfects && parsedData.perfects > 0) {
+                                                                return "fa-gem text-blue-500 "
+                                                            } else if (parsedData.goods && parsedData.goods > 0) {
+                                                                return "fa-solid fa-thumbs-up text-green-500 "
+                                                            } else if (parsedData.total && parsedData.total > 0) {
+                                                                return "fa-duotone fa-solid fa-user-alien text-green-500 "
+                                                            } else {
+                                                                return "fa-solid fa-question text-gray-500 " 
+                                                            }
+                                                        } else {
+                                                            return "fa-solid fa-question text-gray-500 "    
                                                         }
-                                                        return "text-gray-400"; // Default to gray if no data
                                                     })()
                                                 }`}
                                             ></i>
