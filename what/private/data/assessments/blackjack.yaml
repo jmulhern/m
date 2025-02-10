@@ -12,1054 +12,1054 @@ questions:
 # Hard totals (excluding pairs)
 # 18–21
 
-- prompt-text: "Dealer has a 2♠ showing; you have K♥ 8♦"
+- prompt-text: "Dealer has a 2♠ and you have K♥ 8♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 3♣ showing; you have Q♣ 9♦"
+- prompt-text: "Dealer has a 3♣ and you have Q♣ 9♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 4♦ showing; you have Q♦ 10♥"
+- prompt-text: "Dealer has a 4♦ and you have Q♦ 10♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 5♥ showing; you have 10♥ 9♣"
+- prompt-text: "Dealer has a 5♥ and you have 10♥ 9♣"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 6♣ showing; you have J♣ 8♦"
+- prompt-text: "Dealer has a 6♣ and you have J♣ 8♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 7♦ showing; you have K♥ J♦"
+- prompt-text: "Dealer has a 7♦ and you have K♥ J♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 8♦ showing; you have Q♦ J♦"
+- prompt-text: "Dealer has a 8♦ and you have Q♦ J♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 9♦ showing; you have J♣ 9♣"
+- prompt-text: "Dealer has a 9♦ and you have J♣ 9♣"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a J♣ showing; you have A♣ Q♦"
+- prompt-text: "Dealer has a J♣ and you have A♣ Q♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a A♣ showing; you have K♣ 8♦"
+- prompt-text: "Dealer has a A♣ and you have K♣ 8♦"
   correct-answers:
   - Stand
 
 # 17
 
-- prompt-text: "Dealer has a 2♠ showing; you have K♥ 7♦"
+- prompt-text: "Dealer has a 2♠ and you have K♥ 7♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 3♣ showing; you have 9♦ 8♦"
+- prompt-text: "Dealer has a 3♣ and you have 9♦ 8♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 4♦ showing; you have 10♦ 7♥"
+- prompt-text: "Dealer has a 4♦ and you have 10♦ 7♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 5♥ showing; you have J♥ 7♣"
+- prompt-text: "Dealer has a 5♥ and you have J♥ 7♣"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 6♣ showing; you have 9♣ 8♦"
+- prompt-text: "Dealer has a 6♣ and you have 9♣ 8♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 7♦ showing; you have K♥ 7♦"
+- prompt-text: "Dealer has a 7♦ and you have K♥ 7♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 8♦ showing; you have Q♦ 7♦"
+- prompt-text: "Dealer has a 8♦ and you have Q♦ 7♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 9♦ showing; you have J♣ 7♣"
+- prompt-text: "Dealer has a 9♦ and you have J♣ 7♣"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a J♣ showing; you have J♣ 7♦"
+- prompt-text: "Dealer has a J♣ and you have J♣ 7♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a A♣ showing; you have 9♣ 8♦"
+- prompt-text: "Dealer has a A♣ and you have 9♣ 8♦"
   correct-answers:
   - Stand
 
 # 16
 
-- prompt-text: "Dealer has a 2♠ showing; you have J♥ 6♦"
+- prompt-text: "Dealer has a 2♠ and you have J♥ 6♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 3♣ showing; you have 9♦ 7♦"
+- prompt-text: "Dealer has a 3♣ and you have 9♦ 7♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 4♦ showing; you have 10♦ 6♥"
+- prompt-text: "Dealer has a 4♦ and you have 10♦ 6♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 5♥ showing; you have Q♥ 6♣"
+- prompt-text: "Dealer has a 5♥ and you have Q♥ 6♣"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 6♣ showing; you have 9♣ 7♦"
+- prompt-text: "Dealer has a 6♣ and you have 9♣ 7♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 7♦ showing; you have K♥ 6♦"
+- prompt-text: "Dealer has a 7♦ and you have K♥ 6♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 8♦ showing; you have Q♦ 6♦"
+- prompt-text: "Dealer has a 8♦ and you have Q♦ 6♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 9♦ showing; you have J♣ 6♣"
+- prompt-text: "Dealer has a 9♦ and you have J♣ 6♣"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a J♣ showing; you have J♣ 6♦"
+- prompt-text: "Dealer has a J♣ and you have J♣ 6♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have 9♣ 7♦"
+- prompt-text: "Dealer has a A♣ and you have 9♣ 7♦"
   correct-answers:
   - Hit
 
 # 15
 
-- prompt-text: "Dealer has a 2♠ showing; you have 9♥ 6♦"
+- prompt-text: "Dealer has a 2♠ and you have 9♥ 6♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 3♣ showing; you have 8♦ 7♦"
+- prompt-text: "Dealer has a 3♣ and you have 8♦ 7♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 4♦ showing; you have 10♦ 5♥"
+- prompt-text: "Dealer has a 4♦ and you have 10♦ 5♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 5♥ showing; you have Q♥ 5♣"
+- prompt-text: "Dealer has a 5♥ and you have Q♥ 5♣"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 6♣ showing; you have 9♣ 6♦"
+- prompt-text: "Dealer has a 6♣ and you have 9♣ 6♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 7♦ showing; you have K♥ 5♦"
+- prompt-text: "Dealer has a 7♦ and you have K♥ 5♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 8♦ showing; you have Q♦ 5♦"
+- prompt-text: "Dealer has a 8♦ and you have Q♦ 5♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 9♦ showing; you have J♣ 5♣"
+- prompt-text: "Dealer has a 9♦ and you have J♣ 5♣"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a J♣ showing; you have 8♣ 7♦"
+- prompt-text: "Dealer has a J♣ and you have 8♣ 7♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have 9♣ 6♦"
+- prompt-text: "Dealer has a A♣ and you have 9♣ 6♦"
   correct-answers:
   - Hit
 
 # 13-14
 
-- prompt-text: "Dealer has a 2♠ showing; you have 9♥ 5♦"
+- prompt-text: "Dealer has a 2♠ and you have 9♥ 5♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 3♣ showing; you have 8♦ 5♦"
+- prompt-text: "Dealer has a 3♣ and you have 8♦ 5♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 4♦ showing; you have 10♦ 3♥"
+- prompt-text: "Dealer has a 4♦ and you have 10♦ 3♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 5♥ showing; you have 9♥ 5♣"
+- prompt-text: "Dealer has a 5♥ and you have 9♥ 5♣"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 6♣ showing; you have 8♣ 6♦"
+- prompt-text: "Dealer has a 6♣ and you have 8♣ 6♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 7♦ showing; you have K♥ 3♦"
+- prompt-text: "Dealer has a 7♦ and you have K♥ 3♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 8♦ showing; you have Q♦ 4♦"
+- prompt-text: "Dealer has a 8♦ and you have Q♦ 4♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 9♦ showing; you have 9♣ 5♣"
+- prompt-text: "Dealer has a 9♦ and you have 9♣ 5♣"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a J♣ showing; you have 8♣ 6♦"
+- prompt-text: "Dealer has a J♣ and you have 8♣ 6♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have 9♣ 4♦"
+- prompt-text: "Dealer has a A♣ and you have 9♣ 4♦"
   correct-answers:
   - Hit
 
 # 12
 
-- prompt-text: "Dealer has a 2♠ showing; you have 9♥ 3♦"
+- prompt-text: "Dealer has a 2♠ and you have 9♥ 3♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 3♣ showing; you have 8♦ 4♦"
+- prompt-text: "Dealer has a 3♣ and you have 8♦ 4♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 4♦ showing; you have 10♦ 2♥"
+- prompt-text: "Dealer has a 4♦ and you have 10♦ 2♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 5♥ showing; you have 7♥ 5♣"
+- prompt-text: "Dealer has a 5♥ and you have 7♥ 5♣"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 6♣ showing; you have 8♣ 4♦"
+- prompt-text: "Dealer has a 6♣ and you have 8♣ 4♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 7♦ showing; you have K♥ 2♦"
+- prompt-text: "Dealer has a 7♦ and you have K♥ 2♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 8♦ showing; you have 9♦ 3♦"
+- prompt-text: "Dealer has a 8♦ and you have 9♦ 3♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 9♦ showing; you have 7♣ 5♣"
+- prompt-text: "Dealer has a 9♦ and you have 7♣ 5♣"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a J♣ showing; you have 8♣ 4♦"
+- prompt-text: "Dealer has a J♣ and you have 8♣ 4♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have 9♣ 3♦"
+- prompt-text: "Dealer has a A♣ and you have 9♣ 3♦"
   correct-answers:
   - Hit
 
 # 11
 
-- prompt-text: "Dealer has a 2♠ showing; you have 9♥ 2♦"
+- prompt-text: "Dealer has a 2♠ and you have 9♥ 2♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 3♣ showing; you have 8♦ 3♦"
+- prompt-text: "Dealer has a 3♣ and you have 8♦ 3♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 4♦ showing; you have 7♦ 4♥"
+- prompt-text: "Dealer has a 4♦ and you have 7♦ 4♥"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 5♥ showing; you have 6♥ 5♣"
+- prompt-text: "Dealer has a 5♥ and you have 6♥ 5♣"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 6♣ showing; you have 8♣ 3♦"
+- prompt-text: "Dealer has a 6♣ and you have 8♣ 3♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 7♦ showing; you have 7♥ 4♦"
+- prompt-text: "Dealer has a 7♦ and you have 7♥ 4♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 8♦ showing; you have 9♦ 2♦"
+- prompt-text: "Dealer has a 8♦ and you have 9♦ 2♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 9♦ showing; you have 7♣ 4♣"
+- prompt-text: "Dealer has a 9♦ and you have 7♣ 4♣"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a J♣ showing; you have 8♣ 3♦"
+- prompt-text: "Dealer has a J♣ and you have 8♣ 3♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a A♣ showing; you have 9♣ 2♦"
+- prompt-text: "Dealer has a A♣ and you have 9♣ 2♦"
   correct-answers:
   - Double
 
 # 10
 
-- prompt-text: "Dealer has a 2♠ showing; you have 8♥ 2♦"
+- prompt-text: "Dealer has a 2♠ and you have 8♥ 2♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 3♣ showing; you have 7♦ 3♦"
+- prompt-text: "Dealer has a 3♣ and you have 7♦ 3♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 4♦ showing; you have 6♦ 4♥"
+- prompt-text: "Dealer has a 4♦ and you have 6♦ 4♥"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 5♥ showing; you have 6♥ 4♣"
+- prompt-text: "Dealer has a 5♥ and you have 6♥ 4♣"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 6♣ showing; you have 8♣ 2♦"
+- prompt-text: "Dealer has a 6♣ and you have 8♣ 2♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 7♦ showing; you have 7♥ 3♦"
+- prompt-text: "Dealer has a 7♦ and you have 7♥ 3♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 8♦ showing; you have 8♦ 2♦"
+- prompt-text: "Dealer has a 8♦ and you have 8♦ 2♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 9♦ showing; you have 6♣ 4♣"
+- prompt-text: "Dealer has a 9♦ and you have 6♣ 4♣"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a J♣ showing; you have 8♣ 2♦"
+- prompt-text: "Dealer has a J♣ and you have 8♣ 2♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have 8♣ 2♦"
+- prompt-text: "Dealer has a A♣ and you have 8♣ 2♦"
   correct-answers:
   - Hit
 
 # 9
 
-- prompt-text: "Dealer has a 2♠ showing; you have 7♥ 2♦"
+- prompt-text: "Dealer has a 2♠ and you have 7♥ 2♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 3♣ showing; you have 6♦ 3♦"
+- prompt-text: "Dealer has a 3♣ and you have 6♦ 3♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 4♦ showing; you have 5♦ 4♥"
+- prompt-text: "Dealer has a 4♦ and you have 5♦ 4♥"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 5♥ showing; you have 5♥ 4♣"
+- prompt-text: "Dealer has a 5♥ and you have 5♥ 4♣"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 6♣ showing; you have 7♣ 2♦"
+- prompt-text: "Dealer has a 6♣ and you have 7♣ 2♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 7♦ showing; you have 7♥ 2♦"
+- prompt-text: "Dealer has a 7♦ and you have 7♥ 2♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 8♦ showing; you have 7♦ 2♦"
+- prompt-text: "Dealer has a 8♦ and you have 7♦ 2♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 9♦ showing; you have 6♣ 3♣"
+- prompt-text: "Dealer has a 9♦ and you have 6♣ 3♣"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a J♣ showing; you have 7♣ 2♦"
+- prompt-text: "Dealer has a J♣ and you have 7♣ 2♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have 7♣ 2♦"
+- prompt-text: "Dealer has a A♣ and you have 7♣ 2♦"
   correct-answers:
   - Hit
 
 # 5-8
 
-- prompt-text: "Dealer has a 2♠ showing; you have 3♥ 2♦"
+- prompt-text: "Dealer has a 2♠ and you have 3♥ 2♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 3♣ showing; you have 4♦ 3♦"
+- prompt-text: "Dealer has a 3♣ and you have 4♦ 3♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 4♦ showing; you have 5♦ 3♥"
+- prompt-text: "Dealer has a 4♦ and you have 5♦ 3♥"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 5♥ showing; you have 4♥ 2♣"
+- prompt-text: "Dealer has a 5♥ and you have 4♥ 2♣"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 6♣ showing; you have 3♣ 2♦"
+- prompt-text: "Dealer has a 6♣ and you have 3♣ 2♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 7♦ showing; you have 4♥ 2♦"
+- prompt-text: "Dealer has a 7♦ and you have 4♥ 2♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 8♦ showing; you have 6♦ 2♦"
+- prompt-text: "Dealer has a 8♦ and you have 6♦ 2♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 9♦ showing; you have 5♣ 3♣"
+- prompt-text: "Dealer has a 9♦ and you have 5♣ 3♣"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a J♣ showing; you have 3♣ 2♦"
+- prompt-text: "Dealer has a J♣ and you have 3♣ 2♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have 4♣ 2♦"
+- prompt-text: "Dealer has a A♣ and you have 4♣ 2♦"
   correct-answers:
   - Hit
 
 # Soft totals
 # A,9
 
-- prompt-text: "Dealer has a 2♠ showing; you have A♥ 9♦"
+- prompt-text: "Dealer has a 2♠ and you have A♥ 9♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 3♣ showing; you have A♣ 9♦"
+- prompt-text: "Dealer has a 3♣ and you have A♣ 9♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 4♦ showing; you have A♥ 9♠"
+- prompt-text: "Dealer has a 4♦ and you have A♥ 9♠"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 5♥ showing; you have A♦ 9♠"
+- prompt-text: "Dealer has a 5♥ and you have A♦ 9♠"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 6♣ showing; you have A♦ 9♥"
+- prompt-text: "Dealer has a 6♣ and you have A♦ 9♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 7♦ showing; you have A♣ 9♥"
+- prompt-text: "Dealer has a 7♦ and you have A♣ 9♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 8♦ showing; you have A♣ 9♥"
+- prompt-text: "Dealer has a 8♦ and you have A♣ 9♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 9♦ showing; you have A♦ 9♠"
+- prompt-text: "Dealer has a 9♦ and you have A♦ 9♠"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a J♣ showing; you have A♣ 9♦"
+- prompt-text: "Dealer has a J♣ and you have A♣ 9♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a A♣ showing; you have A♦ 9♦"
+- prompt-text: "Dealer has a A♣ and you have A♦ 9♦"
   correct-answers:
   - Stand
 
 # A,8
 
-- prompt-text: "Dealer has a 2♠ showing; you have A♥ 8♦"
+- prompt-text: "Dealer has a 2♠ and you have A♥ 8♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 3♣ showing; you have A♣ 8♦"
+- prompt-text: "Dealer has a 3♣ and you have A♣ 8♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 4♦ showing; you have A♥ 8♠"
+- prompt-text: "Dealer has a 4♦ and you have A♥ 8♠"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 5♥ showing; you have A♦ 8♠"
+- prompt-text: "Dealer has a 5♥ and you have A♦ 8♠"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 6♣ showing; you have A♦ 8♥"
+- prompt-text: "Dealer has a 6♣ and you have A♦ 8♥"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 7♦ showing; you have A♣ 8♥"
+- prompt-text: "Dealer has a 7♦ and you have A♣ 8♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 8♦ showing; you have A♣ 8♥"
+- prompt-text: "Dealer has a 8♦ and you have A♣ 8♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 9♦ showing; you have A♦ 8♠"
+- prompt-text: "Dealer has a 9♦ and you have A♦ 8♠"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a J♣ showing; you have A♣ 8♦"
+- prompt-text: "Dealer has a J♣ and you have A♣ 8♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a A♣ showing; you have A♦ 8♦"
+- prompt-text: "Dealer has a A♣ and you have A♦ 8♦"
   correct-answers:
   - Stand
 
 # A,7
 
-- prompt-text: "Dealer has a 2♠ showing; you have A♥ 7♦"
+- prompt-text: "Dealer has a 2♠ and you have A♥ 7♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 3♣ showing; you have A♣ 7♦"
+- prompt-text: "Dealer has a 3♣ and you have A♣ 7♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 4♦ showing; you have A♥ 7♠"
+- prompt-text: "Dealer has a 4♦ and you have A♥ 7♠"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 5♥ showing; you have A♦ 7♠"
+- prompt-text: "Dealer has a 5♥ and you have A♦ 7♠"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 6♣ showing; you have A♦ 7♥"
+- prompt-text: "Dealer has a 6♣ and you have A♦ 7♥"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 7♦ showing; you have A♣ 7♥"
+- prompt-text: "Dealer has a 7♦ and you have A♣ 7♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 8♦ showing; you have A♣ 7♥"
+- prompt-text: "Dealer has a 8♦ and you have A♣ 7♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 9♦ showing; you have A♦ 7♠"
+- prompt-text: "Dealer has a 9♦ and you have A♦ 7♠"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a J♣ showing; you have A♣ 7♦"
+- prompt-text: "Dealer has a J♣ and you have A♣ 7♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have A♦ 7♦"
+- prompt-text: "Dealer has a A♣ and you have A♦ 7♦"
   correct-answers:
   - Hit
 
 
 # A,6
 
-- prompt-text: "Dealer has a 2♠ showing; you have A♥ 6♦"
+- prompt-text: "Dealer has a 2♠ and you have A♥ 6♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 3♣ showing; you have A♣ 6♦"
+- prompt-text: "Dealer has a 3♣ and you have A♣ 6♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 4♦ showing; you have A♥ 6♠"
+- prompt-text: "Dealer has a 4♦ and you have A♥ 6♠"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 5♥ showing; you have A♦ 6♠"
+- prompt-text: "Dealer has a 5♥ and you have A♦ 6♠"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 6♣ showing; you have A♦ 6♥"
+- prompt-text: "Dealer has a 6♣ and you have A♦ 6♥"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 7♦ showing; you have A♣ 6♥"
+- prompt-text: "Dealer has a 7♦ and you have A♣ 6♥"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 8♦ showing; you have A♣ 6♥"
+- prompt-text: "Dealer has a 8♦ and you have A♣ 6♥"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 9♦ showing; you have A♦ 6♠"
+- prompt-text: "Dealer has a 9♦ and you have A♦ 6♠"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a J♣ showing; you have A♣ 6♦"
+- prompt-text: "Dealer has a J♣ and you have A♣ 6♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have A♦ 6♦"
+- prompt-text: "Dealer has a A♣ and you have A♦ 6♦"
   correct-answers:
   - Hit
 
 # A,4–A,5
 
-- prompt-text: "Dealer has a 2♠ showing; you have A♥ 4♦"
+- prompt-text: "Dealer has a 2♠ and you have A♥ 4♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 3♣ showing; you have A♣ 5♦"
+- prompt-text: "Dealer has a 3♣ and you have A♣ 5♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 4♦ showing; you have A♥ 4♠"
+- prompt-text: "Dealer has a 4♦ and you have A♥ 4♠"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 5♥ showing; you have A♦ 5♠"
+- prompt-text: "Dealer has a 5♥ and you have A♦ 5♠"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 6♣ showing; you have A♦ 4♥"
+- prompt-text: "Dealer has a 6♣ and you have A♦ 4♥"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 7♦ showing; you have A♣ 5♥"
+- prompt-text: "Dealer has a 7♦ and you have A♣ 5♥"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 8♦ showing; you have A♣ 4♥"
+- prompt-text: "Dealer has a 8♦ and you have A♣ 4♥"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 9♦ showing; you have A♦ 5♠"
+- prompt-text: "Dealer has a 9♦ and you have A♦ 5♠"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a J♣ showing; you have A♣ 4♦"
+- prompt-text: "Dealer has a J♣ and you have A♣ 4♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have A♦ 5♦"
+- prompt-text: "Dealer has a A♣ and you have A♦ 5♦"
   correct-answers:
   - Hit
 
 # A,2–A,3
 
-- prompt-text: "Dealer has a 2♠ showing; you have A♥ 2♦"
+- prompt-text: "Dealer has a 2♠ and you have A♥ 2♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 3♣ showing; you have A♣ 3♦"
+- prompt-text: "Dealer has a 3♣ and you have A♣ 3♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 4♦ showing; you have A♥ 3♠"
+- prompt-text: "Dealer has a 4♦ and you have A♥ 3♠"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 5♥ showing; you have A♦ 2♠"
+- prompt-text: "Dealer has a 5♥ and you have A♦ 2♠"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 6♣ showing; you have A♦ 3♥"
+- prompt-text: "Dealer has a 6♣ and you have A♦ 3♥"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 7♦ showing; you have A♣ 2♥"
+- prompt-text: "Dealer has a 7♦ and you have A♣ 2♥"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 8♦ showing; you have A♣ 3♥"
+- prompt-text: "Dealer has a 8♦ and you have A♣ 3♥"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 9♦ showing; you have A♦ 2♠"
+- prompt-text: "Dealer has a 9♦ and you have A♦ 2♠"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a J♣ showing; you have A♣ 2♦"
+- prompt-text: "Dealer has a J♣ and you have A♣ 2♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have A♦ 3♦"
+- prompt-text: "Dealer has a A♣ and you have A♦ 3♦"
   correct-answers:
   - Hit
 
 # Pairs
 # A,A
 
-- prompt-text: "Dealer has a 2♠ showing; you have A♥ A♦"
+- prompt-text: "Dealer has a 2♠ and you have A♥ A♦"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 3♣ showing; you have A♣ A♦"
+- prompt-text: "Dealer has a 3♣ and you have A♣ A♦"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 4♦ showing; you have A♥ A♠"
+- prompt-text: "Dealer has a 4♦ and you have A♥ A♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 5♥ showing; you have A♦ A♠"
+- prompt-text: "Dealer has a 5♥ and you have A♦ A♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 6♣ showing; you have A♦ A♥"
+- prompt-text: "Dealer has a 6♣ and you have A♦ A♥"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 7♦ showing; you have A♣ A♥"
+- prompt-text: "Dealer has a 7♦ and you have A♣ A♥"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 8♦ showing; you have A♣ A♥"
+- prompt-text: "Dealer has a 8♦ and you have A♣ A♥"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 9♦ showing; you have A♦ A♠"
+- prompt-text: "Dealer has a 9♦ and you have A♦ A♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a J♣ showing; you have A♣ A♦"
+- prompt-text: "Dealer has a J♣ and you have A♣ A♦"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a A♣ showing; you have A♦ A♦"
+- prompt-text: "Dealer has a A♣ and you have A♦ A♦"
   correct-answers:
   - Split
 
 # 10,10
 
-- prompt-text: "Dealer has a 2♠ showing; you have 10♥ 10♦"
+- prompt-text: "Dealer has a 2♠ and you have 10♥ 10♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 3♣ showing; you have K♣ K♦"
+- prompt-text: "Dealer has a 3♣ and you have K♣ K♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 4♦ showing; you have J♥ J♠"
+- prompt-text: "Dealer has a 4♦ and you have J♥ J♠"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 5♥ showing; you have Q♦ Q♠"
+- prompt-text: "Dealer has a 5♥ and you have Q♦ Q♠"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 6♣ showing; you have 10♦ 10♥"
+- prompt-text: "Dealer has a 6♣ and you have 10♦ 10♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 7♦ showing; you have J♣ J♥"
+- prompt-text: "Dealer has a 7♦ and you have J♣ J♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 8♦ showing; you have K♣ K♥"
+- prompt-text: "Dealer has a 8♦ and you have K♣ K♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 9♦ showing; you have Q♦ Q♠"
+- prompt-text: "Dealer has a 9♦ and you have Q♦ Q♠"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a J♣ showing; you have J♣ J♦"
+- prompt-text: "Dealer has a J♣ and you have J♣ J♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a A♣ showing; you have 10♦ 10♣"
+- prompt-text: "Dealer has a A♣ and you have 10♦ 10♣"
   correct-answers:
   - Stand
 
 # 9,9
 
-- prompt-text: "Dealer has a 2♠ showing; you have 9♥ 9♦"
+- prompt-text: "Dealer has a 2♠ and you have 9♥ 9♦"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 3♣ showing; you have 9♣ 9♦"
+- prompt-text: "Dealer has a 3♣ and you have 9♣ 9♦"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 4♦ showing; you have 9♥ 9♠"
+- prompt-text: "Dealer has a 4♦ and you have 9♥ 9♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 5♥ showing; you have 9♦ 9♠"
+- prompt-text: "Dealer has a 5♥ and you have 9♦ 9♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 6♣ showing; you have 9♦ 9♥"
+- prompt-text: "Dealer has a 6♣ and you have 9♦ 9♥"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 7♦ showing; you have 9♣ 9♥"
+- prompt-text: "Dealer has a 7♦ and you have 9♣ 9♥"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a 8♦ showing; you have 9♣ 9♥"
+- prompt-text: "Dealer has a 8♦ and you have 9♣ 9♥"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 9♦ showing; you have 9♦ 9♠"
+- prompt-text: "Dealer has a 9♦ and you have 9♦ 9♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a J♣ showing; you have 9♣ 9♦"
+- prompt-text: "Dealer has a J♣ and you have 9♣ 9♦"
   correct-answers:
   - Stand
 
-- prompt-text: "Dealer has a A♣ showing; you have 9♦ 9♣"
+- prompt-text: "Dealer has a A♣ and you have 9♦ 9♣"
   correct-answers:
   - Stand
     
 # 8,8
 
-- prompt-text: "Dealer has a 2♠ showing; you have 8♥ 8♦"
+- prompt-text: "Dealer has a 2♠ and you have 8♥ 8♦"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 3♣ showing; you have 8♣ 8♦"
+- prompt-text: "Dealer has a 3♣ and you have 8♣ 8♦"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 4♦ showing; you have 8♥ 8♠"
+- prompt-text: "Dealer has a 4♦ and you have 8♥ 8♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 5♥ showing; you have 8♦ 8♠"
+- prompt-text: "Dealer has a 5♥ and you have 8♦ 8♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 6♣ showing; you have 8♦ 8♥"
+- prompt-text: "Dealer has a 6♣ and you have 8♦ 8♥"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 7♦ showing; you have 8♣ 8♥"
+- prompt-text: "Dealer has a 7♦ and you have 8♣ 8♥"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 8♦ showing; you have 8♣ 8♥"
+- prompt-text: "Dealer has a 8♦ and you have 8♣ 8♥"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 9♦ showing; you have 8♦ 8♠"
+- prompt-text: "Dealer has a 9♦ and you have 8♦ 8♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a J♣ showing; you have 8♣ 8♦"
+- prompt-text: "Dealer has a J♣ and you have 8♣ 8♦"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a A♣ showing; you have 8♦ 8♣"
+- prompt-text: "Dealer has a A♣ and you have 8♦ 8♣"
   correct-answers:
   - Split
 
 # 7,7
 
-- prompt-text: "Dealer has a 2♠ showing; you have 7♥ 7♦"
+- prompt-text: "Dealer has a 2♠ and you have 7♥ 7♦"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 3♣ showing; you have 7♣ 7♦"
+- prompt-text: "Dealer has a 3♣ and you have 7♣ 7♦"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 4♦ showing; you have 7♥ 7♠"
+- prompt-text: "Dealer has a 4♦ and you have 7♥ 7♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 5♥ showing; you have 7♦ 7♠"
+- prompt-text: "Dealer has a 5♥ and you have 7♦ 7♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 6♣ showing; you have 7♦ 7♥"
+- prompt-text: "Dealer has a 6♣ and you have 7♦ 7♥"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 7♦ showing; you have 7♣ 7♥"
+- prompt-text: "Dealer has a 7♦ and you have 7♣ 7♥"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 8♦ showing; you have 7♣ 7♥"
+- prompt-text: "Dealer has a 8♦ and you have 7♣ 7♥"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 9♦ showing; you have 7♦ 7♠"
+- prompt-text: "Dealer has a 9♦ and you have 7♦ 7♠"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a J♣ showing; you have 7♣ 7♦"
+- prompt-text: "Dealer has a J♣ and you have 7♣ 7♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have 7♦ 7♣"
+- prompt-text: "Dealer has a A♣ and you have 7♦ 7♣"
   correct-answers:
   - Hit
 
 
 # 6,6
 
-- prompt-text: "Dealer has a 2♠ showing; you have 6♥ 6♦"
+- prompt-text: "Dealer has a 2♠ and you have 6♥ 6♦"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 3♣ showing; you have 6♣ 6♦"
+- prompt-text: "Dealer has a 3♣ and you have 6♣ 6♦"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 4♦ showing; you have 6♥ 6♠"
+- prompt-text: "Dealer has a 4♦ and you have 6♥ 6♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 5♥ showing; you have 6♦ 6♠"
+- prompt-text: "Dealer has a 5♥ and you have 6♦ 6♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 6♣ showing; you have 6♦ 6♥"
+- prompt-text: "Dealer has a 6♣ and you have 6♦ 6♥"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 7♦ showing; you have 6♣ 6♥"
+- prompt-text: "Dealer has a 7♦ and you have 6♣ 6♥"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 8♦ showing; you have 6♣ 6♥"
+- prompt-text: "Dealer has a 8♦ and you have 6♣ 6♥"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 9♦ showing; you have 6♦ 6♠"
+- prompt-text: "Dealer has a 9♦ and you have 6♦ 6♠"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a J♣ showing; you have 6♣ 6♦"
+- prompt-text: "Dealer has a J♣ and you have 6♣ 6♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have 6♦ 6♣"
+- prompt-text: "Dealer has a A♣ and you have 6♦ 6♣"
   correct-answers:
   - Hit
 
 # 5,5
 
-- prompt-text: "Dealer has a 2♠ showing; you have 5♥ 5♦"
+- prompt-text: "Dealer has a 2♠ and you have 5♥ 5♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 3♣ showing; you have 5♣ 5♦"
+- prompt-text: "Dealer has a 3♣ and you have 5♣ 5♦"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 4♦ showing; you have 5♥ 5♠"
+- prompt-text: "Dealer has a 4♦ and you have 5♥ 5♠"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 5♥ showing; you have 5♦ 5♠"
+- prompt-text: "Dealer has a 5♥ and you have 5♦ 5♠"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 6♣ showing; you have 5♦ 5♥"
+- prompt-text: "Dealer has a 6♣ and you have 5♦ 5♥"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 7♦ showing; you have 5♣ 5♥"
+- prompt-text: "Dealer has a 7♦ and you have 5♣ 5♥"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 8♦ showing; you have 5♣ 5♥"
+- prompt-text: "Dealer has a 8♦ and you have 5♣ 5♥"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a 9♦ showing; you have 5♦ 5♠"
+- prompt-text: "Dealer has a 9♦ and you have 5♦ 5♠"
   correct-answers:
   - Double
 
-- prompt-text: "Dealer has a J♣ showing; you have 5♣ 5♦"
+- prompt-text: "Dealer has a J♣ and you have 5♣ 5♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have 5♦ 5♣"
+- prompt-text: "Dealer has a A♣ and you have 5♦ 5♣"
   correct-answers:
   - Hit
 
 # 4,4
 
-- prompt-text: "Dealer has a 2♠ showing; you have 4♥ 4♦"
+- prompt-text: "Dealer has a 2♠ and you have 4♥ 4♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 3♣ showing; you have 4♣ 4♦"
+- prompt-text: "Dealer has a 3♣ and you have 4♣ 4♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 4♦ showing; you have 4♥ 4♠"
+- prompt-text: "Dealer has a 4♦ and you have 4♥ 4♠"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 5♥ showing; you have 4♦ 4♠"
+- prompt-text: "Dealer has a 5♥ and you have 4♦ 4♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 6♣ showing; you have 4♦ 4♥"
+- prompt-text: "Dealer has a 6♣ and you have 4♦ 4♥"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 7♦ showing; you have 4♣ 4♥"
+- prompt-text: "Dealer has a 7♦ and you have 4♣ 4♥"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 8♦ showing; you have 4♣ 4♥"
+- prompt-text: "Dealer has a 8♦ and you have 4♣ 4♥"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 9♦ showing; you have 4♦ 4♠"
+- prompt-text: "Dealer has a 9♦ and you have 4♦ 4♠"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a J♣ showing; you have 4♣ 4♦"
+- prompt-text: "Dealer has a J♣ and you have 4♣ 4♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have 4♦ 4♣"
+- prompt-text: "Dealer has a A♣ and you have 4♦ 4♣"
   correct-answers:
   - Hit
 
 # 2,2–3,3
 
-- prompt-text: "Dealer has a 2♠ showing; you have 2♥ 2♦"
+- prompt-text: "Dealer has a 2♠ and you have 2♥ 2♦"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 3♣ showing; you have 3♣ 3♦"
+- prompt-text: "Dealer has a 3♣ and you have 3♣ 3♦"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 4♦ showing; you have 3♥ 3♠"
+- prompt-text: "Dealer has a 4♦ and you have 3♥ 3♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 5♥ showing; you have 2♦ 2♠"
+- prompt-text: "Dealer has a 5♥ and you have 2♦ 2♠"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 6♣ showing; you have 2♦ 2♥"
+- prompt-text: "Dealer has a 6♣ and you have 2♦ 2♥"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 7♦ showing; you have 2♣ 2♥"
+- prompt-text: "Dealer has a 7♦ and you have 2♣ 2♥"
   correct-answers:
   - Split
 
-- prompt-text: "Dealer has a 8♦ showing; you have 3♣ 3♥"
+- prompt-text: "Dealer has a 8♦ and you have 3♣ 3♥"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a 9♦ showing; you have 3♦ 3♠"
+- prompt-text: "Dealer has a 9♦ and you have 3♦ 3♠"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a J♣ showing; you have 2♣ 2♦"
+- prompt-text: "Dealer has a J♣ and you have 2♣ 2♦"
   correct-answers:
   - Hit
 
-- prompt-text: "Dealer has a A♣ showing; you have 3♦ 3♣"
+- prompt-text: "Dealer has a A♣ and you have 3♦ 3♣"
   correct-answers:
   - Hit
