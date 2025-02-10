@@ -151,38 +151,56 @@ const Home = () => {
                             return (
                                 <li
                                     key={assessment.id}
-                                    className={`grid grid-cols-[1fr_auto] py-4 gap-6 items-center cursor-pointer transition duration-200 px-4 text-gray-300 hover:text-yellow-500 `}
+                                    className="grid grid-cols-[auto_1fr_auto] py-4 gap-6 items-center cursor-pointer transition duration-200 px-4 text-gray-300 hover:text-yellow-500"
                                     onClick={() => handleNavigation(assessment.id)}
                                 >
+                                    {/* Column 1: Gem Icon with Number 0 (Shrink Width, Center Text) */}
+                                    <div className="flex flex-col items-center w-min">
+                                        <div className="text-center">
+                                            {/* Dynamically set the gem icon color */}
+                                            <i
+                                                className={`fas fa-gem text-lg ${
+                                                    (() => {
+                                                        const storedData = localStorage.getItem(assessment.id); // Fetch data from localStorage using assessment.id
+                                                        if (storedData) {
+                                                            const parsedData = JSON.parse(storedData);
+                                                            return parsedData.perfects && parsedData.perfects > 0
+                                                                ? "text-blue-500" // Blue if perfects > 0
+                                                                : "text-gray-400"; // Gray if perfects === 0
+                                                        }
+                                                        return "text-gray-400"; // Default to gray if no data
+                                                    })()
+                                                }`}
+                                            ></i>
+                                        </div>
+                                    </div>
 
-
-                                {/* Column 2: Scores */}
-                                    <div>
-                                        <span className={`text-lg font-medium  transition duration-200  `}>
-                                             <i className={`${assessment.icon} mx-2`}></i>
+                                    {/* Column 2: Assessment Name (Left Justified) */}
+                                    <div className="text-left">
+                                        <span className="text-lg font-medium transition duration-200">
                                             {assessment.name}
                                         </span>
                                     </div>
 
-                                    {/* New Column (Column 1): "100 Emoji" Icon and Number */}
-                                    {storedData ? (
-                                    <div className="flex items-center justify-center space-x-2 ml-auto">
-                                        <div className="text-center">
-                                            <i className="fas fa-check text-green-500 text-lg"></i>
-                                            <div className="text-sm text-green-500">{correctCount}</div>
-                                        </div>
-                                        <div className="text-center">
-                                            <i className="fas fa-xmark text-red-500 text-lg"></i>
-                                            <div className="text-sm text-red-500">{incorrectCount}</div>
-                                        </div>
-                                    </div>) : (<div className="flex items-center justify-center space-x-2 ml-auto">
-                                        <div className="text-center ">
-                                            <i className="fa-solid fa-play"></i>
-                                            <div className="text-sm">Start</div>
-                                        </div>
-                                    </div>)}
-
-
+                                    {/* Column 3: Start Icon or Correct/Incorrect Counts (Right Justified) */}
+                                    <div className="flex justify-end">
+                                        {storedData ? (
+                                            <div className="flex space-x-4">
+                                                <div className="text-center">
+                                                    <i className="fas fa-check text-green-500 text-lg"></i>
+                                                    <div className="text-sm text-green-500">{correctCount}</div>
+                                                </div>
+                                                <div className="text-center">
+                                                    <i className="fas fa-times text-red-500 text-lg"></i>
+                                                    <div className="text-sm text-red-500">{incorrectCount}</div>
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            <div className="text-center">
+                                                <i className="fa-solid fa-rocket-launch text-lg"></i>
+                                            </div>
+                                        )}
+                                    </div>
                                 </li>
                             );
                         })}

@@ -182,10 +182,53 @@ const Assessments = () => {
 
     // Handle continue to next question
     const handleDone = () => {
+
+        const assessmentDataRaw = localStorage.getItem(id); // Retrieve the data from localStorage
+        if (assessmentDataRaw) {
+            // Parse existing data
+            const assessmentData = JSON.parse(assessmentDataRaw);
+
+            // Ensure `perfects` is properly initialized
+            assessmentData.perfects = assessmentData.perfects || 0;
+
+            // Increment `perfects` only if `incorrectCount` is 0
+            if (incorrectCount === 0) {
+                assessmentData.perfects += 1;
+            }
+
+            // Save the updated data back to localStorage
+            try {
+                localStorage.setItem(id, JSON.stringify(assessmentData));
+            } catch (err) {
+                console.error("Error saving to localStorage: ", err); // Handle storage errors gracefully
+            }
+        } else {
+            // If data does not exist, initialize and set default values
+            const newAssessmentData = {
+                perfects: incorrectCount === 0 ? 1 : 0,
+                // Add any other default properties as needed
+            };
+
+            try {
+                localStorage.setItem(id, JSON.stringify(newAssessmentData));
+            } catch (err) {
+                console.error("Error saving to localStorage: ", err); // Handle storage errors gracefully
+            }
+        }
+
         const today = moment.tz(new Date(), "America/Phoenix").format("YYYY-MM-DD");
         const key = `${today}-${id}`;
+        try {
+            localStorage.setItem(key, JSON.stringify(
+                {name: assessmentName,
+                    correctCount: correctCount,
+                    incorrectCount: incorrectCount
+                }));
+        } catch (err) {
+            console.error("Error saving to localStorage: ", err); // Log any issues
+        }
 
-        localStorage.setItem(key, JSON.stringify({name: assessmentName, correctCount: correctCount, incorrectCount: incorrectCount}));
+
         navigate(`/w/${id}/scoreboard`);
     };
 
