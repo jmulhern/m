@@ -1,14 +1,14 @@
 name: Random Trivia
 pick: 5
 questions:
-- prompt_text: What is a baby kangaroo called?
+- prompt-text: What is a baby kangaroo called?
   correct-answers:
   -  Joey
   detractors:
   -  Calf
   -  Pup
   -  Kit
-- prompt_text: What is a group of cats called?
+- prompt-text: What is a group of cats called?
   correct-answers:
   -  A clowder
   detractors:
@@ -16,7 +16,7 @@ questions:
   -  A chaos
   -  A gaggle
 
-- prompt_text: Which country is known as the "Land of the Rising Sun"?
+- prompt-text: Which country is known as the "Land of the Rising Sun"?
   correct-answers:
   -  Japan
   detractors:
@@ -24,7 +24,7 @@ questions:
   -  South Korea
   -  Thailand
 
-- prompt_text: What is cognitive dissonance?
+- prompt-text: What is cognitive dissonance?
   correct-answers:
   -  Conflict between attitudes and behaviors
   detractors:
@@ -32,7 +32,7 @@ questions:
   -  Heightened emotional states
   -  Enhanced cognitive function
 
-- prompt_text: If someone "spills the tea," what are they doing in modern slang?
+- prompt-text: If someone "spills the tea," what are they doing in modern slang?
   correct-answers:
   - Sharing gossip
   detractors:
@@ -40,7 +40,7 @@ questions:
   - Drinking tea
   - Avoiding work
 
-- prompt_text: Where would you find the world’s smallest street, Ebenezer Place?
+- prompt-text: Where would you find the world’s smallest street, Ebenezer Place?
   correct-answers:
   - Scotland
   detractors:
@@ -48,7 +48,7 @@ questions:
   - Brazil
   - Japan
 
-- prompt_text: Where can you find the world’s most crooked street?
+- prompt-text: Where can you find the world’s most crooked street?
   correct-answers:
   - San Francisco, USA
   detractors:
@@ -56,7 +56,7 @@ questions:
   - Istanbul, Turkey
   - Sydney, Australia
 
-- prompt_text: What does "bae" stand for in slang?
+- prompt-text: What does "bae" stand for in slang?
   correct-answers:
   - Before Anyone Else
   detractors:
@@ -64,7 +64,7 @@ questions:
   - Bacon And Eggs
   - Big And Exciting
 
-- prompt_text: In what country can you stay in an ice hotel constructed every winter?
+- prompt-text: In what country can you stay in an ice hotel constructed every winter?
   correct-answers:
   - Finland
   detractors:
@@ -72,7 +72,7 @@ questions:
   - Norway
   - Russia
 
-- prompt_text: If someone mentions they visited the "Big Easy," which city are they referring to?
+- prompt-text: If someone mentions they visited the "Big Easy," which city are they referring to?
   correct-answers:
   - New Orleans
   detractors:
@@ -80,7 +80,7 @@ questions:
   - Miami
   - Seattle
 
-- prompt_text: What animal is known for its ability to regenerate lost limbs?
+- prompt-text: What animal is known for its ability to regenerate lost limbs?
   correct-answers:
   - Starfish
   detractors:
@@ -88,7 +88,7 @@ questions:
   - Crab
   - Frog
 
-- prompt_text: What is a common name for a group of flamingos?
+- prompt-text: What is a common name for a group of flamingos?
   correct-answers:
   - A parade
   detractors:
@@ -96,7 +96,7 @@ questions:
   - A crop
   - An alliance
 
-- prompt_text: Which animal's fingerprints are almost identical to human fingerprints?
+- prompt-text: Which animal's fingerprints are almost identical to human fingerprints?
   correct-answers:
   - Koala
   detractors:
@@ -104,7 +104,7 @@ questions:
   - Dolphin
   - Lizard
 
-- prompt_text: What does it mean if someone says they have been "ghosted"?
+- prompt-text: What does it mean if someone says they have been "ghosted"?
   correct-answers:
   - They've been ignored or avoided
   detractors:
@@ -112,7 +112,7 @@ questions:
   - They lost internet connection
   - They've lost their keys
 
-- prompt_text: In what country can you take a selfie with a wild Quokka, known as the happiest animal on earth?
+- prompt-text: In what country can you take a selfie with a wild Quokka, known as the happiest animal on earth?
   correct-answers:
   - Australia
   detractors:
@@ -120,7 +120,7 @@ questions:
   - France
   - South Africa
 
-- prompt_text: What type of cloud is fluffy and looks like cotton candy in the sky?
+- prompt-text: What type of cloud is fluffy and looks like cotton candy in the sky?
   correct-answers:
   - Cumulus
   detractors:
@@ -128,7 +128,7 @@ questions:
   - Nimbus
   - Cirrus
 
-- prompt_text: What is the function of the uvula, the little dangly thing at the back of the throat?
+- prompt-text: What is the function of the uvula, the little dangly thing at the back of the throat?
   correct-answers:
   - Speech articulation
   detractors:
@@ -136,7 +136,7 @@ questions:
   - Taste detection
   - Decor
 
-- prompt_text: What is the national animal of Scotland?
+- prompt-text: What is the national animal of Scotland?
   correct-answers:
   - Unicorn
   detractors:
@@ -144,7 +144,7 @@ questions:
   - Dragon
   - Phoenix
 
-- prompt_text: What do honey bees collect and use to create honey?
+- prompt-text: What do honey bees collect and use to create honey?
   correct-answers:
   - Nectar
   detractors:
@@ -152,7 +152,7 @@ questions:
   - Water
   - Pollen
 
-- prompt_text: Which fruit is known as the “king of fruits”?
+- prompt-text: Which fruit is known as the “king of fruits”?
   correct-answers:
   - Mango
   detractors:
@@ -160,7 +160,7 @@ questions:
   - Banana
   - Pineapple
 
-- prompt_text: What common vegetable is also known as a courgette?
+- prompt-text: What common vegetable is also known as a courgette?
   correct-answers:
   - Zucchini
   detractors:
@@ -168,7 +168,7 @@ questions:
   - Potato
   - Peas
 
-- prompt_text: What is the tiny piece of plastic at the end of a shoelace called?
+- prompt-text: What is the tiny piece of plastic at the end of a shoelace called?
   correct-answers:
   - Aglet
   detractors:
@@ -176,7 +176,7 @@ questions:
   - Bracket
   - Loop
 
-- prompt_text: What is the main ingredient of the traditional Japanese drink sake?
+- prompt-text: What is the main ingredient of the traditional Japanese drink sake?
   correct-answers:
   - Rice
   detractors:
@@ -184,7 +184,7 @@ questions:
   - Barley
   - Corn
 
-- prompt_text: What is the largest type of bear?
+- prompt-text: What is the largest type of bear?
   correct-answers:
   - Polar Bear
   detractors:
@@ -192,7 +192,7 @@ questions:
   - Panda Bear
   - Black Bear
 
-- prompt_text: In which country did table tennis originate?
+- prompt-text: In which country did table tennis originate?
   correct-answers:
   - England
   detractors:
@@ -200,7 +200,7 @@ questions:
   - USA
   - India
 
-- prompt_text: What is the only fruit that has its seeds on the outside?
+- prompt-text: What is the only fruit that has its seeds on the outside?
   correct-answers:
   - Strawberry
   detractors:
@@ -208,7 +208,7 @@ questions:
   - Peach
   - Plum
 
-- prompt_text: Which bird is often associated with delivering babies in folklore?
+- prompt-text: Which bird is often associated with delivering babies in folklore?
   correct-answers:
   - Stork
   detractors:
@@ -216,7 +216,7 @@ questions:
   - Owl
   - Robin
 
-- prompt_text: What musical instrument is Ringo Starr famous for playing?
+- prompt-text: What musical instrument is Ringo Starr famous for playing?
   correct-answers:
   - Drums
   detractors:
@@ -224,7 +224,7 @@ questions:
   - Piano
   - Violin
 
-- prompt_text: Which planet is known as the "Red Planet"?
+- prompt-text: Which planet is known as the "Red Planet"?
   correct-answers:
   - Mars
   detractors:
@@ -232,7 +232,7 @@ questions:
   - Venus
   - Jupiter
 
-- prompt_text: What do you call a male bee that mates with the queen?
+- prompt-text: What do you call a male bee that mates with the queen?
   correct-answers:
   - Drone
   detractors:
@@ -240,7 +240,7 @@ questions:
   - Worker
   - Guard
 
-- prompt_text: What kind of tree do acorns come from?
+- prompt-text: What kind of tree do acorns come from?
   correct-answers:
   - Oak
   detractors:
@@ -248,7 +248,7 @@ questions:
   - Maple
   - Birch
 
-- prompt_text: How many lives is a cat said to have?
+- prompt-text: How many lives is a cat said to have?
   correct-answers:
   - "9"
   detractors:
@@ -256,7 +256,7 @@ questions:
   - "7"
   - "3"
 
-- prompt_text: What do you call a fear of heights?
+- prompt-text: What do you call a fear of heights?
   correct-answers:
   - Acrophobia
   detractors:
@@ -264,7 +264,7 @@ questions:
   - Agoraphobia
   - Claustrophobia
 
-- prompt_text: Which animal's poop is cube-shaped?
+- prompt-text: Which animal's poop is cube-shaped?
   correct-answers:
   - Wombat
   detractors:
@@ -276,7 +276,7 @@ questions:
   #  b)
   #  c)
   #  d)
-- prompt_text: What did the crocodile swallow in “Peter Pan”?
+- prompt-text: What did the crocodile swallow in “Peter Pan”?
   correct-answers:
   - A clock
   detractors:
@@ -284,7 +284,7 @@ questions:
   - A pipe
   - A book
 
-- prompt_text: What letter is not included in any of the 50 US state names?
+- prompt-text: What letter is not included in any of the 50 US state names?
   correct-answers:
   - Q
   detractors:
@@ -292,7 +292,7 @@ questions:
   - X
   - P
 
-- prompt_text: What is the scientific name for a wolf?
+- prompt-text: What is the scientific name for a wolf?
   correct-answers:
   - Canis lupus
   detractors:
@@ -300,7 +300,7 @@ questions:
   - Panthera leo
   - Equus caballus
 
-- prompt_text: In the game of chess, which piece can only move diagonally?
+- prompt-text: In the game of chess, which piece can only move diagonally?
   correct-answers:
   - Bishop
   detractors:
@@ -308,7 +308,7 @@ questions:
   - Knight
   - Queen
 
-- prompt_text: What is the only mammal capable of true flight?
+- prompt-text: What is the only mammal capable of true flight?
   correct-answers:
   - Bat
   detractors:
@@ -316,7 +316,7 @@ questions:
   - Parrot
   - Flying fish
 
-- prompt_text: What was the first feature-length animated movie ever released?
+- prompt-text: What was the first feature-length animated movie ever released?
   correct-answers:
   - Snow White and the Seven Dwarfs
   detractors:
@@ -324,7 +324,7 @@ questions:
   - Cinderella
   - The Lion King
 
-- prompt_text: What was the first toy to be advertised on television?
+- prompt-text: What was the first toy to be advertised on television?
   correct-answers:
   - Mr. Potato Head
   detractors:
@@ -332,7 +332,7 @@ questions:
   - Slinky
   - Rubik's Cube
 
-- prompt_text: What type of fish is Nemo in the movie “Finding Nemo”?
+- prompt-text: What type of fish is Nemo in the movie “Finding Nemo”?
   correct-answers:
   - Clownfish
   detractors:
@@ -340,7 +340,7 @@ questions:
   - Betta fish
   - Guppy
 
-- prompt_text: In what state is Area 51 located?
+- prompt-text: In what state is Area 51 located?
   correct-answers:
   - Nevada
   detractors:
@@ -348,7 +348,7 @@ questions:
   - Arizona
   - Utah
 
-- prompt_text: What is the hardest substance in the human body?
+- prompt-text: What is the hardest substance in the human body?
   correct-answers:
   - Enamel
   detractors:
@@ -356,7 +356,7 @@ questions:
   - Nail
   - Cartilage
 
-- prompt_text: In French, what does the phrase "cul-de-sac" literally mean?
+- prompt-text: In French, what does the phrase "cul-de-sac" literally mean?
   correct-answers:
   - Dead end
   detractors:
@@ -364,7 +364,7 @@ questions:
   - Turn left
   - Red light
 
-- prompt_text: What does the word “loquacious” mean?
+- prompt-text: What does the word “loquacious” mean?
   correct-answers:
   - Talkative
   detractors:
@@ -372,7 +372,7 @@ questions:
   - Angry
   - Sleepy
 
-- prompt_text: What mythical bird is known for rising from its ashes?
+- prompt-text: What mythical bird is known for rising from its ashes?
   correct-answers:
   - Phoenix
   detractors:
@@ -380,7 +380,7 @@ questions:
   - Griffin
   - Minotaur
 
-- prompt_text: What organ in the human body can regrow itself?
+- prompt-text: What organ in the human body can regrow itself?
   correct-answers:
   - Liver
   detractors:
@@ -388,7 +388,7 @@ questions:
   - Heart
   - Lungs
 
-- prompt_text: Which planet in our solar system has the most moons?
+- prompt-text: Which planet in our solar system has the most moons?
   correct-answers:
   - Saturn
   detractors:
@@ -396,7 +396,7 @@ questions:
   - Jupiter
   - Neptune
 
-- prompt_text: What is a group of ravens called?
+- prompt-text: What is a group of ravens called?
   correct-answers:
   - Unkindness
   detractors:
@@ -404,7 +404,7 @@ questions:
   - Murder
   - Gaggle
 
-- prompt_text: Which country is the largest producer of coffee in the world?
+- prompt-text: Which country is the largest producer of coffee in the world?
   correct-answers:
   - Brazil
   detractors:
@@ -412,7 +412,7 @@ questions:
   - Vietnam
   - Ethiopia
 
-- prompt_text: What do you call a baby goat?
+- prompt-text: What do you call a baby goat?
   correct-answers:
   - Kid
   detractors:
@@ -420,7 +420,7 @@ questions:
   - Foal
   - Cub
 
-- prompt_text: Which cartoon character lives in a pineapple under the sea?
+- prompt-text: Which cartoon character lives in a pineapple under the sea?
   correct-answers:
   - SpongeBob SquarePants
   detractors:
@@ -428,7 +428,7 @@ questions:
   - Donald Duck
   - Bugs Bunny
 
-- prompt_text: How many noses does a slug have?
+- prompt-text: How many noses does a slug have?
   correct-answers:
   - Four
   detractors:
@@ -436,7 +436,7 @@ questions:
   - Two
   - Six
 
-- prompt_text: What is the name of Sherlock Holmes' assistant?
+- prompt-text: What is the name of Sherlock Holmes' assistant?
   correct-answers:
   - Watson
   detractors:
@@ -444,7 +444,7 @@ questions:
   - Lestrade
   - Moriarty
 
-- prompt_text: What do pandas primarily eat?
+- prompt-text: What do pandas primarily eat?
   correct-answers:
   - Bamboo
   detractors:
@@ -452,7 +452,7 @@ questions:
   - Meat
   - Grass
 
-- prompt_text: What is the only mammal that can't jump?
+- prompt-text: What is the only mammal that can't jump?
   correct-answers:
   - Elephant
   detractors:
@@ -460,7 +460,7 @@ questions:
   - Hippo
   - Giraffe
 
-- prompt_text: Which animal is known to have the longest lifespan?
+- prompt-text: Which animal is known to have the longest lifespan?
   correct-answers:
   - Giant Tortoise
   detractors:
@@ -468,7 +468,7 @@ questions:
   - Blue Whale
   - Parrot
 
-- prompt_text: Nvidia's headquarters are based in which Silicon Valley city?
+- prompt-text: Nvidia's headquarters are based in which Silicon Valley city?
   correct-answers:
   - Santa Clara
   detractors:
@@ -476,7 +476,7 @@ questions:
   - Cupertino
   - Mountain View
 
-- prompt_text: Who was the leader of the Communist Party of Yugoslavia?
+- prompt-text: Who was the leader of the Communist Party of Yugoslavia?
   correct-answers:
   - Josip Broz Tito
   detractors:
@@ -484,13 +484,13 @@ questions:
   - Milos Obilic
   - Aleskandar Petrovic
 
-- prompt_text: There are 86400 seconds in a day.
+- prompt-text: There are 86400 seconds in a day.
   correct-answers:
   - True
   detractors:
   - False
 
-- prompt_text: This trope refers to minor characters that are killed off to show how a monster works.
+- prompt-text: This trope refers to minor characters that are killed off to show how a monster works.
   correct-answers:
   - Red Shirt
   detractors:
@@ -498,7 +498,7 @@ questions:
   - Expendables
   - Cannon Fodder
 
-- prompt_text: What country is the second largest in the world by area?
+- prompt-text: What country is the second largest in the world by area?
   correct-answers:
   - Canada
   detractors:
@@ -506,7 +506,7 @@ questions:
   - China
   - United States of America
 
-- prompt_text: What is the Linnean name of the domestic apple tree?
+- prompt-text: What is the Linnean name of the domestic apple tree?
   correct-answers:
   - Malus pumila
   detractors:
@@ -514,7 +514,7 @@ questions:
   - Pomus domestica
   - Appelus delectica
 
-- prompt_text: "\"Green Eggs And Ham\" is a book by which author?"
+- prompt-text: "\"Green Eggs And Ham\" is a book by which author?"
   correct-answers:
   - Dr. Seuss
   detractors:
@@ -522,7 +522,7 @@ questions:
   - Roald Dahl
   - A.A. Milne
 
-- prompt_text: Which company designed the "Betamax" video cassette format?
+- prompt-text: Which company designed the "Betamax" video cassette format?
   correct-answers:
   - Sony
   detractors:
@@ -530,7 +530,7 @@ questions:
   - LG
   - Fujitsu
 
-- prompt_text: Which of these musicals won the Tony Award for Best Musical?
+- prompt-text: Which of these musicals won the Tony Award for Best Musical?
   correct-answers:
   - Rent
   detractors:
@@ -538,7 +538,7 @@ questions:
   - American Idiot
   - Newsies
 
-- prompt_text: What is the name of the protagonist of J.D. Salinger's novel Catcher in the Rye?
+- prompt-text: What is the name of the protagonist of J.D. Salinger's novel Catcher in the Rye?
   correct-answers:
   - Holden Caulfield
   detractors:
@@ -546,7 +546,7 @@ questions:
   - Jay Gatsby
   - Randall Flagg
 
-- prompt_text: Frank Lloyd Wright was the architect behind what famous building?
+- prompt-text: Frank Lloyd Wright was the architect behind what famous building?
   correct-answers:
   - The Guggenheim
   detractors:
@@ -554,7 +554,7 @@ questions:
   - Sydney Opera House
   - The Space Needle
 
-- prompt_text: In the "Halo" franchise, in what country is New Mombasa?
+- prompt-text: In the "Halo" franchise, in what country is New Mombasa?
   correct-answers:
   - Kenya
   detractors:
@@ -562,7 +562,7 @@ questions:
   - Turkey
   - Slovakia
 
-- prompt_text: Which movie contains the quote, "Say hello to my little friend!"?
+- prompt-text: Which movie contains the quote, "Say hello to my little friend!"?
   correct-answers:
   - Scarface
   detractors:
@@ -570,7 +570,7 @@ questions:
   - Heat
   - Goodfellas
 
-- prompt_text: Which of the following countries banned the use of personal genetic ancestry tests?
+- prompt-text: Which of the following countries banned the use of personal genetic ancestry tests?
   correct-answers:
   - Germany
   detractors:
@@ -578,7 +578,7 @@ questions:
   - Canada
   - Sweden
 
-- prompt_text: Who painted The Starry Night?
+- prompt-text: Who painted The Starry Night?
   correct-answers:
   - Vincent van Gogh
   detractors:
@@ -586,7 +586,7 @@ questions:
   - Leonardo da Vinci
   - Michelangelo
 
-- prompt_text: This movie contains the quote, "Houston, we have a problem."
+- prompt-text: This movie contains the quote, "Houston, we have a problem."
   correct-answers:
   - Apollo 13
   detractors:
@@ -594,7 +594,7 @@ questions:
   - Capricorn One
   - Marooned
 
-- prompt_text: Which of these Roman gods doesn't have a counterpart in Greek mythology?
+- prompt-text: Which of these Roman gods doesn't have a counterpart in Greek mythology?
   correct-answers:
   - Janus
   detractors:
@@ -602,7 +602,7 @@ questions:
   - Juno
   - Mars
 
-- prompt_text: A minotaur is half human half what?
+- prompt-text: A minotaur is half human half what?
   correct-answers:
   - Bull
   detractors:
@@ -610,7 +610,7 @@ questions:
   - Horse
   - Eagle
 
-- prompt_text: What is the name of the Greek god of peaceful deaths?
+- prompt-text: What is the name of the Greek god of peaceful deaths?
   correct-answers:
   - Thanatos
   detractors:
@@ -618,7 +618,7 @@ questions:
   - Hades
   - Moros
 
-- prompt_text: Which Greek god/goddess tossed a golden apple with the words "for the fairest" into the middle of the feast of the gods?
+- prompt-text: Which Greek god/goddess tossed a golden apple with the words "for the fairest" into the middle of the feast of the gods?
   correct-answers:
   - Eris
   detractors:
@@ -626,7 +626,7 @@ questions:
   - Ares
   - Artemis
 
-- prompt_text: The Norse god Odin has two pet crows named "Huginn" and "Muninn". What do their names mean?
+- prompt-text: The Norse god Odin has two pet crows named "Huginn" and "Muninn". What do their names mean?
   correct-answers:
   - Thought & Memory
   detractors:
@@ -634,7 +634,7 @@ questions:
   - War & Learning
   - Sleeping & Waking
 
-- prompt_text: Hera is god of...
+- prompt-text: Hera is god of...
   correct-answers:
   - Marriage
   detractors:
@@ -642,7 +642,7 @@ questions:
   - Sea
   - War
 
-- prompt_text: Hel was the daughter of which Norse Mythological figure?
+- prompt-text: Hel was the daughter of which Norse Mythological figure?
   correct-answers:
   - Loki
   detractors:
@@ -650,7 +650,7 @@ questions:
   - Odin
   - Balder
 
-- prompt_text: The dish Fugu, is made from what family of fish?
+- prompt-text: The dish Fugu, is made from what family of fish?
   correct-answers:
   - Pufferfish
   detractors:
@@ -658,7 +658,7 @@ questions:
   - Salmon
   - Mackerel
 
-- prompt_text: For what reason would a spotted hyena "laugh"?
+- prompt-text: For what reason would a spotted hyena "laugh"?
   correct-answers:
   - Nervousness
   detractors:
@@ -666,7 +666,7 @@ questions:
   - Aggression
   - Exhaustion
 
-- prompt_text: What are rhino's horn made of?
+- prompt-text: What are rhino's horn made of?
   correct-answers:
   - Keratin
   detractors:
@@ -674,7 +674,7 @@ questions:
   - Ivory
   - Skin
 
-- prompt_text: What is the name for a male bee that comes from an unfertilized egg?
+- prompt-text: What is the name for a male bee that comes from an unfertilized egg?
   correct-answers:
   - Drone
   detractors:
@@ -682,7 +682,7 @@ questions:
   - Worker
   - Male
 
-- prompt_text: Which of these species is not extinct?
+- prompt-text: Which of these species is not extinct?
   correct-answers:
   - Komodo dragon
   detractors:
@@ -690,7 +690,7 @@ questions:
   - Tasmanian tiger
   - Saudi gazelle
 
-- prompt_text: What is the common term for bovine spongiform encephalopathy (BSE)?
+- prompt-text: What is the common term for bovine spongiform encephalopathy (BSE)?
   correct-answers:
   - Mad Cow disease
   detractors:
@@ -698,7 +698,7 @@ questions:
   - Milk fever
   - Foot-and-mouth disease
 
-- prompt_text: Cashmere is the wool from which kind of animal?
+- prompt-text: Cashmere is the wool from which kind of animal?
   correct-answers:
   - Goat
   detractors:
@@ -706,7 +706,7 @@ questions:
   - Camel
   - Llama
 
-- prompt_text: What does "hippopotamus" mean and in what language?
+- prompt-text: What does "hippopotamus" mean and in what language?
   correct-answers:
   - River Horse (Greek)
   detractors:
@@ -714,7 +714,7 @@ questions:
   - Fat Pig (Greek)
   - Fat Pig (Latin)
 
-- prompt_text: What type of animal is a natterjack?
+- prompt-text: What type of animal is a natterjack?
   correct-answers:
   - Toad
   detractors:
@@ -722,13 +722,13 @@ questions:
   - Fish
   - Insect
 
-- prompt_text: Tigers have one colour of skin despite the stripey fur.
+- prompt-text: Tigers have one colour of skin despite the stripey fur.
   correct-answers:
   - False
   detractors:
   - True
 
-- prompt_text: What is the fastest animal?
+- prompt-text: What is the fastest animal?
   correct-answers:
   - Peregrine Falcon
   detractors:
@@ -736,7 +736,7 @@ questions:
   - Cheetah
   - Horsefly
 
-- prompt_text: What is the scientific name of the Common Chimpanzee?
+- prompt-text: What is the scientific name of the Common Chimpanzee?
   correct-answers:
   - Pan troglodytes
   detractors:
@@ -744,7 +744,7 @@ questions:
   - Pan paniscus
   - Panthera leo
 
-- prompt_text: What is the scientific name for the "Polar Bear"?
+- prompt-text: What is the scientific name for the "Polar Bear"?
   correct-answers:
   - Ursus Maritimus
   detractors:
@@ -752,7 +752,7 @@ questions:
   - Ursus Spelaeus
   - Ursus Arctos
 
-- prompt_text: What is the world's longest venomous snake?
+- prompt-text: What is the world's longest venomous snake?
   correct-answers:
   - King Cobra
   detractors:
@@ -760,7 +760,7 @@ questions:
   - Inland Taipan
   - Yellow Bellied Sea Snake
 
-- prompt_text: A carnivorous animal eats flesh, what does a nucivorous animal eat?
+- prompt-text: A carnivorous animal eats flesh, what does a nucivorous animal eat?
   correct-answers:
   - Nuts
   detractors:
@@ -768,7 +768,7 @@ questions:
   - Fruit
   - Seaweed
 
-- prompt_text: What is the name of the family that the domestic cat is a member of?
+- prompt-text: What is the name of the family that the domestic cat is a member of?
   correct-answers:
   - Felidae
   detractors:
@@ -776,7 +776,7 @@ questions:
   - Felis
   - Cat
 
-- prompt_text: What dog breed is one of the oldest breeds of dog and has flourished since before 400 BCE?
+- prompt-text: What dog breed is one of the oldest breeds of dog and has flourished since before 400 BCE?
   correct-answers:
   - Pugs
   detractors:
@@ -784,7 +784,7 @@ questions:
   - Boxers
   - Chihuahua
 
-- prompt_text: What color is a polar bear's skin?
+- prompt-text: What color is a polar bear's skin?
   correct-answers:
   - Black
   detractors:

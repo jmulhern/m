@@ -298,7 +298,7 @@ const Assessments = () => {
 
                     {/* Loop over the possible answers */}
                     <div className="space-y-2">
-                        {currentQuestion.possible_answers.map((answer) => {
+                        {currentQuestion.possible_answers.map((answer, idx) => {
                             const isSelected = selectedAnswers.includes(answer);
                             const isAnswerCorrect = currentQuestion.correct_answers.includes(answer);
                             let buttonClass =
@@ -320,7 +320,7 @@ const Assessments = () => {
 
                             return (
                                 <button
-                                    key={answer} // Use "answer" instead of index for a unique key
+                                    key={`answer-${idx}-${currentQuestionIndex}`} // Use "answer" instead of index for a unique key
                                     onClick={() => handleTextClick(answer)}
                                     disabled={isSubmitted} // Disable buttons after submission
                                     className={buttonClass}

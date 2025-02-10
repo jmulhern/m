@@ -66,12 +66,14 @@ func Routes() *http.ServeMux {
 			{
 				"id":   "aws-cloud-practitioner",
 				"name": "AWS Cloud Practitioner",
-				"icon": "fa-brands fa-aws",
 			},
 			{
 				"id":   "random-trivia",
 				"name": "Random Trivia",
-				"icon": "fa-solid fa-block-question",
+			},
+			{
+				"id":   "blackjack",
+				"name": "Blackjack Strategy",
 			},
 		})
 		w.Header().Add("Content-Type", "application/json")
@@ -99,8 +101,14 @@ func Routes() *http.ServeMux {
 
 		var questions []any
 		for _, question := range assessment.Questions {
-			possibleAnswers := append(question.Detractors, question.CorrectAnswers...)
-			shufflePossibleAnswers(possibleAnswers)
+			var possibleAnswers []string
+			if len(assessment.Possibilities) != 0 {
+				possibleAnswers = assessment.Possibilities
+			} else {
+				possibleAnswers = append(question.Detractors, question.CorrectAnswers...)
+				shufflePossibleAnswers(possibleAnswers)
+			}
+
 			questions = append(questions, map[string]any{
 				"question":         question.PromptText,
 				"possible_answers": possibleAnswers,
